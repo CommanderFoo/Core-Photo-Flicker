@@ -52,6 +52,14 @@ Objects {
     }
   }
   ParentId: 15436693484293200163
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:Tween"
+      AssetReference {
+        Id: 5010859578220487614
+      }
+    }
+  }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
