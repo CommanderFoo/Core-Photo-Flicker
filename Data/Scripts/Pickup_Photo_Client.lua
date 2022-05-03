@@ -99,7 +99,7 @@ Input.flickedEvent:Connect(function(angle)
 		local tween = TWEEN:new(.5, 
 		
 			{ x = pos.x, y = pos.y, z = pos.z }, 
-			{ x = pos.x + 400 * math.sin(math.rad(angle)), y = pos.y + 400 * math.cos(math.rad(angle)), z = 1 }
+			{ x = pos.x + 400 * math.sin(math.rad(angle)), y = pos.y + 400 * math.cos(math.rad(angle)), z = 5 }
 		
 		)
 

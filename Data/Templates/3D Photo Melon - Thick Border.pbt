@@ -116,8 +116,7 @@ Assets {
         Name: "UI Container"
         Transform {
           Location {
-            X: 31.8197346
-            Z: 2.67350629e-06
+            X: 32
           }
           Rotation {
           }

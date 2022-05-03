@@ -68,8 +68,9 @@ Objects {
   Camera {
     UseAsDefault: true
     InitialDistance: 400
-    MinDistance: 300
-    MaxDistance: 600
+    IsDistanceAdjustable: true
+    MinDistance: 400
+    MaxDistance: 1000
     PositionOffset {
     }
     RotationOffset {
