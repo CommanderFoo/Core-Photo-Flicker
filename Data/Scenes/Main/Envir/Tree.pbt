@@ -5,7 +5,7 @@ Objects {
   Name: "Foor"
   Transform {
     Location {
-      Z: -250
+      Z: -200
     }
     Rotation {
     }
