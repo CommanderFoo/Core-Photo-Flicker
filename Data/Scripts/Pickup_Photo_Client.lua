@@ -4,13 +4,12 @@ local CARDS = script:GetCustomProperty("Cards"):WaitForObject()
 
 local item = nil
 local last_item = nil
-local tween = nil
-
+local tweens = {}
 local photos = {}
 
 CARDS.childAddedEvent:Connect(function ()
-	--photos = {}
 	local exists = false
+	
 	for _, card in ipairs(CARDS:GetChildren()) do
 		for _, photo in ipairs(photos) do
 			if photo.photo == card then
@@ -18,11 +17,12 @@ CARDS.childAddedEvent:Connect(function ()
 				
 			end
 		end
+		
 		if not exists then
 			table.insert(photos, {photo = card, intersected = false})
 		end
-		exists = false
-		
+
+		exists = false	
 	end
 end)
 
@@ -57,6 +57,7 @@ function DropOnTable(SourcePhoto)
 	if source == nil then
 		return
 	end
+
 	--Spawn task to drop the card
 	local drop = Task.Spawn(function ()
 		if source.intersected == false then
@@ -66,9 +67,8 @@ function DropOnTable(SourcePhoto)
 			Task.GetCurrent():Cancel()
 		end
 	end)
-	drop.repeatCount = -1
-		
 	
+	drop.repeatCount = -1
 end
 
 local function on_touch_started(position)
@@ -77,7 +77,6 @@ local function on_touch_started(position)
 	if(hit ~= nil and hit.other.name == "Frame") then
 		item = hit.other
 		last_item = item
-		
 	end
 end
 
@@ -85,6 +84,7 @@ local function on_touch_stopped()
 	if(item == nil) then
 		return
 	end
+
 	DropOnTable(item.parent.parent)
 	item = nil
 end
@@ -92,12 +92,16 @@ end
 Input.touchStartedEvent:Connect(on_touch_started)
 Input.touchStoppedEvent:Connect(on_touch_stopped)
 
-
 Input.flickedEvent:Connect(function(angle)
 	if(last_item ~= nil) then
 		local pos = last_item.parent.parent:GetWorldPosition()
+		local tween = TWEEN:new(.5, 
+		
+			{ x = pos.x, y = pos.y, z = pos.z }, 
+			{ x = pos.x + 400 * math.sin(math.rad(angle)), y = pos.y + 400 * math.cos(math.rad(angle)), z = 1 }
+		
+		)
 
-		tween = TWEEN:new(.5, { x = pos.x, y = pos.y, z = pos.z }, { x = pos.x + 400 * math.sin(math.rad(angle)), y = pos.y + 400 * math.cos(math.rad(angle)), z = 1 })
 		tween:on_change(function(c)
 			if(last_item) then
 				last_item.parent.parent:SetWorldPosition(Vector3.New(c.x, c.y, c.z))
@@ -105,12 +109,17 @@ Input.flickedEvent:Connect(function(angle)
 		end)
 
 		tween:on_complete(function()
-			DropOnTable(last_item.parent.parent)
-			tween = nil
+			if(last_item ~= nil) then
+				DropOnTable(last_item.parent.parent)
+			end
+
 			last_item = nil
+			tweens[tween] = nil
+			tween = nil
 		end)
 
 		tween:set_easing(TWEEN.Easings.Out_Cubic)
+		tweens[tween] = tween
 	end
 end)
 
@@ -122,7 +131,6 @@ Events.Connect("PhotosCreated",function ()
 		DropOnTable(photo.photo)
 	end
 end)
-
 
 function Tick(dt)
 	if(item ~= nil) then
@@ -137,7 +145,9 @@ function Tick(dt)
 		end
 	end
 
-	if(tween ~= nil) then
-		tween:tween(dt)
+	for index, tween in pairs(tweens) do
+		if(tween ~= nil) then
+			tween:tween(dt)
+		end
 	end
 end
