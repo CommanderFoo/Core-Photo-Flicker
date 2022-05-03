@@ -5,14 +5,14 @@ Objects {
   Name: "Foor"
   Transform {
     Location {
-      Z: -50
+      Z: -250
     }
     Rotation {
     }
     Scale {
       X: 200
       Y: 200
-      Z: 1
+      Z: 4
     }
   }
   ParentId: 1765135817762738410

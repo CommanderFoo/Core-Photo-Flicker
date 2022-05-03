@@ -59,6 +59,12 @@ Objects {
         Id: 5010859578220487614
       }
     }
+    Overrides {
+      Name: "cs:Cards"
+      ObjectReference {
+        SelfId: 17109224186771654119
+      }
+    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"

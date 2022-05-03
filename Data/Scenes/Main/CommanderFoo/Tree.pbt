@@ -39,13 +39,19 @@ Objects {
     Overrides {
       Name: "cs:3DPhoto"
       AssetReference {
-        Id: 1910032846740961544
+        Id: 866414950477945831
       }
     }
     Overrides {
       Name: "cs:Tween"
       AssetReference {
         Id: 5010859578220487614
+      }
+    }
+    Overrides {
+      Name: "cs:Cards"
+      ObjectReference {
+        SelfId: 17109224186771654119
       }
     }
   }

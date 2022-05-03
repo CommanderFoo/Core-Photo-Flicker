@@ -1,11 +1,15 @@
 local TWEEN = require(script:GetCustomProperty("Tween"))
 local PHOTO = script:GetCustomProperty("3DPhoto")
+local CARDS = script:GetCustomProperty("Cards"):WaitForObject()
+
 
 local tweens = {}
-local z = 1
+local z = 5
+
 
 for i = 1, 20 do
-	local photo = World.SpawnAsset(PHOTO)
+	-- spawn the photos under a folder so PickupPhotoClient can find them easy
+	local photo = World.SpawnAsset(PHOTO, {parent = CARDS})
 	local pos = Vector3.New(-450, 0, z)
 	local duration = CoreMath.Clamp(math.random(), 0.4, .8)
 
@@ -30,7 +34,7 @@ for i = 1, 20 do
 	tween:set_easing(TWEEN.Easings.Out_Cubic)
 
 	table.insert(tweens, tween)
-	z = z + 0.4
+	z = z + 1
 end
 
 function Tick(dt)
@@ -40,4 +44,6 @@ function Tick(dt)
 		end
 	end
 end
+
+
 
