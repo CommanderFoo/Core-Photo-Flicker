@@ -69,8 +69,8 @@ Objects {
     UseAsDefault: true
     InitialDistance: 400
     IsDistanceAdjustable: true
-    MinDistance: 400
-    MaxDistance: 1000
+    MinDistance: 200
+    MaxDistance: 1500
     PositionOffset {
     }
     RotationOffset {

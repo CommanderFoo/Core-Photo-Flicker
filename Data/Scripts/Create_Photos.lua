@@ -12,7 +12,7 @@ for i = 1, 20 do
 	local photo = World.SpawnAsset(PHOTO, { parent = CARDS })
 	local pos = Vector3.New(-450, 0, z)
 	local duration = CoreMath.Clamp(math.random(), 0.4, .8)
-	local tween = TWEEN:new(duration, { x = -350, y = 0 }, { x = math.random(-150, 800), y = math.random(-600, 600) })
+	local tween = TWEEN:new(duration, { x = -700, y = 0 }, { x = math.random(-150, 800), y = math.random(-600, 600) })
 	local frame = photo:FindDescendantByName("Frame")
 	local container = photo:FindDescendantByName("UI")
 	local trigger = photo:FindDescendantByName("Trigger")
@@ -26,7 +26,7 @@ for i = 1, 20 do
 	frame:SetScale(frame_scale)
 	container:SetPosition(container_pos)
 	trigger:SetScale(frame_scale)
-	
+
 	height_offset = height_offset + 0.001
 	ui_z_offset = ui_z_offset + 0.05
 
@@ -41,7 +41,7 @@ for i = 1, 20 do
 		pos.x = c.x
 		pos.y = c.y
 
-		photo:SetWorldPosition(pos)
+		photo:SetPosition(pos)
 	end)
 
 	local can_delay = math.random(2)
@@ -60,6 +60,3 @@ function Tick(dt)
 		end
 	end
 end
-
-
-

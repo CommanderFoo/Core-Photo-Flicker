@@ -4,25 +4,29 @@ local CARDS = script:GetCustomProperty("Cards"):WaitForObject()
 
 local item = nil
 local last_item = nil
+local is_rotating = false
+local is_pinching = false
+local current_rotation = 0
+
 local tweens = {}
 local photos = {}
 
 CARDS.childAddedEvent:Connect(function ()
 	local exists = false
-	
+
 	for _, card in ipairs(CARDS:GetChildren()) do
 		for _, photo in ipairs(photos) do
 			if photo.photo == card then
 				exists = true
-				
+
 			end
 		end
-		
+
 		if not exists then
 			photos[card] = {photo = card, intersected = false}
 		end
 
-		exists = false	
+		exists = false
 	end
 end)
 
@@ -34,7 +38,7 @@ function Overlap(sourcePhoto, collision)
 			photo.intersected = true
 		end
 	end
-	
+
 end
 
 --Photo trigger  end overlaps
@@ -48,13 +52,13 @@ end
 
 function DropOnTable(SourcePhoto)
 	local source = nil
-	-- retrieve the photo from the photos table 
+	-- retrieve the photo from the photos table
 	for i, photo in pairs(photos) do
 		if photo.photo == SourcePhoto then
 			source = photo
 		end
 	end
-	
+
 	if source == nil then
 		return
 	end
@@ -90,17 +94,14 @@ local function on_touch_stopped()
 	item = nil
 end
 
-Input.touchStartedEvent:Connect(on_touch_started)
-Input.touchStoppedEvent:Connect(on_touch_stopped)
-
 Input.flickedEvent:Connect(function(angle)
 	if(last_item ~= nil) then
 		local pos = last_item.parent.parent:GetWorldPosition()
-		local tween = TWEEN:new(.5, 
-		
-			{ x = pos.x, y = pos.y, z = pos.z }, 
-			{ x = pos.x + 400 * math.sin(math.rad(angle)), y = pos.y + 400 * math.cos(math.rad(angle)), z = 5 }
-		
+		local tween = TWEEN:new(.8,
+
+			{ x = pos.x, y = pos.y, z = pos.z },
+			{ x = pos.x + 600 * math.sin(math.rad(angle)), y = pos.y + 600 * math.cos(math.rad(angle)), z = 5 }
+
 		)
 
 		tween:on_change(function(c)
@@ -124,15 +125,6 @@ Input.flickedEvent:Connect(function(angle)
 	end
 end)
 
-
-Events.Connect("Overlap",Overlap)
-Events.Connect("EndOverlap",EndOverlap)
-Events.Connect("PhotosCreated",function ()
-	for _, photo in ipairs(photos) do
-		DropOnTable(photo.photo)
-	end
-end)
-
 function Tick(dt)
 	if(item ~= nil) then
 		local pointer = Input.GetPointerPosition()
@@ -151,4 +143,51 @@ function Tick(dt)
 			tween:tween(dt)
 		end
 	end
+
+	if(is_pinching) then
+		local pinch = Input.GetPinchValue()
+		local cam = Game.GetLocalPlayer():GetActiveCamera()
+
+		cam.currentDistance = (cam.maxDistance - cam.minDistance) * pinch
+	end
+	
+	-- if(is_rotating) then
+	-- 	local rotation = Input.GetRotateValue()
+
+	-- 	rotation = rotation > 0 and (rotation) or rotation
+
+	-- 	local cam = Game.GetLocalPlayer():GetActiveCamera()
+	-- 	local cam_rotation = cam:GetWorldRotation()
+
+	-- 	cam:SetRotationOffset(Rotation.New(rotation + current_rotation, 0, 0))
+	-- end
 end
+
+Input.pinchStartedEvent:Connect(function()
+	is_pinching = true
+end)
+
+Input.pinchStoppedEvent:Connect(function()
+	is_pinching = false
+end)
+
+Input.rotateStartedEvent:Connect(function()
+	current_rotation = Game.GetLocalPlayer():GetActiveCamera():GetRotationOffset().x
+	is_rotating = true
+end)
+
+Input.rotateStoppedEvent:Connect(function()
+	is_rotating = false
+end)
+
+Input.touchStartedEvent:Connect(on_touch_started)
+Input.touchStoppedEvent:Connect(on_touch_stopped)
+Input.DisableVirtualControls()
+
+Events.Connect("Overlap",Overlap)
+Events.Connect("EndOverlap",EndOverlap)
+Events.Connect("PhotosCreated",function ()
+	for _, photo in ipairs(photos) do
+		DropOnTable(photo.photo)
+	end
+end)
