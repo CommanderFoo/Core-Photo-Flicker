@@ -19,7 +19,7 @@ CARDS.childAddedEvent:Connect(function ()
 		end
 		
 		if not exists then
-			table.insert(photos, {photo = card, intersected = false})
+			photos[card] = {photo = card, intersected = false}
 		end
 
 		exists = false	
@@ -29,16 +29,17 @@ end)
 --Photo trigger overlaps
 function Overlap(sourcePhoto, collision)
 	--print(sourcePhoto, " collided with ", collision)
-	for i, photo in ipairs(photos) do
+	for i, photo in pairs(photos) do
 		if photo.photo == sourcePhoto then
 			photo.intersected = true
 		end
 	end
 	
 end
+
 --Photo trigger  end overlaps
 function EndOverlap(sourcePhoto, collision)
-	for i, photo in ipairs(photos) do
+	for i, photo in pairs(photos) do
 		if photo.photo == sourcePhoto then
 			photo.intersected = false
 		end
@@ -48,7 +49,7 @@ end
 function DropOnTable(SourcePhoto)
 	local source = nil
 	-- retrieve the photo from the photos table 
-	for i, photo in ipairs(photos) do
+	for i, photo in pairs(photos) do
 		if photo.photo == SourcePhoto then
 			source = photo
 		end
@@ -59,15 +60,15 @@ function DropOnTable(SourcePhoto)
 	end
 
 	--Spawn task to drop the card
-	local drop = Task.Spawn(function ()
+	local drop = Task.Spawn(function()
 		if source.intersected == false then
-			source.photo:SetWorldPosition(source.photo:GetWorldPosition() - Vector3.New(0,0,2))
+			source.photo:SetWorldPosition(source.photo:GetWorldPosition() - Vector3.New(0, 0, 2))
 		else
-			source.photo:SetWorldPosition(source.photo:GetWorldPosition() + Vector3.New(0,0,2))
+			source.photo:SetWorldPosition(source.photo:GetWorldPosition() + Vector3.New(0, 0, 2))
 			Task.GetCurrent():Cancel()
 		end
 	end)
-	
+
 	drop.repeatCount = -1
 end
 

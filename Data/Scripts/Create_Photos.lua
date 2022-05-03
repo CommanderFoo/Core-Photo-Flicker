@@ -2,21 +2,19 @@ local TWEEN = require(script:GetCustomProperty("Tween"))
 local PHOTO = script:GetCustomProperty("3DPhoto")
 local CARDS = script:GetCustomProperty("Cards"):WaitForObject()
 
-
 local tweens = {}
-local z = 5
-
+local z = 0
 
 for i = 1, 20 do
 	-- spawn the photos under a folder so PickupPhotoClient can find them easy
-	local photo = World.SpawnAsset(PHOTO, {parent = CARDS})
+	local photo = World.SpawnAsset(PHOTO, { parent = CARDS })
 	local pos = Vector3.New(-450, 0, z)
 	local duration = CoreMath.Clamp(math.random(), 0.4, .8)
-
 	local tween = TWEEN:new(duration, { x = -350, y = 0 }, { x = math.random(-150, 800), y = math.random(-600, 600) })
-	photo:SetWorldRotation(Rotation.New(0, 0, math.random(360)))
 
+	photo:SetWorldRotation(Rotation.New(0, 0, math.random(360)))
 	photo:SetWorldPosition(pos)
+
 	tween:on_complete(function()
 		tween = nil
 	end)
@@ -34,7 +32,7 @@ for i = 1, 20 do
 	tween:set_easing(TWEEN.Easings.Out_Cubic)
 
 	table.insert(tweens, tween)
-	z = z + 1
+	z = z + .02
 end
 
 function Tick(dt)
