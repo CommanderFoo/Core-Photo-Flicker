@@ -3,12 +3,15 @@ local PHOTO = script:GetCustomProperty("3DPhoto")
 local CARDS = script:GetCustomProperty("Cards"):WaitForObject()
 local THEMES = require(script:GetCustomProperty("Themes"))
 
+local CARD_SET = nil
+
 local tweens = {}
 local z = 0
 local height_offset = 0.001
 local ui_z_offset = 0.01
 
 function DealPhotos()
+	CARD_SET = THEMES[math.random(#THEMES)].cards
 	for i = 1, 2 do
 		CreatePhotos()
 	end
@@ -16,7 +19,7 @@ end
 
 function CreatePhotos()
 
-	local CARD_SET = THEMES[math.random(#THEMES)].cards
+
 
 	for i = 1, #CARD_SET do
 		-- spawn the photos under a folder so PickupPhotoClient can find them easy
