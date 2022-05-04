@@ -19,9 +19,6 @@ function DealPhotos()
 end
 
 function CreatePhotos()
-
-
-
 	for i = 1, #CARD_SET do
 		-- spawn the photos under a folder so PickupPhotoClient can find them easy
 		local current_card = CARD_SET[i].photo
@@ -66,7 +63,7 @@ function CreatePhotos()
 		tween:set_easing(TWEEN.Easings.Out_Cubic)
 	
 		table.insert(tweens, tween)
-		z = z + .02
+		z = z + .2
 	end
 end
 
@@ -80,3 +77,10 @@ function Tick(dt)
 end
 
 Game.playerJoinedEvent:Connect(DealPhotos)
+
+Events.Connect("destroy_card", function(card)
+	if(card ~= nil and Object.IsValid(card:GetObject())) then
+		card:GetObject():Destroy()
+		Events.Broadcast("increase_score", 100)
+	end
+end)

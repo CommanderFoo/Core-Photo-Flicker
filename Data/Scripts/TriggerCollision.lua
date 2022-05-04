@@ -3,10 +3,9 @@ local ROOT = script:GetCustomProperty("Root"):WaitForObject()
 
 
 function OnBeginOverlap(trigger, other)
-	local cardParent
     if other:IsA("Trigger") then
         local trigger_script = other:FindChildByName("TriggerCollision")
-        cardParent = trigger_script:GetCustomProperty("Root")
+        local cardParent = trigger_script:GetCustomProperty("Root")
         Events.Broadcast("Overlap", ROOT, cardParent)
     else
         Events.Broadcast("Overlap", ROOT, other)
@@ -15,9 +14,7 @@ function OnBeginOverlap(trigger, other)
 end
 
 function OnEndOverlap(trigger, other)
-	
-    Events.Broadcast("EndOverlap",ROOT, other)
-	
+    Events.Broadcast("EndOverlap",ROOT, other)	
 end
 
 --Wait for cards to be spawned and dealt

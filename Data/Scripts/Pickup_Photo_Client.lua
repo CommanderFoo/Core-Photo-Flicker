@@ -68,9 +68,14 @@ function RemoveMatchedCards(card1, card2)
 	for _, photo in ipairs(CARDS:GetChildren()) do
 		if card1 == photo or card2 == photo then
 			local position = photo:GetWorldPosition()
-			photo:Destroy()
-			local VFX = World.SpawnAsset(MATCH_VFX, {position = position, lifeSpan  = 1})
 
+			Events.BroadcastToServer("destroy_card", photo:GetReference())
+
+			if(Object.IsValid(photo)) then
+				photo:Destroy()
+			end
+
+			local VFX = World.SpawnAsset(MATCH_VFX, {position = position, lifeSpan  = 1})
 		end
 	end
 end
@@ -104,6 +109,11 @@ function DropOnTable(SourcePhoto)
 
 	--Spawn task to drop the card
 	local drop = Task.Spawn(function()
+		if(not Object.IsValid(source.photo)) then
+			Task.GetCurrent():Cancel()
+			return
+		end
+
 		if source.intersected == false then
 			source.photo:SetWorldPosition(source.photo:GetWorldPosition() - Vector3.New(0, 0, 2))
 		else
@@ -117,6 +127,10 @@ function DropOnTable(SourcePhoto)
 end
 
 local function on_touch_started(position)
+	if(last_item ~= nil) then
+		return
+	end
+	
 	local hit = UI.GetHitResult(position)
 
 	if(hit ~= nil and hit.other.name == "Frame") then
@@ -132,7 +146,10 @@ local function on_touch_stopped()
 		return
 	end
 
-	DropOnTable(item.parent.parent)
+	if(Object.IsValid(item)) then
+		DropOnTable(item.parent.parent)
+	end
+
 	item = nil
 end
 
@@ -147,13 +164,13 @@ Input.flickedEvent:Connect(function(angle)
 		)
 
 		tween:on_change(function(c)
-			if(last_item) then
+			if(last_item and Object.IsValid(last_item)) then
 				last_item.parent.parent:SetWorldPosition(Vector3.New(c.x, c.y, c.z))
 			end
 		end)
 
 		tween:on_complete(function()
-			if(last_item ~= nil) then
+			if(last_item ~= nil and Object.IsValid(last_item)) then
 				DropOnTable(last_item.parent.parent)
 			end
 
@@ -174,7 +191,7 @@ function Tick(dt)
 		if(pointer ~= nil) then
 			local hit = UI.GetHitResult(pointer)
 
-			if(hit ~= nil and hit ~= item) then
+			if(hit ~= nil and hit ~= item and Object.IsValid(item)) then
 				item.parent.parent:SetWorldPosition(Vector3.New(hit:GetImpactPosition().x, hit:GetImpactPosition().y, 60))
 			end
 		end
@@ -224,6 +241,7 @@ end)
 
 Input.touchStartedEvent:Connect(on_touch_started)
 Input.touchStoppedEvent:Connect(on_touch_stopped)
+
 Input.DisableVirtualControls()
 
 Events.Connect("Overlap",Overlap)
