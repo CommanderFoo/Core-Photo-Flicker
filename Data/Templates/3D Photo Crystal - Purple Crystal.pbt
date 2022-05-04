@@ -7,7 +7,7 @@ Assets {
       RootId: 16092551061076353886
       Objects {
         Id: 16092551061076353886
-        Name: "3D Photo Crystal - Red Crystal"
+        Name: "3D Photo Crystal - Purple Crystal"
         Transform {
           Scale {
             X: 1

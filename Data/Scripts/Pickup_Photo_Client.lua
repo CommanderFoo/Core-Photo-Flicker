@@ -23,7 +23,7 @@ CARDS.childAddedEvent:Connect(function ()
 		end
 
 		if not exists then
-			photos[card] = {photo = card, intersected = false}
+			photos[card] = {photo = card, intersected = false, intersected_with = nil}
 		end
 
 		exists = false
@@ -33,9 +33,18 @@ end)
 --Photo trigger overlaps
 function Overlap(sourcePhoto, collision)
 	--print(sourcePhoto, " collided with ", collision)
+	
 	for i, photo in pairs(photos) do
 		if photo.photo == sourcePhoto then
 			photo.intersected = true
+			if not collision:IsA("StaticMesh") then
+				if photo.intersected_with ~= collision:GetObject() then
+					photo.intersected_with = collision:GetObject()
+				end
+			else
+				--hit the "Foor" or Floor as it is more commonly know!
+				photo.intersected_with = collision
+			end
 		end
 	end
 
@@ -46,9 +55,35 @@ function EndOverlap(sourcePhoto, collision)
 	for i, photo in pairs(photos) do
 		if photo.photo == sourcePhoto then
 			photo.intersected = false
+			--photo.intersected_with = nil
 		end
 	end
 end
+
+function RemoveMatchedCards(card1, card2)
+	--NEED TO: add score
+	--NEED TO: Play sound & visual effect
+	
+	for _, photo in ipairs(CARDS:GetChildren()) do
+		if card1 == photo or card2 == photo then
+			photo:Destroy()
+		end
+	end
+end
+
+function CheckMatch(source)
+	--print(source.photo.name)
+	if source.intersected_with == nil then
+		return
+	end
+	if source.photo.name == source.intersected_with.name then
+		RemoveMatchedCards(source.photo, source.intersected_with)
+		
+	else
+		print("No match ", source.photo.name, source.intersected_with.name )
+	end
+end
+
 
 function DropOnTable(SourcePhoto)
 	local source = nil
@@ -70,6 +105,7 @@ function DropOnTable(SourcePhoto)
 		else
 			source.photo:SetWorldPosition(source.photo:GetWorldPosition() + Vector3.New(0, 0, 2))
 			Task.GetCurrent():Cancel()
+			CheckMatch(source)
 		end
 	end)
 
@@ -186,8 +222,8 @@ Input.DisableVirtualControls()
 
 Events.Connect("Overlap",Overlap)
 Events.Connect("EndOverlap",EndOverlap)
-Events.Connect("PhotosCreated",function ()
+-- Events.Connect("PhotosCreated",function ()
 	for _, photo in ipairs(photos) do
 		DropOnTable(photo.photo)
 	end
-end)
+-- end)

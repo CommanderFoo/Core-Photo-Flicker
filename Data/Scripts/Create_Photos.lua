@@ -12,6 +12,7 @@ local ui_z_offset = 0.01
 
 function DealPhotos()
 	CARD_SET = THEMES[math.random(#THEMES)].cards
+	--Deal each card in the theme twice so have pairs
 	for i = 1, 2 do
 		CreatePhotos()
 	end

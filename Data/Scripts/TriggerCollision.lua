@@ -3,8 +3,14 @@ local ROOT = script:GetCustomProperty("Root"):WaitForObject()
 
 
 function OnBeginOverlap(trigger, other)
-	
-	Events.Broadcast("Overlap", ROOT, other)
+	local cardParent
+    if other:IsA("Trigger") then
+        local trigger_script = other:FindChildByName("TriggerCollision")
+        cardParent = trigger_script:GetCustomProperty("Root")
+        Events.Broadcast("Overlap", ROOT, cardParent)
+    else
+        Events.Broadcast("Overlap", ROOT, other)
+    end
 	
 end
 

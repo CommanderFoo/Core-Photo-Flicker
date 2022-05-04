@@ -1,13 +1,13 @@
 Assets {
   Id: 3066825683470862812
-  Name: "3D Photo Fruit - Pineapple "
+  Name: "3D Photo Fruit - Pineapple"
   PlatformAssetType: 5
   TemplateAsset {
     ObjectBlock {
       RootId: 1699917078492277150
       Objects {
         Id: 1699917078492277150
-        Name: "3D Photo Pineapple - Thick Border"
+        Name: "3D Photo Fruit - Pineapple"
         Transform {
           Scale {
             X: 1

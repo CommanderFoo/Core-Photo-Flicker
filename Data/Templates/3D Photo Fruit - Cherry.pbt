@@ -7,7 +7,7 @@ Assets {
       RootId: 1445080145181753628
       Objects {
         Id: 1445080145181753628
-        Name: "3D Photo Cherry - Thick Border"
+        Name: "3D Photo Fruit - Cherry"
         Transform {
           Scale {
             X: 1
