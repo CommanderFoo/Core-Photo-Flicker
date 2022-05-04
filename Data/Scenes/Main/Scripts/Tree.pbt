@@ -187,6 +187,12 @@ Objects {
         Id: 5023634569369172201
       }
     }
+    Overrides {
+      Name: "cs:PickupVFX"
+      AssetReference {
+        Id: 7615709195224845236
+      }
+    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"

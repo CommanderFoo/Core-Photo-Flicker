@@ -1,8 +1,8 @@
 Name: "Maize"
 RootId: 3843404861901986054
 Objects {
-  Id: 10827068355703710058
-  Name: "Cha-ching Cash Register Money Bell Buy Or Sell Notification 01 SFX"
+  Id: 9680707703392757057
+  Name: "VFX_ClientContext"
   Transform {
     Location {
     }
@@ -15,33 +15,31 @@ Objects {
     }
   }
   ParentId: 3843404861901986054
+  ChildIds: 18073738827629800924
   Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
+    Value: "mc:ecollisionsetting:forceoff"
   }
   Visible_v2 {
     Value: "mc:evisibilitysetting:inheritfromparent"
   }
   CameraCollidable {
-    Value: "mc:ecollisionsetting:inheritfromparent"
+    Value: "mc:ecollisionsetting:forceoff"
   }
   EditorIndicatorVisibility {
     Value: "mc:eindicatorvisibility:visiblewhenselected"
   }
-  AudioInstance {
-    AudioAsset {
-      Id: 4839122425994275606
+  NetworkContext {
+    DetailRelevance {
+      Value: "mc:edetaillevel:low"
     }
-    Volume: 1
-    Falloff: -1
-    Radius: -1
   }
   NetworkRelevanceDistance {
     Value: "mc:eproxyrelevance:critical"
   }
 }
 Objects {
-  Id: 10089904105312212472
-  Name: "Button Click 01 SFX"
+  Id: 18073738827629800924
+  Name: "Paper Book Open Close Page 01 SFX"
   Transform {
     Location {
     }
@@ -53,7 +51,8 @@ Objects {
       Z: 1
     }
   }
-  ParentId: 3843404861901986054
+  ParentId: 9680707703392757057
+  Lifespan: 1.5
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -68,8 +67,10 @@ Objects {
   }
   AudioInstance {
     AudioAsset {
-      Id: 16674062624357608766
+      Id: 2089941090273319362
     }
+    AutoPlay: true
+    Repeat: true
     Volume: 1
     Falloff: -1
     Radius: -1

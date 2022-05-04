@@ -2,6 +2,7 @@
 local TWEEN = require(script:GetCustomProperty("Tween"))
 local CARDS = script:GetCustomProperty("Cards"):WaitForObject()
 local MATCH_VFX = script:GetCustomProperty("MatchVFX")
+local PICKUP_VFX = script:GetCustomProperty("PickupVFX")
 
 local item = nil
 local last_item = nil
@@ -121,6 +122,8 @@ local function on_touch_started(position)
 	if(hit ~= nil and hit.other.name == "Frame") then
 		item = hit.other
 		last_item = item
+		local VFX = World.SpawnAsset(PICKUP_VFX, {lifeSpan  = 1})
+
 	end
 end
 
