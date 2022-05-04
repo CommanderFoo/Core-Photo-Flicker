@@ -88,6 +88,12 @@ Objects {
         SelfId: 17109224186771654119
       }
     }
+    Overrides {
+      Name: "cs:Themes"
+      AssetReference {
+        Id: 1973718304677095829
+      }
+    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
