@@ -554,4 +554,6 @@ Assets {
     }
   }
   SerializationVersion: 113
+  VirtualFolderPath: "Cards"
+  VirtualFolderPath: "Fruits"
 }

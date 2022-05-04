@@ -4,5 +4,23 @@ Assets {
   PlatformAssetType: 30
   SerializationVersion: 113
   VirtualFolderSetAsset {
+    Folders {
+      VirtualFolderPath: "Cards"
+      PlatformAssetType: 5
+    }
+    Folders {
+      VirtualFolderPath: "Cards"
+      VirtualFolderPath: "Fruits"
+      PlatformAssetType: 5
+    }
+    Folders {
+      VirtualFolderPath: "Cards"
+      VirtualFolderPath: "Crystals"
+      PlatformAssetType: 5
+    }
+    Folders {
+      VirtualFolderPath: "VFX"
+      PlatformAssetType: 5
+    }
   }
 }

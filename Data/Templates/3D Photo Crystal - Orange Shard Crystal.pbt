@@ -1,13 +1,13 @@
 Assets {
-  Id: 3066825683470862812
-  Name: "3D Photo Fruit - Pineapple"
+  Id: 15325186440815432461
+  Name: "3D Photo Crystal - Orange Shard Crystal"
   PlatformAssetType: 5
   TemplateAsset {
     ObjectBlock {
-      RootId: 1699917078492277150
+      RootId: 15490153287351973707
       Objects {
-        Id: 1699917078492277150
-        Name: "3D Photo Fruit - Pineapple"
+        Id: 15490153287351973707
+        Name: "3D Photo Crystal - Yellow Shard Crystal"
         Transform {
           Scale {
             X: 1
@@ -16,7 +16,7 @@ Assets {
           }
         }
         ParentId: 4781671109827199097
-        ChildIds: 11867185702879086229
+        ChildIds: 16768100334840448217
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -37,7 +37,7 @@ Assets {
         }
       }
       Objects {
-        Id: 11867185702879086229
+        Id: 16768100334840448217
         Name: "Geo"
         Transform {
           Location {
@@ -51,10 +51,10 @@ Assets {
             Z: 0.178356484
           }
         }
-        ParentId: 1699917078492277150
-        ChildIds: 12361039744774968878
-        ChildIds: 14328234984906777032
-        ChildIds: 414624008051730803
+        ParentId: 15490153287351973707
+        ChildIds: 1846691358311874565
+        ChildIds: 10904711831792540419
+        ChildIds: 13066569851499028346
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -75,7 +75,7 @@ Assets {
         }
       }
       Objects {
-        Id: 12361039744774968878
+        Id: 1846691358311874565
         Name: "UI"
         Transform {
           Location {
@@ -88,8 +88,8 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 11867185702879086229
-        ChildIds: 8507588209515233336
+        ParentId: 16768100334840448217
+        ChildIds: 14632713502864649920
         Collidable_v2 {
           Value: "mc:ecollisionsetting:forceoff"
         }
@@ -112,7 +112,7 @@ Assets {
         }
       }
       Objects {
-        Id: 8507588209515233336
+        Id: 14632713502864649920
         Name: "UI Container"
         Transform {
           Location {
@@ -127,8 +127,8 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 12361039744774968878
-        ChildIds: 3346087842795302099
+        ParentId: 1846691358311874565
+        ChildIds: 13441270943869582812
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -173,7 +173,7 @@ Assets {
         }
       }
       Objects {
-        Id: 3346087842795302099
+        Id: 13441270943869582812
         Name: "Background"
         Transform {
           Location {
@@ -186,8 +186,8 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 8507588209515233336
-        ChildIds: 3703425006961322641
+        ParentId: 14632713502864649920
+        ChildIds: 14447927067091922959
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -245,7 +245,7 @@ Assets {
         }
       }
       Objects {
-        Id: 3703425006961322641
+        Id: 14447927067091922959
         Name: "Image"
         Transform {
           Location {
@@ -258,7 +258,7 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 3346087842795302099
+        ParentId: 13441270943869582812
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -284,7 +284,7 @@ Assets {
           UseParentHeight: true
           Image {
             Brush {
-              Id: 14421219552726139858
+              Id: 1808585853654595691
             }
             Color {
               R: 1
@@ -316,7 +316,7 @@ Assets {
         }
       }
       Objects {
-        Id: 14328234984906777032
+        Id: 10904711831792540419
         Name: "Frame"
         Transform {
           Location {
@@ -333,7 +333,7 @@ Assets {
             Z: 0.202393174
           }
         }
-        ParentId: 11867185702879086229
+        ParentId: 16768100334840448217
         UnregisteredParameters {
           Overrides {
             Name: "ma:Shared_BaseMaterial:id"
@@ -388,7 +388,7 @@ Assets {
         }
       }
       Objects {
-        Id: 414624008051730803
+        Id: 13066569851499028346
         Name: "ClientContext"
         Transform {
           Location {
@@ -403,8 +403,8 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 11867185702879086229
-        ChildIds: 4401482973030300119
+        ParentId: 16768100334840448217
+        ChildIds: 8284431228403572945
         Collidable_v2 {
           Value: "mc:ecollisionsetting:forceoff"
         }
@@ -427,7 +427,7 @@ Assets {
         }
       }
       Objects {
-        Id: 4401482973030300119
+        Id: 8284431228403572945
         Name: "Trigger"
         Transform {
           Location {
@@ -441,8 +441,8 @@ Assets {
             Z: 0.202393174
           }
         }
-        ParentId: 414624008051730803
-        ChildIds: 1904618116317691871
+        ParentId: 13066569851499028346
+        ChildIds: 3769049524164380654
         Collidable_v2 {
           Value: "mc:ecollisionsetting:forceon"
         }
@@ -469,7 +469,7 @@ Assets {
         }
       }
       Objects {
-        Id: 1904618116317691871
+        Id: 3769049524164380654
         Name: "TriggerCollision"
         Transform {
           Location {
@@ -482,12 +482,12 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 4401482973030300119
+        ParentId: 8284431228403572945
         UnregisteredParameters {
           Overrides {
             Name: "cs:Root"
             ObjectReference {
-              SubObjectId: 1699917078492277150
+              SubObjectId: 15490153287351973707
             }
           }
         }
@@ -523,12 +523,12 @@ Assets {
       }
     }
     Assets {
-      Id: 14421219552726139858
-      Name: "Fantasy Fruit 009"
+      Id: 1808585853654595691
+      Name: "Fantasy Craft Crystal 019"
       PlatformAssetType: 9
       PrimaryAsset {
         AssetType: "PlatformBrushAssetRef"
-        AssetId: "UI_Fantasy_Food_Fruit_009"
+        AssetId: "UI_Fantasy_Crafting_Crystal_019"
       }
     }
     Assets {
@@ -556,5 +556,5 @@ Assets {
   }
   SerializationVersion: 113
   VirtualFolderPath: "Cards"
-  VirtualFolderPath: "Fruits"
+  VirtualFolderPath: "Crystals"
 }
