@@ -89,7 +89,7 @@ function CheckMatch(source)
 		RemoveMatchedCards(source.photo, source.intersected_with)
 		
 	else
-		print("No match ", source.photo.name, source.intersected_with.name )
+		--print("No match ", source.photo.name, source.intersected_with.name )
 	end
 end
 
@@ -120,6 +120,7 @@ function DropOnTable(SourcePhoto)
 			source.photo:SetWorldPosition(source.photo:GetWorldPosition() + Vector3.New(0, 0, 2))
 			Task.GetCurrent():Cancel()
 			CheckMatch(source)
+			last_item = nil
 		end
 	end)
 
