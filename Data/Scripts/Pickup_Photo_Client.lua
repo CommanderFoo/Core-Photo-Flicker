@@ -223,7 +223,7 @@ Input.DisableVirtualControls()
 Events.Connect("Overlap",Overlap)
 Events.Connect("EndOverlap",EndOverlap)
 -- Events.Connect("PhotosCreated",function ()
-	for _, photo in ipairs(photos) do
-		DropOnTable(photo.photo)
-	end
+	-- for _, photo in ipairs(photos) do
+	-- 	DropOnTable(photo.photo)
+	-- end
 -- end)
