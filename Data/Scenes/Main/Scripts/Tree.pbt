@@ -181,6 +181,12 @@ Objects {
         SelfId: 17109224186771654119
       }
     }
+    Overrides {
+      Name: "cs:MatchVFX"
+      AssetReference {
+        Id: 5023634569369172201
+      }
+    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"

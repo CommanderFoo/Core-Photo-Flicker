@@ -1,6 +1,7 @@
 
 local TWEEN = require(script:GetCustomProperty("Tween"))
 local CARDS = script:GetCustomProperty("Cards"):WaitForObject()
+local MATCH_VFX = script:GetCustomProperty("MatchVFX")
 
 local item = nil
 local last_item = nil
@@ -62,11 +63,13 @@ end
 
 function RemoveMatchedCards(card1, card2)
 	--NEED TO: add score
-	--NEED TO: Play sound & visual effect
 	
 	for _, photo in ipairs(CARDS:GetChildren()) do
 		if card1 == photo or card2 == photo then
+			local position = photo:GetWorldPosition()
 			photo:Destroy()
+			local VFX = World.SpawnAsset(MATCH_VFX, {position = position, lifeSpan  = 1})
+
 		end
 	end
 end
