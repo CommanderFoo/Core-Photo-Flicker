@@ -11,15 +11,15 @@ function Tick(dt)
 		cam.currentDistance = (cam.maxDistance - cam.minDistance) * pinch
 	end
 
-	if(is_rotating) then
-		local rotation = Input.GetRotateValue()
+	-- if(is_rotating) then
+	-- 	local rotation = Input.GetRotateValue()
 
-		rotation = rotation > 0 and (rotation) or rotation
+	-- 	rotation = rotation > 0 and (rotation) or rotation
 
-		local cam = Game.GetLocalPlayer():GetActiveCamera()
+	-- 	local cam = Game.GetLocalPlayer():GetActiveCamera()
 
-		cam:SetRotationOffset(Rotation.New(rotation + current_rotation, 0, 0))
-	end
+	-- 	cam:SetRotationOffset(Rotation.New(rotation + current_rotation, 0, 0))
+	-- end
 end
 
 Input.touchStartedEvent:Connect(function()
