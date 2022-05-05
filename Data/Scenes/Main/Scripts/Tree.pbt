@@ -134,6 +134,7 @@ Objects {
   ParentId: 4266750952463575350
   ChildIds: 4004225859173045466
   ChildIds: 7258016952844516425
+  ChildIds: 6335774691393329276
   Collidable_v2 {
     Value: "mc:ecollisionsetting:forceoff"
   }
@@ -149,6 +150,42 @@ Objects {
   NetworkContext {
     DetailRelevance {
       Value: "mc:edetaillevel:low"
+    }
+  }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
+}
+Objects {
+  Id: 6335774691393329276
+  Name: "Touch_Client"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 15436693484293200163
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  Script {
+    ScriptAsset {
+      Id: 7616104734153868454
     }
   }
   NetworkRelevanceDistance {

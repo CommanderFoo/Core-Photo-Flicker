@@ -6,9 +6,6 @@ local PICKUP_VFX = script:GetCustomProperty("PickupVFX")
 
 local item = nil
 local last_item = nil
-local is_rotating = false
-local is_pinching = false
-local current_rotation = 0
 
 local tweens = {}
 local photos = {}
@@ -216,42 +213,7 @@ function Tick(dt)
 			tween:tween(dt)
 		end
 	end
-
-	if(is_pinching) then
-		local pinch = Input.GetPinchValue()
-		local cam = Game.GetLocalPlayer():GetActiveCamera()
-
-		cam.currentDistance = (cam.maxDistance - cam.minDistance) * pinch
-	end
-	
-	-- if(is_rotating) then
-	-- 	local rotation = Input.GetRotateValue()
-
-	-- 	rotation = rotation > 0 and (rotation) or rotation
-
-	-- 	local cam = Game.GetLocalPlayer():GetActiveCamera()
-	-- 	local cam_rotation = cam:GetWorldRotation()
-
-	-- 	cam:SetRotationOffset(Rotation.New(rotation + current_rotation, 0, 0))
-	-- end
 end
-
-Input.pinchStartedEvent:Connect(function()
-	is_pinching = true
-end)
-
-Input.pinchStoppedEvent:Connect(function()
-	is_pinching = false
-end)
-
-Input.rotateStartedEvent:Connect(function()
-	current_rotation = Game.GetLocalPlayer():GetActiveCamera():GetRotationOffset().x
-	is_rotating = true
-end)
-
-Input.rotateStoppedEvent:Connect(function()
-	is_rotating = false
-end)
 
 Input.touchStartedEvent:Connect(on_touch_started)
 Input.touchStoppedEvent:Connect(on_touch_stopped)
