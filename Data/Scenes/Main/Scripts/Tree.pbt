@@ -5,6 +5,7 @@ Objects {
   Name: "Cards"
   Transform {
     Location {
+      Z: 0.001
     }
     Rotation {
     }
@@ -132,6 +133,7 @@ Objects {
   }
   ParentId: 4266750952463575350
   ChildIds: 4004225859173045466
+  ChildIds: 7258016952844516425
   Collidable_v2 {
     Value: "mc:ecollisionsetting:forceoff"
   }
@@ -147,6 +149,62 @@ Objects {
   NetworkContext {
     DetailRelevance {
       Value: "mc:edetaillevel:low"
+    }
+  }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
+}
+Objects {
+  Id: 7258016952844516425
+  Name: "UIManager_Server"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 15436693484293200163
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:UIContainer"
+      ObjectReference {
+        SelfId: 8508780102921987653
+      }
+    }
+    Overrides {
+      Name: "cs:RestartBtn"
+      ObjectReference {
+        SelfId: 11138232998031467308
+      }
+    }
+    Overrides {
+      Name: "cs:ShuffleBtn"
+      ObjectReference {
+        SelfId: 12738781578157766057
+      }
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  Script {
+    ScriptAsset {
+      Id: 7333528403897020281
     }
   }
   NetworkRelevanceDistance {

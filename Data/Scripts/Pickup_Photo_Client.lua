@@ -42,11 +42,14 @@ function Overlap(sourcePhoto, collision)
 			if not collision:IsA("StaticMesh") then
 				if photo.intersected_with ~= collision:GetObject() then
 					photo.intersected_with = collision:GetObject()
+					
 				end
+				
 			else
 				--hit the "Foor" or Floor as it is more commonly know!
 				photo.intersected_with = collision
 			end
+			return
 		end
 	end
 
@@ -69,9 +72,13 @@ function RemoveMatchedCards(card1, card2)
 		if card1 == photo or card2 == photo then
 			local position = photo:GetWorldPosition()
 
+			-- card1:SetWorldPosition(Vector3.New(100, 0, -1000))
+			-- card2:SetWorldPosition(Vector3.New(200, 0, -1000))
+
 			Events.BroadcastToServer("destroy_card", photo:GetReference())
 
 			if(Object.IsValid(photo)) then
+				photo:SetWorldPosition(Vector3.New(100, 0, -1000))
 				photo:Destroy()
 			end
 
@@ -85,7 +92,9 @@ function CheckMatch(source)
 	if source.intersected_with == nil then
 		return
 	end
+	--print(source.photo.name, " interesected_with ", source.intersected_with.name)
 	if source.photo.name == source.intersected_with.name then
+		--print(source.photo.name, " interesected_with ", source.intersected_with.name, "remove match")
 		RemoveMatchedCards(source.photo, source.intersected_with)
 		
 	else
@@ -118,8 +127,11 @@ function DropOnTable(SourcePhoto)
 			source.photo:SetWorldPosition(source.photo:GetWorldPosition() - Vector3.New(0, 0, 2))
 		else
 			source.photo:SetWorldPosition(source.photo:GetWorldPosition() + Vector3.New(0, 0, 2))
-			Task.GetCurrent():Cancel()
 			CheckMatch(source)
+			if Object.IsValid(source.photo) then
+				source.photo.clientUserData.current = false
+			end
+			Task.GetCurrent():Cancel()
 			last_item = nil
 		end
 	end)
@@ -137,6 +149,7 @@ local function on_touch_started(position)
 	if(hit ~= nil and hit.other.name == "Frame") then
 		item = hit.other
 		last_item = item
+		last_item.parent.parent.clientUserData.current = true
 		local VFX = World.SpawnAsset(PICKUP_VFX, {lifeSpan  = 1})
 
 	end
