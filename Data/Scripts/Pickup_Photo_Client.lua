@@ -195,6 +195,8 @@ Input.flickedEvent:Connect(function(angle)
 	end
 end)
 
+
+
 function Tick(dt)
 	if(item ~= nil) then
 		local pointer = Input.GetPointerPosition()

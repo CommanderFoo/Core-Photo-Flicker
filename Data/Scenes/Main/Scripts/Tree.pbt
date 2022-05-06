@@ -95,6 +95,12 @@ Objects {
         Id: 1973718304677095829
       }
     }
+    Overrides {
+      Name: "cs:Timer"
+      ObjectReference {
+        SelfId: 7885710943437266480
+      }
+    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -224,6 +230,12 @@ Objects {
       Name: "cs:ShuffleBtn"
       ObjectReference {
         SelfId: 12738781578157766057
+      }
+    }
+    Overrides {
+      Name: "cs:PauseBtn"
+      ObjectReference {
+        SelfId: 15132719966928197305
       }
     }
   }
