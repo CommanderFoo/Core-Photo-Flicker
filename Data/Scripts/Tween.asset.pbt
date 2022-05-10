@@ -15,6 +15,6 @@ Assets {
   Marketplace {
     Description: "My custom tween library."
   }
-  SerializationVersion: 113
+  SerializationVersion: 115
   DirectlyPublished: true
 }

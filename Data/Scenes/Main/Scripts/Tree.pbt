@@ -98,7 +98,7 @@ Objects {
     Overrides {
       Name: "cs:Timer"
       ObjectReference {
-        SelfId: 7885710943437266480
+        SelfId: 17214641365037515531
       }
     }
   }
@@ -156,6 +156,12 @@ Objects {
   NetworkContext {
     DetailRelevance {
       Value: "mc:edetaillevel:low"
+    }
+    MinDetailLevel {
+      Value: "mc:edetaillevel:low"
+    }
+    MaxDetailLevel {
+      Value: "mc:edetaillevel:ultra"
     }
   }
   NetworkRelevanceDistance {
@@ -217,25 +223,25 @@ Objects {
     Overrides {
       Name: "cs:UIContainer"
       ObjectReference {
-        SelfId: 8508780102921987653
+        SelfId: 11774971185288353684
       }
     }
     Overrides {
       Name: "cs:RestartBtn"
       ObjectReference {
-        SelfId: 11138232998031467308
+        SelfId: 5653786578758624549
       }
     }
     Overrides {
       Name: "cs:ShuffleBtn"
       ObjectReference {
-        SelfId: 12738781578157766057
+        SelfId: 3000089781911782631
       }
     }
     Overrides {
       Name: "cs:PauseBtn"
       ObjectReference {
-        SelfId: 15132719966928197305
+        SelfId: 1136480496198617105
       }
     }
   }
