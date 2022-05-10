@@ -1,28 +1,10 @@
 Assets {
-  Id: 15109312242768551333
-  Name: "Luckiest Guy"
-  PlatformAssetType: 28
-  PrimaryAsset {
-    AssetType: "FontAssetRef"
-    AssetId: "LuckiestGuyRegular_ref"
-  }
-}
-Assets {
   Id: 14813488981274987120
   Name: "BG Flat 006"
   PlatformAssetType: 9
   PrimaryAsset {
     AssetType: "PlatformBrushAssetRef"
     AssetId: "BackgroundNoOutline_015"
-  }
-}
-Assets {
-  Id: 12647467629071250094
-  Name: "Icon Arrow Rounded 001"
-  PlatformAssetType: 9
-  PrimaryAsset {
-    AssetType: "PlatformBrushAssetRef"
-    AssetId: "Icon_ArrowRounded_001"
   }
 }
 Assets {
@@ -80,15 +62,6 @@ Assets {
   }
 }
 Assets {
-  Id: 6235536471326417281
-  Name: "Roboto Black"
-  PlatformAssetType: 28
-  PrimaryAsset {
-    AssetType: "FontAssetRef"
-    AssetId: "RobotoBlack_ref"
-  }
-}
-Assets {
   Id: 5843242743582657704
   Name: "Center Circle 001"
   PlatformAssetType: 9
@@ -104,15 +77,6 @@ Assets {
   PrimaryAsset {
     AssetType: "PlatformBrushAssetRef"
     AssetId: "Icon_ArrowRepeat"
-  }
-}
-Assets {
-  Id: 2576370041750162101
-  Name: "Icon Leaderboard"
-  PlatformAssetType: 9
-  PrimaryAsset {
-    AssetType: "PlatformBrushAssetRef"
-    AssetId: "Icon_Leaderboard"
   }
 }
 Assets {

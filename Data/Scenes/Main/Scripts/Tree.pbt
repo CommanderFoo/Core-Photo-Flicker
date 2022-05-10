@@ -104,7 +104,7 @@ Objects {
     Overrides {
       Name: "cs:PauseScreen"
       ObjectReference {
-        SelfId: 11258072242901802385
+        SelfId: 841534158063459245
       }
     }
   }
