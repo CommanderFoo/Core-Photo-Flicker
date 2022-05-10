@@ -62,6 +62,15 @@ Assets {
   }
 }
 Assets {
+  Id: 6235536471326417281
+  Name: "Roboto Black"
+  PlatformAssetType: 28
+  PrimaryAsset {
+    AssetType: "FontAssetRef"
+    AssetId: "RobotoBlack_ref"
+  }
+}
+Assets {
   Id: 5843242743582657704
   Name: "Center Circle 001"
   PlatformAssetType: 9
