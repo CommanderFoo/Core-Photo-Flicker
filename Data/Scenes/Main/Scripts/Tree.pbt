@@ -101,6 +101,12 @@ Objects {
         SelfId: 17214641365037515531
       }
     }
+    Overrides {
+      Name: "cs:PauseScreen"
+      ObjectReference {
+        SelfId: 11258072242901802385
+      }
+    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"

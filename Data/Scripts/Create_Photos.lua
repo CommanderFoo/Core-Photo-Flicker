@@ -4,6 +4,8 @@ local CARDS = script:GetCustomProperty("Cards"):WaitForObject()
 local THEMES = require(script:GetCustomProperty("Themes"))
 
 local TIMER = script:GetCustomProperty("Timer"):WaitForObject()
+local PAUSE_SCREEN = script:GetCustomProperty("PauseScreen"):WaitForObject()
+
 
 local CARD_SET = nil
 
@@ -107,16 +109,27 @@ end
 
 function PauseGame()
 	timer_pause = not(timer_pause )
+	TWEEN.slide_right (PAUSE_SCREEN, 530, 1.2, TWEEN.Out_Back)
 end
 
 function Tick(dt)
 	if not timer_pause then
 		timer = timer + dt
 	end
-	TIMER.text = string.format("%.3f", timer)
-	for index, t in ipairs(tweens) do
-		if(t ~= nil) then
-			t:tween(dt)
+	if timer <= 0 then
+		TIMER.text = "00:00"
+	else
+		--format timer
+		local hours = string.format("%02.f", math.floor(timer/3600))
+    	local mins = string.format("%02.f", math.floor(timer/60 - (hours*60)))
+    	local secs = string.format("%02.f", math.floor(timer - hours*3600 - mins *60))
+
+		TIMER.text = mins..":"..secs
+		--TIMER.text = string.format("%.2f", timer)
+		for index, t in ipairs(tweens) do
+			if(t ~= nil) then
+				t:tween(dt)
+			end
 		end
 	end
 end
