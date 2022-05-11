@@ -588,7 +588,7 @@ Assets {
       }
       Objects {
         Id: 343415894732562037
-        Name: "UI Panel Continue"
+        Name: "UI Panel Close"
         Transform {
           Location {
           }
@@ -601,9 +601,7 @@ Assets {
           }
         }
         ParentId: 15327340910357074828
-        ChildIds: 17396876466186986079
         ChildIds: 17986995274466356880
-        ChildIds: 2771939116426226070
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -643,75 +641,8 @@ Assets {
         }
       }
       Objects {
-        Id: 17396876466186986079
-        Name: "ButtonBG_Round"
-        Transform {
-          Location {
-          }
-          Rotation {
-          }
-          Scale {
-            X: 1
-            Y: 1
-            Z: 1
-          }
-        }
-        ParentId: 343415894732562037
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CameraCollidable {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        EditorIndicatorVisibility {
-          Value: "mc:eindicatorvisibility:visiblewhenselected"
-        }
-        Control {
-          Width: 104
-          Height: 104
-          RenderTransformPivot {
-            Anchor {
-              Value: "mc:euianchor:middlecenter"
-            }
-          }
-          Image {
-            Brush {
-              Id: 14813488981274987120
-            }
-            Color {
-              G: 0.138431564
-              B: 0.270497799
-              A: 1
-            }
-            TeamSettings {
-            }
-            ShadowColor {
-              A: 1
-            }
-            ShadowOffset {
-            }
-            ScreenshotIndex: 1
-          }
-          AnchorLayout {
-            SelfAnchor {
-              Anchor {
-                Value: "mc:euianchor:middlecenter"
-              }
-            }
-            TargetAnchor {
-              Anchor {
-                Value: "mc:euianchor:middlecenter"
-              }
-            }
-          }
-        }
-      }
-      Objects {
         Id: 17986995274466356880
-        Name: "ContinueBtn"
+        Name: "Close Button"
         Transform {
           Location {
           }
@@ -737,9 +668,9 @@ Assets {
           Value: "mc:eindicatorvisibility:visiblewhenselected"
         }
         Control {
-          Width: 64
-          Height: 64
-          UIX: 4
+          Width: 250
+          Height: 88
+          UIY: -0.2
           RenderTransformPivot {
             Anchor {
               Value: "mc:euianchor:middlecenter"
@@ -747,149 +678,70 @@ Assets {
           }
           IsHittable: true
           Button {
+            Label: "Close"
             FontColor {
-              R: 0.341914415
-              G: 0.814846396
+              R: 1
+              G: 1
               B: 1
               A: 1
             }
             FontSize: 32
             ButtonColor {
-              R: 0.341914415
-              G: 0.814846396
-              B: 1
+              G: 0.138431564
+              B: 0.270497799
               A: 1
             }
             HoveredColor {
-              R: 1
-              G: 1
+              R: 0.102241755
+              G: 0.577579916
               B: 1
               A: 1
             }
             PressedColor {
+              R: 0.00699545396
+              G: 0.25415194
+              B: 0.693871737
+              A: 1
+            }
+            DisabledColor {
               R: 1
               G: 1
               B: 1
               A: 1
             }
-            DisabledColor {
-              R: 0.436000019
-              G: 0.436000019
-              B: 0.436000019
-              A: 1
-            }
             Brush {
-              Id: 12647467629071250094
+              Id: 14813488981274987120
             }
             IsButtonEnabled: true
             ClickMode {
               Value: "mc:ebuttonclickmode:default"
             }
             Font {
-              Id: 15109312242768551333
-            }
-            Justification {
-              Value: "mc:etextjustify:center"
-            }
-            VerticalJustification {
-              Value: "mc:everticaljustification:center"
-            }
-            ShadowColor {
-              A: 1
-            }
-            ShadowOffset {
-            }
-          }
-          AnchorLayout {
-            SelfAnchor {
-              Anchor {
-                Value: "mc:euianchor:middlecenter"
-              }
-            }
-            TargetAnchor {
-              Anchor {
-                Value: "mc:euianchor:middlecenter"
-              }
-            }
-          }
-        }
-      }
-      Objects {
-        Id: 2771939116426226070
-        Name: "UI Text Box"
-        Transform {
-          Location {
-          }
-          Rotation {
-          }
-          Scale {
-            X: 1
-            Y: 1
-            Z: 1
-          }
-        }
-        ParentId: 343415894732562037
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CameraCollidable {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        EditorIndicatorVisibility {
-          Value: "mc:eindicatorvisibility:visiblewhenselected"
-        }
-        Control {
-          Width: 200
-          Height: 60
-          UIY: 16
-          RenderTransformPivot {
-            Anchor {
-              Value: "mc:euianchor:middlecenter"
-            }
-          }
-          Text {
-            Label: "Play"
-            Color {
-              R: 1
-              G: 1
-              B: 1
-              A: 1
-            }
-            Size: 24
-            Justification {
-              Value: "mc:etextjustify:center"
-            }
-            AutoWrapText: true
-            Font {
               Id: 7895514115667993783
             }
+            Justification {
+              Value: "mc:etextjustify:center"
+            }
             VerticalJustification {
               Value: "mc:everticaljustification:center"
             }
             ShadowColor {
-              A: 1
-            }
-            ShadowOffset {
-            }
-            OutlineColor {
               G: 0.138431564
               B: 0.270497799
               A: 1
             }
-            OutlineSize: 1
+            ShadowOffset {
+            }
           }
           AnchorLayout {
             SelfAnchor {
               Anchor {
-                Value: "mc:euianchor:bottomcenter"
+                Value: "mc:euianchor:middlecenter"
               }
             }
             TargetAnchor {
               Anchor {
-                Value: "mc:euianchor:bottomcenter"
+                Value: "mc:euianchor:middlecenter"
               }
             }
           }
@@ -911,6 +763,7 @@ Assets {
         }
         ParentId: 14006409704173045136
         ChildIds: 3532310327508099106
+        ChildIds: 1565875284924237421
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -980,16 +833,92 @@ Assets {
         Control {
           Width: 200
           Height: 60
-          UIX: 2
           RenderTransformPivot {
             Anchor {
               Value: "mc:euianchor:middlecenter"
             }
           }
           UseParentWidth: true
-          UseParentHeight: true
           Text {
-            Label: "How to Play:\r\nFind all pairs of matching cards.\r\nPlace one card on top of another card with the same picture to make a match.\r\nCards can be moved quickly with a flick gesture."
+            Label: "How to Play:"
+            Color {
+              G: 0.138431564
+              B: 0.270497799
+              A: 1
+            }
+            Size: 32
+            Justification {
+              Value: "mc:etextjustify:center"
+            }
+            AutoWrapText: true
+            Font {
+              Id: 7895514115667993783
+            }
+            VerticalJustification {
+              Value: "mc:everticaljustification:top"
+            }
+            ShadowColor {
+              A: 1
+            }
+            ShadowOffset {
+            }
+            OutlineColor {
+              A: 1
+            }
+          }
+          AnchorLayout {
+            SelfAnchor {
+              Anchor {
+                Value: "mc:euianchor:topleft"
+              }
+            }
+            TargetAnchor {
+              Anchor {
+                Value: "mc:euianchor:topleft"
+              }
+            }
+          }
+        }
+      }
+      Objects {
+        Id: 1565875284924237421
+        Name: "UI Text Box"
+        Transform {
+          Location {
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 11359099867320747043
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        EditorIndicatorVisibility {
+          Value: "mc:eindicatorvisibility:visiblewhenselected"
+        }
+        Control {
+          Width: 200
+          Height: 270
+          UIY: 66.2366791
+          RenderTransformPivot {
+            Anchor {
+              Value: "mc:euianchor:middlecenter"
+            }
+          }
+          UseParentWidth: true
+          Text {
+            Label: "Find all pairs of matching cards.\r\nPlace one card on top of another card with the same picture to make a match.\r\nCards can be moved quickly with a flick gesture."
             Color {
               G: 0.138431564
               B: 0.270497799
@@ -1114,24 +1043,6 @@ Assets {
       PrimaryAsset {
         AssetType: "PlatformBrushAssetRef"
         AssetId: "CenterCircle_001"
-      }
-    }
-    Assets {
-      Id: 12647467629071250094
-      Name: "Icon Arrow Rounded 001"
-      PlatformAssetType: 9
-      PrimaryAsset {
-        AssetType: "PlatformBrushAssetRef"
-        AssetId: "Icon_ArrowRounded_001"
-      }
-    }
-    Assets {
-      Id: 15109312242768551333
-      Name: "Luckiest Guy"
-      PlatformAssetType: 28
-      PrimaryAsset {
-        AssetType: "FontAssetRef"
-        AssetId: "LuckiestGuyRegular_ref"
       }
     }
     Assets {

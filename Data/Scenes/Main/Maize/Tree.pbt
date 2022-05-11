@@ -1189,6 +1189,7 @@ Objects {
   ChildIds: 7958466908494440361
   ChildIds: 15708841779342355332
   ChildIds: 16443359550206853135
+  ChildIds: 12878029569979075007
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -1232,6 +1233,52 @@ Objects {
           Value: "mc:euianchor:topleft"
         }
       }
+    }
+  }
+}
+Objects {
+  Id: 12878029569979075007
+  Name: "Info Panel - Tutorial"
+  Transform {
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 11774971185288353684
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  TemplateInstance {
+    ParameterOverrideMap {
+      key: 1065769718497404668
+      value {
+        Overrides {
+          Name: "Name"
+          String: "Info Panel - Tutorial"
+        }
+        Overrides {
+          Name: "Position"
+          Vector {
+          }
+        }
+        Overrides {
+          Name: "Rotation"
+          Rotator {
+          }
+        }
+        Overrides {
+          Name: "UIY"
+          Float: 1500
+        }
+      }
+    }
+    TemplateAsset {
+      Id: 3903482482837030487
     }
   }
 }

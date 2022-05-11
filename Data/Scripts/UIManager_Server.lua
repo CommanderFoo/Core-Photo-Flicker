@@ -18,13 +18,15 @@ local CONTINUE_BTN_SMALL = script:GetCustomProperty("ContinueBtnSmall"):WaitForO
 local HELPT_BTN_SMALL = script:GetCustomProperty("HelptBtnSmall"):WaitForObject()
 local TITLE_SCEEN_BTN_SMALL = script:GetCustomProperty("TitleSceenBtnSmall"):WaitForObject()
 
-
+local HELP_PANEL = script:GetCustomProperty("HelpPanel"):WaitForObject()
+local HELP_PANEL_CLOSE_BUTTON = script:GetCustomProperty("HelpPanelCloseButton"):WaitForObject()
 
 
 local tweens = {}
 
 local pause_on = false
 local congrats_on = false
+local tutorial_on = false
 local screen_size = nil
 local y_pos = nil
 
@@ -126,11 +128,15 @@ function OnClicked(button)
         button.isInteractable = true
 
     elseif button == HELPT_BTN_SMALL then
-        print("Show Tutorial Panel")
         button.isInteractable = false
-        --TogglePanel(HELP_PANEL, pause_on)
+        tutorial_on = not tutorial_on
+        TogglePanel(HELP_PANEL, pause_on)
         Task.Wait(1.5)
         button.isInteractable = true
+
+    elseif button == HELP_PANEL_CLOSE_BUTTON then
+        tutorial_on = not tutorial_on
+        TogglePanel(HELP_PANEL, tutorial_on)
 
     elseif button == TITLE_SCEEN_BTN_SMALL then
         button.isInteractable = false
@@ -170,6 +176,7 @@ CONGRATS_PLAY_BTN.clickedEvent:Connect(OnClicked)
 RESTART_BTN_SMALL.clickedEvent:Connect(OnClicked)
 CONTINUE_BTN_SMALL.clickedEvent:Connect(OnClicked)
 HELPT_BTN_SMALL.clickedEvent:Connect(OnClicked)
+HELP_PANEL_CLOSE_BUTTON.clickedEvent:Connect(OnClicked)
 TITLE_SCEEN_BTN_SMALL.clickedEvent:Connect(OnClicked)
 
 Events.Connect("match_UI", UpdateMatchUI)

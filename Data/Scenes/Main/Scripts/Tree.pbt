@@ -333,6 +333,24 @@ Objects {
         OuterTemplateIds: 5148378255416365230
       }
     }
+    Overrides {
+      Name: "cs:HelpPanel"
+      ObjectReference {
+        SelfId: 14654174797103109461
+        SubObjectId: 1065769718497404668
+        InstanceId: 12878029569979075007
+        TemplateId: 3903482482837030487
+      }
+    }
+    Overrides {
+      Name: "cs:HelpPanelCloseButton"
+      ObjectReference {
+        SelfId: 4326531356764249401
+        SubObjectId: 17986995274466356880
+        InstanceId: 12878029569979075007
+        TemplateId: 3903482482837030487
+      }
+    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
