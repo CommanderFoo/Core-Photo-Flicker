@@ -46,7 +46,7 @@ Objects {
 }
 Objects {
   Id: 7895828788752880789
-  Name: "Start Screen Container"
+  Name: "Title Screen Container"
   Transform {
     Location {
     }
@@ -60,11 +60,14 @@ Objects {
   }
   ParentId: 15083460371663379266
   ChildIds: 15720916385974855352
+  ChildIds: 6036301749954090572
+  ChildIds: 10804723435934021432
+  ChildIds: 4085833305605419278
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
   Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
+    Value: "mc:evisibilitysetting:forceon"
   }
   CameraCollidable {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -105,8 +108,743 @@ Objects {
   }
 }
 Objects {
+  Id: 4085833305605419278
+  Name: "Title Screen Button Panel"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 7895828788752880789
+  ChildIds: 16389421210091220024
+  ChildIds: 7020615236707917277
+  ChildIds: 17180833255887931705
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  Control {
+    Width: 800
+    Height: 400
+    UIY: 104
+    RenderTransformPivot {
+      Anchor {
+        Value: "mc:euianchor:middlecenter"
+      }
+    }
+    Panel {
+      Opacity: 1
+    }
+    AnchorLayout {
+      SelfAnchor {
+        Anchor {
+          Value: "mc:euianchor:middlecenter"
+        }
+      }
+      TargetAnchor {
+        Anchor {
+          Value: "mc:euianchor:middlecenter"
+        }
+      }
+    }
+  }
+}
+Objects {
+  Id: 17180833255887931705
+  Name: "Text Button - Capsule"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 4085833305605419278
+  TemplateInstance {
+    ParameterOverrideMap {
+      key: 4429027583269805043
+      value {
+        Overrides {
+          Name: "Name"
+          String: "Leaderboard Button - Capsule"
+        }
+        Overrides {
+          Name: "Scale"
+          Vector {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        Overrides {
+          Name: "UIX"
+          Float: 200
+        }
+        Overrides {
+          Name: "Position"
+          Vector {
+          }
+        }
+        Overrides {
+          Name: "Rotation"
+          Rotator {
+          }
+        }
+        Overrides {
+          Name: "UIY"
+          Float: 0
+        }
+        Overrides {
+          Name: "Anchor"
+          Enum {
+            Value: "mc:euianchor:bottomcenter"
+          }
+        }
+        Overrides {
+          Name: "Dock"
+          Enum {
+            Value: "mc:euianchor:bottomcenter"
+          }
+        }
+      }
+    }
+    ParameterOverrideMap {
+      key: 6067044185211840393
+      value {
+        Overrides {
+          Name: "Label"
+          String: "High Scores"
+        }
+        Overrides {
+          Name: "FontSize"
+          Int: 32
+        }
+        Overrides {
+          Name: "ScaleToFit"
+          Bool: false
+        }
+        Overrides {
+          Name: "UIY"
+          Float: -1
+        }
+      }
+    }
+    TemplateAsset {
+      Id: 8520288693219612727
+    }
+  }
+}
+Objects {
+  Id: 7020615236707917277
+  Name: "Text Button - Capsule"
+  Transform {
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 4085833305605419278
+  TemplateInstance {
+    ParameterOverrideMap {
+      key: 4429027583269805043
+      value {
+        Overrides {
+          Name: "Name"
+          String: "Tutorial Button - Capsule"
+        }
+        Overrides {
+          Name: "Scale"
+          Vector {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        Overrides {
+          Name: "UIX"
+          Float: -200
+        }
+        Overrides {
+          Name: "Position"
+          Vector {
+          }
+        }
+        Overrides {
+          Name: "Rotation"
+          Rotator {
+          }
+        }
+        Overrides {
+          Name: "Dock"
+          Enum {
+            Value: "mc:euianchor:bottomcenter"
+          }
+        }
+        Overrides {
+          Name: "Anchor"
+          Enum {
+            Value: "mc:euianchor:bottomcenter"
+          }
+        }
+        Overrides {
+          Name: "UIY"
+          Float: 0
+        }
+      }
+    }
+    ParameterOverrideMap {
+      key: 6067044185211840393
+      value {
+        Overrides {
+          Name: "Label"
+          String: "Tutorial"
+        }
+        Overrides {
+          Name: "FontSize"
+          Int: 32
+        }
+        Overrides {
+          Name: "ScaleToFit"
+          Bool: false
+        }
+        Overrides {
+          Name: "UIY"
+          Float: -1
+        }
+      }
+    }
+    TemplateAsset {
+      Id: 8520288693219612727
+    }
+  }
+}
+Objects {
+  Id: 16389421210091220024
+  Name: "Text Button - Capsule"
+  Transform {
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 4085833305605419278
+  TemplateInstance {
+    ParameterOverrideMap {
+      key: 4429027583269805043
+      value {
+        Overrides {
+          Name: "Name"
+          String: "Play Button - Capsule"
+        }
+        Overrides {
+          Name: "Position"
+          Vector {
+          }
+        }
+        Overrides {
+          Name: "Rotation"
+          Rotator {
+          }
+        }
+        Overrides {
+          Name: "Scale"
+          Vector {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        Overrides {
+          Name: "UIY"
+          Float: 0
+        }
+      }
+    }
+    TemplateAsset {
+      Id: 8520288693219612727
+    }
+  }
+}
+Objects {
+  Id: 10804723435934021432
+  Name: "Card Match Title"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 7895828788752880789
+  ChildIds: 11654065287084130165
+  ChildIds: 12365048109474322623
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:forceoff"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  Control {
+    Width: 1047
+    Height: 415
+    UIY: -200
+    RenderTransformPivot {
+      Anchor {
+        Value: "mc:euianchor:middlecenter"
+      }
+    }
+    Panel {
+      Opacity: 1
+    }
+    AnchorLayout {
+      SelfAnchor {
+        Anchor {
+          Value: "mc:euianchor:middlecenter"
+        }
+      }
+      TargetAnchor {
+        Anchor {
+          Value: "mc:euianchor:middlecenter"
+        }
+      }
+    }
+  }
+}
+Objects {
+  Id: 12365048109474322623
+  Name: "ColouredText"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 10804723435934021432
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  Control {
+    Width: 200
+    Height: 69
+    RenderTransformPivot {
+      Anchor {
+        Value: "mc:euianchor:middlecenter"
+      }
+    }
+    UseParentWidth: true
+    UseParentHeight: true
+    Text {
+      Label: "Card  Match"
+      Color {
+        R: 0.929999948
+        G: 0.923841059
+        A: 1
+      }
+      Size: 180
+      Justification {
+        Value: "mc:etextjustify:center"
+      }
+      AutoWrapText: true
+      Font {
+        Id: 2412044537693665245
+      }
+      VerticalJustification {
+        Value: "mc:everticaljustification:center"
+      }
+      ShadowColor {
+        R: 0.204000011
+        G: 0.204000011
+        B: 0.204000011
+        A: 1
+      }
+      ShadowOffset {
+        X: 1
+        Y: 1
+      }
+      OutlineColor {
+        A: 1
+      }
+      OutlineSize: 5
+    }
+    AnchorLayout {
+      SelfAnchor {
+        Anchor {
+          Value: "mc:euianchor:middlecenter"
+        }
+      }
+      TargetAnchor {
+        Anchor {
+          Value: "mc:euianchor:middlecenter"
+        }
+      }
+    }
+  }
+}
+Objects {
+  Id: 11654065287084130165
+  Name: "WhiteOutline"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 10804723435934021432
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  Control {
+    Width: 200
+    Height: 172
+    RenderTransformPivot {
+      Anchor {
+        Value: "mc:euianchor:middlecenter"
+      }
+    }
+    UseParentWidth: true
+    UseParentHeight: true
+    Text {
+      Label: "Card  Match"
+      Color {
+        R: 1
+        G: 1
+        B: 1
+        A: 1
+      }
+      Size: 180
+      Justification {
+        Value: "mc:etextjustify:center"
+      }
+      AutoWrapText: true
+      Font {
+        Id: 2412044537693665245
+      }
+      VerticalJustification {
+        Value: "mc:everticaljustification:center"
+      }
+      ShadowColor {
+        R: 0.162
+        G: 0.162
+        B: 0.162
+        A: 1
+      }
+      ShadowOffset {
+        X: -8
+        Y: 8
+      }
+      OutlineColor {
+        R: 1
+        G: 1
+        B: 1
+        A: 1
+      }
+      OutlineSize: 24
+    }
+    AnchorLayout {
+      SelfAnchor {
+        Anchor {
+          Value: "mc:euianchor:middlecenter"
+        }
+      }
+      TargetAnchor {
+        Anchor {
+          Value: "mc:euianchor:middlecenter"
+        }
+      }
+    }
+  }
+}
+Objects {
+  Id: 6036301749954090572
+  Name: "Title Panel"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 7895828788752880789
+  ChildIds: 3319849181802236385
+  ChildIds: 10060007141306792175
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  Control {
+    Width: 1047
+    Height: -696
+    UIY: -128
+    RenderTransformPivot {
+      Anchor {
+        Value: "mc:euianchor:middlecenter"
+      }
+    }
+    AddSizeToParentIfUsingParentSize: true
+    UseParentWidth: true
+    UseParentHeight: true
+    Panel {
+      Opacity: 1
+    }
+    AnchorLayout {
+      SelfAnchor {
+        Anchor {
+          Value: "mc:euianchor:middlecenter"
+        }
+      }
+      TargetAnchor {
+        Anchor {
+          Value: "mc:euianchor:middlecenter"
+        }
+      }
+    }
+  }
+}
+Objects {
+  Id: 10060007141306792175
+  Name: "ColouredText"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 6036301749954090572
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  Control {
+    Width: 200
+    Height: 69
+    RenderTransformPivot {
+      Anchor {
+        Value: "mc:euianchor:middlecenter"
+      }
+    }
+    UseParentWidth: true
+    UseParentHeight: true
+    Text {
+      Label: "Photo  Flicker"
+      Color {
+        R: 0.929999948
+        G: 0.923841059
+        A: 1
+      }
+      Size: 180
+      Justification {
+        Value: "mc:etextjustify:center"
+      }
+      AutoWrapText: true
+      Font {
+        Id: 2412044537693665245
+      }
+      VerticalJustification {
+        Value: "mc:everticaljustification:center"
+      }
+      ShadowColor {
+        R: 0.204000011
+        G: 0.204000011
+        B: 0.204000011
+        A: 1
+      }
+      ShadowOffset {
+        X: 1
+        Y: 1
+      }
+      OutlineColor {
+        A: 1
+      }
+      OutlineSize: 5
+    }
+    AnchorLayout {
+      SelfAnchor {
+        Anchor {
+          Value: "mc:euianchor:middlecenter"
+        }
+      }
+      TargetAnchor {
+        Anchor {
+          Value: "mc:euianchor:middlecenter"
+        }
+      }
+    }
+  }
+}
+Objects {
+  Id: 3319849181802236385
+  Name: "WhiteOutline"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 6036301749954090572
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  Control {
+    Width: 200
+    Height: 172
+    RenderTransformPivot {
+      Anchor {
+        Value: "mc:euianchor:middlecenter"
+      }
+    }
+    UseParentWidth: true
+    UseParentHeight: true
+    Text {
+      Label: "Photo  Flicker"
+      Color {
+        R: 1
+        G: 1
+        B: 1
+        A: 1
+      }
+      Size: 180
+      Justification {
+        Value: "mc:etextjustify:center"
+      }
+      AutoWrapText: true
+      Font {
+        Id: 2412044537693665245
+      }
+      VerticalJustification {
+        Value: "mc:everticaljustification:center"
+      }
+      ShadowColor {
+        R: 0.162
+        G: 0.162
+        B: 0.162
+        A: 1
+      }
+      ShadowOffset {
+        X: -8
+        Y: 8
+      }
+      OutlineColor {
+        R: 1
+        G: 1
+        B: 1
+        A: 1
+      }
+      OutlineSize: 24
+    }
+    AnchorLayout {
+      SelfAnchor {
+        Anchor {
+          Value: "mc:euianchor:middlecenter"
+        }
+      }
+      TargetAnchor {
+        Anchor {
+          Value: "mc:euianchor:middlecenter"
+        }
+      }
+    }
+  }
+}
+Objects {
   Id: 15720916385974855352
-  Name: "UI Start Panel"
+  Name: "UI Title Panel"
   Transform {
     Location {
     }
@@ -123,10 +861,6 @@ Objects {
   ChildIds: 6080377691752491101
   ChildIds: 16662365720187328323
   ChildIds: 16984630471740683823
-  ChildIds: 14576940012180738486
-  ChildIds: 13905601218947341510
-  ChildIds: 3497454195273946661
-  ChildIds: 1686834898184881269
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -167,274 +901,6 @@ Objects {
   }
 }
 Objects {
-  Id: 1686834898184881269
-  Name: "Square Button - Blank"
-  Transform {
-    Location {
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 15720916385974855352
-  TemplateInstance {
-    ParameterOverrideMap {
-      key: 5419735888844028923
-      value {
-        Overrides {
-          Name: "Name"
-          String: "Square Button - Blank"
-        }
-        Overrides {
-          Name: "Scale"
-          Vector {
-            X: 1
-            Y: 1
-            Z: 1
-          }
-        }
-        Overrides {
-          Name: "Position"
-          Vector {
-          }
-        }
-        Overrides {
-          Name: "Rotation"
-          Rotator {
-          }
-        }
-        Overrides {
-          Name: "UIX"
-          Float: 288.551697
-        }
-        Overrides {
-          Name: "UIY"
-          Float: -90.1445312
-        }
-        Overrides {
-          Name: "Anchor"
-          Enum {
-            Value: "mc:euianchor:bottomcenter"
-          }
-        }
-        Overrides {
-          Name: "Dock"
-          Enum {
-            Value: "mc:euianchor:bottomcenter"
-          }
-        }
-      }
-    }
-    TemplateAsset {
-      Id: 13174186764478544642
-    }
-  }
-}
-Objects {
-  Id: 3497454195273946661
-  Name: "Square Button - Blank"
-  Transform {
-    Location {
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 15720916385974855352
-  TemplateInstance {
-    ParameterOverrideMap {
-      key: 5419735888844028923
-      value {
-        Overrides {
-          Name: "Name"
-          String: "Square Button - Blank"
-        }
-        Overrides {
-          Name: "Scale"
-          Vector {
-            X: 1
-            Y: 1
-            Z: 1
-          }
-        }
-        Overrides {
-          Name: "Position"
-          Vector {
-          }
-        }
-        Overrides {
-          Name: "Rotation"
-          Rotator {
-          }
-        }
-        Overrides {
-          Name: "UIX"
-          Float: -271.200195
-        }
-        Overrides {
-          Name: "UIY"
-          Float: -90.1445312
-        }
-        Overrides {
-          Name: "Anchor"
-          Enum {
-            Value: "mc:euianchor:bottomcenter"
-          }
-        }
-        Overrides {
-          Name: "Dock"
-          Enum {
-            Value: "mc:euianchor:bottomcenter"
-          }
-        }
-      }
-    }
-    TemplateAsset {
-      Id: 13174186764478544642
-    }
-  }
-}
-Objects {
-  Id: 13905601218947341510
-  Name: "Square Button - Blank"
-  Transform {
-    Location {
-    }
-    Rotation {
-    }
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 15720916385974855352
-  TemplateInstance {
-    ParameterOverrideMap {
-      key: 5419735888844028923
-      value {
-        Overrides {
-          Name: "Name"
-          String: "Square Button - Blank"
-        }
-        Overrides {
-          Name: "Scale"
-          Vector {
-            X: 1
-            Y: 1
-            Z: 1
-          }
-        }
-        Overrides {
-          Name: "Position"
-          Vector {
-          }
-        }
-        Overrides {
-          Name: "Rotation"
-          Rotator {
-          }
-        }
-        Overrides {
-          Name: "UIY"
-          Float: -90.1445312
-        }
-        Overrides {
-          Name: "Anchor"
-          Enum {
-            Value: "mc:euianchor:bottomcenter"
-          }
-        }
-        Overrides {
-          Name: "Dock"
-          Enum {
-            Value: "mc:euianchor:bottomcenter"
-          }
-        }
-        Overrides {
-          Name: "UIX"
-          Float: 112.260094
-        }
-      }
-    }
-    TemplateAsset {
-      Id: 13174186764478544642
-    }
-  }
-}
-Objects {
-  Id: 14576940012180738486
-  Name: "Square Button - Blank"
-  Transform {
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 15720916385974855352
-  TemplateInstance {
-    ParameterOverrideMap {
-      key: 5419735888844028923
-      value {
-        Overrides {
-          Name: "Name"
-          String: "Square Button - Blank"
-        }
-        Overrides {
-          Name: "Scale"
-          Vector {
-            X: 1
-            Y: 1
-            Z: 1
-          }
-        }
-        Overrides {
-          Name: "Position"
-          Vector {
-          }
-        }
-        Overrides {
-          Name: "Rotation"
-          Rotator {
-          }
-        }
-        Overrides {
-          Name: "UIY"
-          Float: -90.1445312
-        }
-        Overrides {
-          Name: "Anchor"
-          Enum {
-            Value: "mc:euianchor:bottomcenter"
-          }
-        }
-        Overrides {
-          Name: "Dock"
-          Enum {
-            Value: "mc:euianchor:bottomcenter"
-          }
-        }
-        Overrides {
-          Name: "UIX"
-          Float: -78.3710175
-        }
-      }
-    }
-    TemplateAsset {
-      Id: 13174186764478544642
-    }
-  }
-}
-Objects {
   Id: 16984630471740683823
   Name: "Info Panel - Blank"
   Transform {
@@ -467,7 +933,13 @@ Objects {
         }
         Overrides {
           Name: "UIY"
-          Float: -112.261688
+          Float: -8
+        }
+        Overrides {
+          Name: "Visible"
+          Enum {
+            Value: "mc:evisibilitysetting:forceoff"
+          }
         }
       }
     }
@@ -506,7 +978,7 @@ Objects {
   Control {
     Width: 1024
     Height: 1024
-    UIX: -16
+    UIX: -44
     UIY: 300
     RenderTransformPivot {
       Anchor {

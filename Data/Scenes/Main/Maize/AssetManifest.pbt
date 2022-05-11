@@ -89,6 +89,15 @@ Assets {
   }
 }
 Assets {
+  Id: 2412044537693665245
+  Name: "Mouse Memoirs"
+  PlatformAssetType: 28
+  PrimaryAsset {
+    AssetType: "FontAssetRef"
+    AssetId: "MouseMemoirsRegular_ref"
+  }
+}
+Assets {
   Id: 2089941090273319362
   Name: "Paper Book Open Close Page 01 SFX"
   PlatformAssetType: 7
