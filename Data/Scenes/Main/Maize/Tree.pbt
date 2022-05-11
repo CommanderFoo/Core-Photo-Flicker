@@ -60,6 +60,7 @@ Objects {
   ParentId: 15083460371663379266
   ChildIds: 12637012492273057610
   ChildIds: 7958466908494440361
+  ChildIds: 15708841779342355332
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -103,6 +104,70 @@ Objects {
           Value: "mc:euianchor:topleft"
         }
       }
+    }
+  }
+}
+Objects {
+  Id: 15708841779342355332
+  Name: "Info Panel - Pause"
+  Transform {
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 11774971185288353684
+  TemplateInstance {
+    ParameterOverrideMap {
+      key: 18265977801772457905
+      value {
+        Overrides {
+          Name: "Name"
+          String: "Info Panel - Pause"
+        }
+        Overrides {
+          Name: "Position"
+          Vector {
+          }
+        }
+        Overrides {
+          Name: "Rotation"
+          Rotator {
+          }
+        }
+        Overrides {
+          Name: "Scale"
+          Vector {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        Overrides {
+          Name: "Opacity"
+          Float: 1
+        }
+        Overrides {
+          Name: "UIInheritParentWidth"
+          Bool: false
+        }
+        Overrides {
+          Name: "UIInheritParentHeight"
+          Bool: false
+        }
+        Overrides {
+          Name: "UIX"
+          Float: 0
+        }
+        Overrides {
+          Name: "UIY"
+          Float: 0
+        }
+      }
+    }
+    TemplateAsset {
+      Id: 5148378255416365230
     }
   }
 }

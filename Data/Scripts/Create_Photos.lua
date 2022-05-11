@@ -4,7 +4,7 @@ local CARDS = script:GetCustomProperty("Cards"):WaitForObject()
 local THEMES = require(script:GetCustomProperty("Themes"))
 
 local TIMER = script:GetCustomProperty("Timer"):WaitForObject()
-local PAUSE_SCREEN = script:GetCustomProperty("PauseScreen"):WaitForObject()
+
 
 
 local CARD_SET = nil
@@ -109,7 +109,7 @@ end
 
 function PauseGame()
 	timer_pause = not(timer_pause )
-	TWEEN.slide_right (PAUSE_SCREEN, 530, 1.2, TWEEN.Out_Back)
+	
 end
 
 function Tick(dt)

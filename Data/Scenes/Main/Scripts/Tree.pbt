@@ -250,6 +250,21 @@ Objects {
         SelfId: 1136480496198617105
       }
     }
+    Overrides {
+      Name: "cs:Tween"
+      AssetReference {
+        Id: 5010859578220487614
+      }
+    }
+    Overrides {
+      Name: "cs:PausePanel"
+      ObjectReference {
+        SelfId: 8645188952599321583
+        SubObjectId: 18265977801772457905
+        InstanceId: 15708841779342355332
+        TemplateId: 5148378255416365230
+      }
+    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"

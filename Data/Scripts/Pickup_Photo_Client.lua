@@ -10,6 +10,8 @@ local last_item = nil
 local tweens = {}
 local photos = {}
 
+local pause_touch
+
 CARDS.childAddedEvent:Connect(function ()
 	local exists = false
 
@@ -137,6 +139,9 @@ function DropOnTable(SourcePhoto)
 end
 
 local function on_touch_started(position)
+	if pause_touch then
+		return
+	end
 	if(last_item ~= nil) then
 		return
 	end
@@ -195,6 +200,9 @@ Input.flickedEvent:Connect(function(angle)
 	end
 end)
 
+function PauseTouch()
+	pause_touch = not pause_touch
+end
 
 
 function Tick(dt)
@@ -224,6 +232,7 @@ Input.DisableVirtualControls()
 
 Events.Connect("Overlap",Overlap)
 Events.Connect("EndOverlap",EndOverlap)
+Events.Connect("Pause", PauseTouch)
 -- Events.Connect("PhotosCreated",function ()
 	-- for _, photo in ipairs(photos) do
 	-- 	DropOnTable(photo.photo)
