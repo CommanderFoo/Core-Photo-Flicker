@@ -1,13 +1,13 @@
 Assets {
-  Id: 13174186764478544642
-  Name: "Square Button - Blank"
+  Id: 5183594156602741487
+  Name: "Square Button - Pause"
   PlatformAssetType: 5
   TemplateAsset {
     ObjectBlock {
-      RootId: 5419735888844028923
+      RootId: 11954287186438329059
       Objects {
-        Id: 5419735888844028923
-        Name: "Square Button - Blank"
+        Id: 11954287186438329059
+        Name: "Square Button - Pause"
         Transform {
           Scale {
             X: 1
@@ -15,13 +15,15 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 11774971185288353684
-        ChildIds: 4301958224968351336
-        ChildIds: 6418607793518466099
-        ChildIds: 1570925909163435659
-        ChildIds: 8951428364506855395
-        ChildIds: 16115890408882557571
-        ChildIds: 10450495970322091201
+        ParentId: 12637012492273057610
+        ChildIds: 12788459590260256162
+        ChildIds: 12807450277048922217
+        ChildIds: 17885443260019217009
+        ChildIds: 16890425313770071639
+        ChildIds: 3322301224731788972
+        ChildIds: 4828161320733031913
+        ChildIds: 7833052384004392199
+        ChildIds: 17815804814288506528
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -63,7 +65,7 @@ Assets {
         }
       }
       Objects {
-        Id: 4301958224968351336
+        Id: 12788459590260256162
         Name: "Background"
         Transform {
           Location {
@@ -76,7 +78,7 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 5419735888844028923
+        ParentId: 11954287186438329059
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -130,7 +132,7 @@ Assets {
         }
       }
       Objects {
-        Id: 6418607793518466099
+        Id: 12807450277048922217
         Name: "Tile Edge"
         Transform {
           Location {
@@ -143,7 +145,7 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 5419735888844028923
+        ParentId: 11954287186438329059
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -199,7 +201,7 @@ Assets {
         }
       }
       Objects {
-        Id: 1570925909163435659
+        Id: 17885443260019217009
         Name: "Inner Border"
         Transform {
           Location {
@@ -212,7 +214,7 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 5419735888844028923
+        ParentId: 11954287186438329059
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -267,7 +269,7 @@ Assets {
         }
       }
       Objects {
-        Id: 8951428364506855395
+        Id: 16890425313770071639
         Name: "Inner UI Panel"
         Transform {
           Location {
@@ -280,10 +282,10 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 5419735888844028923
-        ChildIds: 8850654132905278599
-        ChildIds: 16986424362859021696
-        ChildIds: 10960020649504694880
+        ParentId: 11954287186438329059
+        ChildIds: 18187641819539992974
+        ChildIds: 18138560495314800821
+        ChildIds: 9323608920870596665
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -324,7 +326,7 @@ Assets {
         }
       }
       Objects {
-        Id: 8850654132905278599
+        Id: 18187641819539992974
         Name: "Bottom Curve"
         Transform {
           Location {
@@ -337,7 +339,7 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 8951428364506855395
+        ParentId: 16890425313770071639
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -394,7 +396,7 @@ Assets {
         }
       }
       Objects {
-        Id: 16986424362859021696
+        Id: 18138560495314800821
         Name: "Middle Curve"
         Transform {
           Location {
@@ -407,7 +409,7 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 8951428364506855395
+        ParentId: 16890425313770071639
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -464,7 +466,7 @@ Assets {
         }
       }
       Objects {
-        Id: 10960020649504694880
+        Id: 9323608920870596665
         Name: "Top Curve"
         Transform {
           Location {
@@ -477,7 +479,7 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 8951428364506855395
+        ParentId: 16890425313770071639
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -534,7 +536,7 @@ Assets {
         }
       }
       Objects {
-        Id: 16115890408882557571
+        Id: 3322301224731788972
         Name: "Outer Border"
         Transform {
           Location {
@@ -547,7 +549,7 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 5419735888844028923
+        ParentId: 11954287186438329059
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -603,8 +605,8 @@ Assets {
         }
       }
       Objects {
-        Id: 10450495970322091201
-        Name: "UI Button"
+        Id: 4828161320733031913
+        Name: "UI Pause Button"
         Transform {
           Location {
           }
@@ -616,7 +618,7 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 5419735888844028923
+        ParentId: 11954287186438329059
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -702,6 +704,144 @@ Assets {
           }
         }
       }
+      Objects {
+        Id: 7833052384004392199
+        Name: "UI Image Pause Bar 1"
+        Transform {
+          Location {
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 11954287186438329059
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        EditorIndicatorVisibility {
+          Value: "mc:eindicatorvisibility:visiblewhenselected"
+        }
+        Control {
+          Width: 12
+          Height: 42
+          UIX: -12
+          UIY: -56
+          RenderTransformPivot {
+            Anchor {
+              Value: "mc:euianchor:middlecenter"
+            }
+          }
+          Image {
+            Brush {
+              Id: 1436678889621240448
+            }
+            Color {
+              G: 0.138431564
+              B: 0.270497799
+              A: 1
+            }
+            TeamSettings {
+            }
+            ShadowColor {
+              A: 1
+            }
+            ShadowOffset {
+            }
+            ScreenshotIndex: 1
+          }
+          AnchorLayout {
+            SelfAnchor {
+              Anchor {
+                Value: "mc:euianchor:bottomcenter"
+              }
+            }
+            TargetAnchor {
+              Anchor {
+                Value: "mc:euianchor:bottomcenter"
+              }
+            }
+          }
+        }
+      }
+      Objects {
+        Id: 17815804814288506528
+        Name: "UI Image Pause Bar 1"
+        Transform {
+          Location {
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 11954287186438329059
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        EditorIndicatorVisibility {
+          Value: "mc:eindicatorvisibility:visiblewhenselected"
+        }
+        Control {
+          Width: 12
+          Height: 42
+          UIX: 12.1089973
+          UIY: -56
+          RenderTransformPivot {
+            Anchor {
+              Value: "mc:euianchor:middlecenter"
+            }
+          }
+          Image {
+            Brush {
+              Id: 1436678889621240448
+            }
+            Color {
+              G: 0.138431564
+              B: 0.270497799
+              A: 1
+            }
+            TeamSettings {
+            }
+            ShadowColor {
+              A: 1
+            }
+            ShadowOffset {
+            }
+            ScreenshotIndex: 1
+          }
+          AnchorLayout {
+            SelfAnchor {
+              Anchor {
+                Value: "mc:euianchor:bottomcenter"
+              }
+            }
+            TargetAnchor {
+              Anchor {
+                Value: "mc:euianchor:bottomcenter"
+              }
+            }
+          }
+        }
+      }
     }
     Assets {
       Id: 10437848565118595544
@@ -730,11 +870,19 @@ Assets {
         AssetId: "UI_Scifi_Frame_001"
       }
     }
+    Assets {
+      Id: 1436678889621240448
+      Name: "BG Flat 001"
+      PlatformAssetType: 9
+      PrimaryAsset {
+        AssetType: "PlatformBrushAssetRef"
+        AssetId: "BackgroundNoOutline_020"
+      }
+    }
     PrimaryAssetId {
       AssetType: "None"
       AssetId: "None"
     }
   }
   SerializationVersion: 115
-  VirtualFolderPath: "Buttons"
 }

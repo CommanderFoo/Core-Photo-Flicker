@@ -4,7 +4,7 @@ local TWEEN = require(script:GetCustomProperty("Tween"))
 
 local UIPANEL_MAIN_BUTTONS = script:GetCustomProperty("UIPanelMainButtons"):WaitForObject()
 local RESTART_BTN = script:GetCustomProperty("RestartBtn"):WaitForObject()
-local SHUFFLE_BTN = script:GetCustomProperty("ShuffleBtn"):WaitForObject()
+local SHUFFLE_BTN_SQUARE = script:GetCustomProperty("ShuffleBtnSquare"):WaitForObject()
 local PAUSE_BTN = script:GetCustomProperty("PauseBtn"):WaitForObject()
 local PAUSE_PANEL = script:GetCustomProperty("PausePanel"):WaitForObject()
 local MATCHES = script:GetCustomProperty("Matches"):WaitForObject()
@@ -83,8 +83,7 @@ function OnClicked(button)
         Task.Wait(1.5)
         button.isInteractable = true
 
-    elseif button == SHUFFLE_BTN then
-       
+    elseif button == SHUFFLE_BTN_SQUARE then
         button.isInteractable = false
         Events.Broadcast("Reshuffle")
         Events.BroadcastToServer("Reshuffle")
@@ -108,9 +107,11 @@ function OnClicked(button)
 
         Task.Wait(1.5)
         button.isInteractable = true
-       
+
     elseif button == RESTART_BTN_SMALL then
         button.isInteractable = false
+        Events.Broadcast("Pause")
+        Events.BroadcastToServer("Pause")
         pause_on =  not pause_on
         TogglePanel(PAUSE_PANEL, pause_on)
         Events.Broadcast("NewGame")
@@ -169,7 +170,7 @@ end
 SetInitialScreenPos()
 
 RESTART_BTN.clickedEvent:Connect(OnClicked)
-SHUFFLE_BTN.clickedEvent:Connect(OnClicked)
+SHUFFLE_BTN_SQUARE.clickedEvent:Connect(OnClicked)
 PAUSE_BTN.clickedEvent:Connect(OnClicked)
 CONGRATS_PLAY_BTN.clickedEvent:Connect(OnClicked)
 --Pause Panel Buttons

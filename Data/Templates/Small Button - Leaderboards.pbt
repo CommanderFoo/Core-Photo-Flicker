@@ -1,13 +1,13 @@
 Assets {
-  Id: 3381543344473464802
-  Name: "Small Button - Tutorial"
+  Id: 2917533846114216446
+  Name: "Small Button - Leaderboards"
   PlatformAssetType: 5
   TemplateAsset {
     ObjectBlock {
-      RootId: 13590906683143004193
+      RootId: 11466115662770001184
       Objects {
-        Id: 13590906683143004193
-        Name: "Small Button - Tutorial"
+        Id: 11466115662770001184
+        Name: "Smal Button - Leaderboards"
         Transform {
           Scale {
             X: 1
@@ -16,9 +16,9 @@ Assets {
           }
         }
         ParentId: 1858226445961114986
-        ChildIds: 9056043647519028961
-        ChildIds: 7146785217445425719
-        ChildIds: 4068941935676244830
+        ChildIds: 15817637777845521682
+        ChildIds: 11074047145881276458
+        ChildIds: 6331273232599401096
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -34,7 +34,7 @@ Assets {
         Control {
           Width: 168
           Height: 168
-          UIX: 96
+          UIX: -96
           UIY: 168
           RenderTransformPivot {
             Anchor {
@@ -47,19 +47,19 @@ Assets {
           AnchorLayout {
             SelfAnchor {
               Anchor {
-                Value: "mc:euianchor:topleft"
+                Value: "mc:euianchor:topright"
               }
             }
             TargetAnchor {
               Anchor {
-                Value: "mc:euianchor:topleft"
+                Value: "mc:euianchor:topright"
               }
             }
           }
         }
       }
       Objects {
-        Id: 9056043647519028961
+        Id: 15817637777845521682
         Name: "ButtonBG_Round"
         Transform {
           Location {
@@ -72,7 +72,7 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 13590906683143004193
+        ParentId: 11466115662770001184
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -126,8 +126,8 @@ Assets {
         }
       }
       Objects {
-        Id: 7146785217445425719
-        Name: "HelptBtnSmall"
+        Id: 11074047145881276458
+        Name: "HighScoresBtn"
         Transform {
           Location {
           }
@@ -139,7 +139,7 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 13590906683143004193
+        ParentId: 11466115662770001184
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -155,7 +155,6 @@ Assets {
         Control {
           Width: 64
           Height: 64
-          UIY: 0.25
           RenderTransformPivot {
             Anchor {
               Value: "mc:euianchor:middlecenter"
@@ -163,18 +162,18 @@ Assets {
           }
           IsHittable: true
           Button {
-            Label: "?"
             FontColor {
               R: 0.341914415
               G: 0.814846396
               B: 1
               A: 1
             }
-            FontSize: 64
+            FontSize: 32
             ButtonColor {
               R: 0.341914415
               G: 0.814846396
               B: 1
+              A: 1
             }
             HoveredColor {
               R: 1
@@ -195,15 +194,14 @@ Assets {
               A: 1
             }
             Brush {
-              Id: 841534158063459245
+              Id: 2576370041750162101
             }
             IsButtonEnabled: true
-            OnlyUseMainColor: true
             ClickMode {
               Value: "mc:ebuttonclickmode:default"
             }
             Font {
-              Id: 6235536471326417281
+              Id: 15109312242768551333
             }
             Justification {
               Value: "mc:etextjustify:center"
@@ -232,7 +230,7 @@ Assets {
         }
       }
       Objects {
-        Id: 4068941935676244830
+        Id: 6331273232599401096
         Name: "UI Text Box"
         Transform {
           Location {
@@ -245,7 +243,7 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 13590906683143004193
+        ParentId: 11466115662770001184
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -259,7 +257,7 @@ Assets {
           Value: "mc:eindicatorvisibility:visiblewhenselected"
         }
         Control {
-          Width: 144
+          Width: 200
           Height: 60
           UIY: 16
           RenderTransformPivot {
@@ -268,7 +266,7 @@ Assets {
             }
           }
           Text {
-            Label: "Tutorial"
+            Label: "High Scores"
             Color {
               G: 0.138431564
               B: 0.270497799
@@ -321,12 +319,21 @@ Assets {
       }
     }
     Assets {
-      Id: 6235536471326417281
-      Name: "Roboto Black"
+      Id: 2576370041750162101
+      Name: "Icon Leaderboard"
+      PlatformAssetType: 9
+      PrimaryAsset {
+        AssetType: "PlatformBrushAssetRef"
+        AssetId: "Icon_Leaderboard"
+      }
+    }
+    Assets {
+      Id: 15109312242768551333
+      Name: "Luckiest Guy"
       PlatformAssetType: 28
       PrimaryAsset {
         AssetType: "FontAssetRef"
-        AssetId: "RobotoBlack_ref"
+        AssetId: "LuckiestGuyRegular_ref"
       }
     }
     Assets {

@@ -1,13 +1,13 @@
 Assets {
-  Id: 13174186764478544642
-  Name: "Square Button - Blank"
+  Id: 1040408120915274199
+  Name: "Square Button - Shuffle"
   PlatformAssetType: 5
   TemplateAsset {
     ObjectBlock {
-      RootId: 5419735888844028923
+      RootId: 3271370539268018590
       Objects {
-        Id: 5419735888844028923
-        Name: "Square Button - Blank"
+        Id: 3271370539268018590
+        Name: "Square Button - Shuffle"
         Transform {
           Scale {
             X: 1
@@ -15,13 +15,14 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 11774971185288353684
-        ChildIds: 4301958224968351336
-        ChildIds: 6418607793518466099
-        ChildIds: 1570925909163435659
-        ChildIds: 8951428364506855395
-        ChildIds: 16115890408882557571
-        ChildIds: 10450495970322091201
+        ParentId: 12637012492273057610
+        ChildIds: 6765351160972481549
+        ChildIds: 4558631252889747030
+        ChildIds: 8331087520420891886
+        ChildIds: 1903095836792659334
+        ChildIds: 13400425299969423590
+        ChildIds: 7567366685662818777
+        ChildIds: 17822825686792365732
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -37,8 +38,8 @@ Assets {
         Control {
           Width: 128
           Height: 136
-          UIX: -64
-          UIY: -28
+          UIX: 64
+          UIY: -24
           RenderTransformPivot {
             Anchor {
               Value: "mc:euianchor:middlecenter"
@@ -51,19 +52,19 @@ Assets {
           AnchorLayout {
             SelfAnchor {
               Anchor {
-                Value: "mc:euianchor:bottomright"
+                Value: "mc:euianchor:bottomleft"
               }
             }
             TargetAnchor {
               Anchor {
-                Value: "mc:euianchor:bottomright"
+                Value: "mc:euianchor:bottomleft"
               }
             }
           }
         }
       }
       Objects {
-        Id: 4301958224968351336
+        Id: 6765351160972481549
         Name: "Background"
         Transform {
           Location {
@@ -76,7 +77,7 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 5419735888844028923
+        ParentId: 3271370539268018590
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -130,7 +131,7 @@ Assets {
         }
       }
       Objects {
-        Id: 6418607793518466099
+        Id: 4558631252889747030
         Name: "Tile Edge"
         Transform {
           Location {
@@ -143,7 +144,7 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 5419735888844028923
+        ParentId: 3271370539268018590
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -199,7 +200,7 @@ Assets {
         }
       }
       Objects {
-        Id: 1570925909163435659
+        Id: 8331087520420891886
         Name: "Inner Border"
         Transform {
           Location {
@@ -212,7 +213,7 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 5419735888844028923
+        ParentId: 3271370539268018590
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -267,7 +268,7 @@ Assets {
         }
       }
       Objects {
-        Id: 8951428364506855395
+        Id: 1903095836792659334
         Name: "Inner UI Panel"
         Transform {
           Location {
@@ -280,10 +281,10 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 5419735888844028923
-        ChildIds: 8850654132905278599
-        ChildIds: 16986424362859021696
-        ChildIds: 10960020649504694880
+        ParentId: 3271370539268018590
+        ChildIds: 2054534463889413858
+        ChildIds: 10226300136305504229
+        ChildIds: 18323224428221564933
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -324,7 +325,7 @@ Assets {
         }
       }
       Objects {
-        Id: 8850654132905278599
+        Id: 2054534463889413858
         Name: "Bottom Curve"
         Transform {
           Location {
@@ -337,7 +338,7 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 8951428364506855395
+        ParentId: 1903095836792659334
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -394,7 +395,7 @@ Assets {
         }
       }
       Objects {
-        Id: 16986424362859021696
+        Id: 10226300136305504229
         Name: "Middle Curve"
         Transform {
           Location {
@@ -407,7 +408,7 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 8951428364506855395
+        ParentId: 1903095836792659334
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -464,7 +465,7 @@ Assets {
         }
       }
       Objects {
-        Id: 10960020649504694880
+        Id: 18323224428221564933
         Name: "Top Curve"
         Transform {
           Location {
@@ -477,7 +478,7 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 8951428364506855395
+        ParentId: 1903095836792659334
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -534,7 +535,7 @@ Assets {
         }
       }
       Objects {
-        Id: 16115890408882557571
+        Id: 13400425299969423590
         Name: "Outer Border"
         Transform {
           Location {
@@ -547,7 +548,7 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 5419735888844028923
+        ParentId: 3271370539268018590
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -603,8 +604,8 @@ Assets {
         }
       }
       Objects {
-        Id: 10450495970322091201
-        Name: "UI Button"
+        Id: 7567366685662818777
+        Name: "ButtonIcon"
         Transform {
           Location {
           }
@@ -616,7 +617,76 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 5419735888844028923
+        ParentId: 3271370539268018590
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        EditorIndicatorVisibility {
+          Value: "mc:eindicatorvisibility:visiblewhenselected"
+        }
+        Control {
+          Width: 58
+          Height: 58
+          UIX: 1
+          UIY: -8
+          RenderTransformPivot {
+            Anchor {
+              Value: "mc:euianchor:middlecenter"
+            }
+          }
+          Image {
+            Brush {
+              Id: 7335377910279542972
+            }
+            Color {
+              G: 0.138431564
+              B: 0.270497799
+              A: 1
+            }
+            TeamSettings {
+            }
+            ShadowColor {
+              A: 1
+            }
+            ShadowOffset {
+            }
+            ScreenshotIndex: 1
+          }
+          AnchorLayout {
+            SelfAnchor {
+              Anchor {
+                Value: "mc:euianchor:middlecenter"
+              }
+            }
+            TargetAnchor {
+              Anchor {
+                Value: "mc:euianchor:middlecenter"
+              }
+            }
+          }
+        }
+      }
+      Objects {
+        Id: 17822825686792365732
+        Name: "ShuffleBtnSquare"
+        Transform {
+          Location {
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 3271370539268018590
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -730,11 +800,19 @@ Assets {
         AssetId: "UI_Scifi_Frame_001"
       }
     }
+    Assets {
+      Id: 7335377910279542972
+      Name: "Icon Arrow Swap"
+      PlatformAssetType: 9
+      PrimaryAsset {
+        AssetType: "PlatformBrushAssetRef"
+        AssetId: "Icon_ArrowSwap"
+      }
+    }
     PrimaryAssetId {
       AssetType: "None"
       AssetId: "None"
     }
   }
   SerializationVersion: 115
-  VirtualFolderPath: "Buttons"
 }

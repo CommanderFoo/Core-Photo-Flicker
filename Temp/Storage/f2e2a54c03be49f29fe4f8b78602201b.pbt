@@ -11,6 +11,6 @@ Entries {
     StringVar: "wins"
   }
   SimpleValue {
-    IntVar: 5
+    IntVar: 7
   }
 }

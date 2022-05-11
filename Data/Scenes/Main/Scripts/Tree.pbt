@@ -245,15 +245,18 @@ Objects {
       }
     }
     Overrides {
-      Name: "cs:ShuffleBtn"
-      ObjectReference {
-        SelfId: 3000089781911782631
-      }
-    }
-    Overrides {
       Name: "cs:PauseBtn"
       ObjectReference {
         SelfId: 1136480496198617105
+      }
+    }
+    Overrides {
+      Name: "cs:ShuffleBtnSquare"
+      ObjectReference {
+        SelfId: 1753450900748820850
+        SubObjectId: 17822825686792365732
+        InstanceId: 13028781604208830405
+        TemplateId: 1040408120915274199
       }
     }
     Overrides {

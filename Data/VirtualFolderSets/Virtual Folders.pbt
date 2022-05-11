@@ -22,5 +22,9 @@ Assets {
       VirtualFolderPath: "VFX"
       PlatformAssetType: 5
     }
+    Folders {
+      VirtualFolderPath: "Buttons"
+      PlatformAssetType: 5
+    }
   }
 }

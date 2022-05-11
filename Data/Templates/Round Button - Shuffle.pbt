@@ -1,13 +1,13 @@
 Assets {
-  Id: 2917533846114216446
-  Name: "Smal Button - Leaderboards"
+  Id: 10738968196143115459
+  Name: "Round Button - Shuffle"
   PlatformAssetType: 5
   TemplateAsset {
     ObjectBlock {
-      RootId: 11466115662770001184
+      RootId: 9346085440695564564
       Objects {
-        Id: 11466115662770001184
-        Name: "Smal Button - Leaderboards"
+        Id: 9346085440695564564
+        Name: "Round Button - Shuffle"
         Transform {
           Scale {
             X: 1
@@ -15,10 +15,10 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 1858226445961114986
-        ChildIds: 15817637777845521682
-        ChildIds: 11074047145881276458
-        ChildIds: 6331273232599401096
+        ParentId: 12637012492273057610
+        ChildIds: 4247789758332319402
+        ChildIds: 3520998654336117858
+        ChildIds: 1768181924434442911
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -32,35 +32,36 @@ Assets {
           Value: "mc:eindicatorvisibility:visiblewhenselected"
         }
         Control {
-          Width: 168
-          Height: 168
-          UIX: -96
-          UIY: 168
+          Width: 128
+          Height: 100
+          UIX: 64
+          UIY: -24
           RenderTransformPivot {
             Anchor {
               Value: "mc:euianchor:middlecenter"
             }
           }
+          UseParentHeight: true
           Panel {
             Opacity: 1
           }
           AnchorLayout {
             SelfAnchor {
               Anchor {
-                Value: "mc:euianchor:topright"
+                Value: "mc:euianchor:bottomleft"
               }
             }
             TargetAnchor {
               Anchor {
-                Value: "mc:euianchor:topright"
+                Value: "mc:euianchor:bottomleft"
               }
             }
           }
         }
       }
       Objects {
-        Id: 15817637777845521682
-        Name: "ButtonBG_Round"
+        Id: 4247789758332319402
+        Name: "Background"
         Transform {
           Location {
           }
@@ -72,7 +73,7 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 11466115662770001184
+        ParentId: 9346085440695564564
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -86,8 +87,9 @@ Assets {
           Value: "mc:eindicatorvisibility:visiblewhenselected"
         }
         Control {
-          Width: 104
-          Height: 104
+          Width: 128
+          Height: 120
+          UIY: -4
           RenderTransformPivot {
             Anchor {
               Value: "mc:euianchor:middlecenter"
@@ -98,7 +100,7 @@ Assets {
               Id: 14813488981274987120
             }
             Color {
-              G: 0.138431564
+              G: 0.138431609
               B: 0.270497799
               A: 1
             }
@@ -114,20 +116,20 @@ Assets {
           AnchorLayout {
             SelfAnchor {
               Anchor {
-                Value: "mc:euianchor:middlecenter"
+                Value: "mc:euianchor:bottomcenter"
               }
             }
             TargetAnchor {
               Anchor {
-                Value: "mc:euianchor:middlecenter"
+                Value: "mc:euianchor:bottomcenter"
               }
             }
           }
         }
       }
       Objects {
-        Id: 11074047145881276458
-        Name: "HighScoresBtn"
+        Id: 3520998654336117858
+        Name: "Button Edge"
         Transform {
           Location {
           }
@@ -139,7 +141,7 @@ Assets {
             Z: 1
           }
         }
-        ParentId: 11466115662770001184
+        ParentId: 9346085440695564564
         Collidable_v2 {
           Value: "mc:ecollisionsetting:inheritfromparent"
         }
@@ -153,25 +155,94 @@ Assets {
           Value: "mc:eindicatorvisibility:visiblewhenselected"
         }
         Control {
-          Width: 64
-          Height: 64
+          Width: 128
+          Height: 120
+          UIY: -16
           RenderTransformPivot {
             Anchor {
               Value: "mc:euianchor:middlecenter"
             }
           }
+          Image {
+            Brush {
+              Id: 14813488981274987120
+            }
+            Color {
+              R: 0.00699541
+              G: 0.254152089
+              B: 0.693871737
+              A: 1
+            }
+            TeamSettings {
+            }
+            ShadowColor {
+              A: 1
+            }
+            ShadowOffset {
+            }
+            ScreenshotIndex: 1
+          }
+          AnchorLayout {
+            SelfAnchor {
+              Anchor {
+                Value: "mc:euianchor:bottomcenter"
+              }
+            }
+            TargetAnchor {
+              Anchor {
+                Value: "mc:euianchor:bottomcenter"
+              }
+            }
+          }
+        }
+      }
+      Objects {
+        Id: 1768181924434442911
+        Name: "UI Button Shuffle"
+        Transform {
+          Location {
+          }
+          Rotation {
+          }
+          Scale {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        ParentId: 9346085440695564564
+        Collidable_v2 {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        Visible_v2 {
+          Value: "mc:evisibilitysetting:inheritfromparent"
+        }
+        CameraCollidable {
+          Value: "mc:ecollisionsetting:inheritfromparent"
+        }
+        EditorIndicatorVisibility {
+          Value: "mc:eindicatorvisibility:visiblewhenselected"
+        }
+        Control {
+          Width: 72
+          Height: 64
+          UIX: 3
+          UIY: -48
+          RenderTransformPivot {
+            Anchor {
+              Value: "mc:euianchor:middlecenter"
+            }
+          }
+          AddSizeToParentIfUsingParentSize: true
           IsHittable: true
           Button {
             FontColor {
-              R: 0.341914415
-              G: 0.814846396
-              B: 1
               A: 1
             }
-            FontSize: 32
+            FontSize: 20
             ButtonColor {
-              R: 0.341914415
-              G: 0.814846396
+              R: 0.75
+              G: 0.929662049
               B: 1
               A: 1
             }
@@ -188,20 +259,19 @@ Assets {
               A: 1
             }
             DisabledColor {
-              R: 0.436000019
-              G: 0.436000019
-              B: 0.436000019
+              R: 1
+              G: 1
+              B: 1
               A: 1
             }
             Brush {
-              Id: 2576370041750162101
+              Id: 7335377910279542972
             }
             IsButtonEnabled: true
             ClickMode {
               Value: "mc:ebuttonclickmode:default"
             }
             Font {
-              Id: 15109312242768551333
             }
             Justification {
               Value: "mc:etextjustify:center"
@@ -210,88 +280,11 @@ Assets {
               Value: "mc:everticaljustification:center"
             }
             ShadowColor {
-              A: 1
-            }
-            ShadowOffset {
-            }
-          }
-          AnchorLayout {
-            SelfAnchor {
-              Anchor {
-                Value: "mc:euianchor:middlecenter"
-              }
-            }
-            TargetAnchor {
-              Anchor {
-                Value: "mc:euianchor:middlecenter"
-              }
-            }
-          }
-        }
-      }
-      Objects {
-        Id: 6331273232599401096
-        Name: "UI Text Box"
-        Transform {
-          Location {
-          }
-          Rotation {
-          }
-          Scale {
-            X: 1
-            Y: 1
-            Z: 1
-          }
-        }
-        ParentId: 11466115662770001184
-        Collidable_v2 {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        Visible_v2 {
-          Value: "mc:evisibilitysetting:inheritfromparent"
-        }
-        CameraCollidable {
-          Value: "mc:ecollisionsetting:inheritfromparent"
-        }
-        EditorIndicatorVisibility {
-          Value: "mc:eindicatorvisibility:visiblewhenselected"
-        }
-        Control {
-          Width: 200
-          Height: 60
-          UIY: 16
-          RenderTransformPivot {
-            Anchor {
-              Value: "mc:euianchor:middlecenter"
-            }
-          }
-          Text {
-            Label: "High Scores"
-            Color {
               G: 0.138431564
               B: 0.270497799
               A: 1
             }
-            Size: 24
-            Justification {
-              Value: "mc:etextjustify:center"
-            }
-            AutoWrapText: true
-            Font {
-              Id: 7895514115667993783
-            }
-            VerticalJustification {
-              Value: "mc:everticaljustification:center"
-            }
-            ShadowColor {
-              A: 1
-            }
             ShadowOffset {
-            }
-            OutlineColor {
-              G: 0.138431564
-              B: 0.270497799
-              A: 1
             }
           }
           AnchorLayout {
@@ -319,30 +312,12 @@ Assets {
       }
     }
     Assets {
-      Id: 2576370041750162101
-      Name: "Icon Leaderboard"
+      Id: 7335377910279542972
+      Name: "Icon Arrow Swap"
       PlatformAssetType: 9
       PrimaryAsset {
         AssetType: "PlatformBrushAssetRef"
-        AssetId: "Icon_Leaderboard"
-      }
-    }
-    Assets {
-      Id: 15109312242768551333
-      Name: "Luckiest Guy"
-      PlatformAssetType: 28
-      PrimaryAsset {
-        AssetType: "FontAssetRef"
-        AssetId: "LuckiestGuyRegular_ref"
-      }
-    }
-    Assets {
-      Id: 7895514115667993783
-      Name: "Baloo 2 Extra Bold"
-      PlatformAssetType: 28
-      PrimaryAsset {
-        AssetType: "FontAssetRef"
-        AssetId: "Baloo2ExtraBold_ref"
+        AssetId: "Icon_ArrowSwap"
       }
     }
     PrimaryAssetId {
