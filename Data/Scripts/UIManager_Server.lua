@@ -1,41 +1,84 @@
 
 -- Custom 
-local UICONTAINER = script:GetCustomProperty("UIContainer"):WaitForObject()
+local TWEEN = require(script:GetCustomProperty("Tween"))
+
 
 
 local RESTART_BTN = script:GetCustomProperty("RestartBtn"):WaitForObject()
 local SHUFFLE_BTN = script:GetCustomProperty("ShuffleBtn"):WaitForObject()
 local PAUSE_BTN = script:GetCustomProperty("PauseBtn"):WaitForObject()
 local PAUSE_PANEL = script:GetCustomProperty("PausePanel"):WaitForObject()
+local MATCHES = script:GetCustomProperty("Matches"):WaitForObject()
+
+local CONGRAT_PANEL = script:GetCustomProperty("CongratPanel"):WaitForObject()
+local CONGRATS_PLAY_BTN = script:GetCustomProperty("Congrats_PlayBtn"):WaitForObject()
 
 
-local TWEEN = require(script:GetCustomProperty("Tween"))
 
 local tweens = {}
 
 local pause_on = false
+local congrats_on = false
 local screen_size = nil
 local y_pos = nil
 
 --set initial pause screen position
-function SetPauseScreenPos()
+function SetInitialScreenPos()
     screen_size = UI.GetScreenSize()
     y_pos  = CoreMath.Round(screen_size.y / 2) + 750
-    print(screen_size, y_pos)
+    
     PAUSE_PANEL.x = 0
     PAUSE_PANEL.y = y_pos
+
+    CONGRAT_PANEL.x = 0
+    CONGRAT_PANEL.y = y_pos
 end
 
+function TogglePanel(panel, direction)
+    --function Tween:new(duration, from, to, easing, change, complete)
+    screen_size = UI.GetScreenSize()
+    y_pos = CoreMath.Round(screen_size.y / 2) + 750
+
+    local tween = nil
+
+    if direction then
+        tween = TWEEN:new(1.2, { x = 0, y = y_pos }, { x = 0, y = 0 })
+    else
+        tween = TWEEN:new(1.2, { x = 0, y = 0 }, { x = 0, y = y_pos } )
+    end
+
+
+    tween:on_complete(function()
+        tween = nil
+    end)
+
+    tween:on_change(function(c)
+
+
+        panel.x = c.x
+        panel.y = c.y
+
+    end)
+
+    tween:set_easing(TWEEN.Easings.OutSine)
+
+    table.insert(tweens, tween)
+end
 
 
 function OnClicked(button)
     
-    if button == RESTART_BTN then
+    if button == RESTART_BTN or button == CONGRATS_PLAY_BTN then
         button.isInteractable = false
         Events.Broadcast("Restart")
         Events.BroadcastToServer("Restart")
         Task.Wait(1.5)
         button.isInteractable = true
+
+        if button == CONGRATS_PLAY_BTN then
+            congrats_on = not congrats_on
+            TogglePanel(CONGRAT_PANEL, congrats_on)
+        end
 
     elseif button == SHUFFLE_BTN then
        
@@ -49,34 +92,7 @@ function OnClicked(button)
         Events.Broadcast("Pause")
         Events.BroadcastToServer("Pause")
         pause_on =  not pause_on
-        --function Tween:new(duration, from, to, easing, change, complete)
-        screen_size = UI.GetScreenSize()
-        y_pos = CoreMath.Round(screen_size.y / 2) + 750
-
-        local tween = nil
-
-        if pause_on then
-            tween = TWEEN:new(1.2, { x = 0, y = y_pos }, { x = 0, y = 0 })
-        else
-            tween = TWEEN:new(1.2, { x = 0, y = 0 }, { x = 0, y = y_pos } )
-        end
-
-
-        tween:on_complete(function()
-            tween = nil
-        end)
-    
-        tween:on_change(function(c)
-    
-
-            PAUSE_PANEL.x = c.x
-            PAUSE_PANEL.y = c.y
-
-        end)
-
-        tween:set_easing(TWEEN.Easings.OutSine)
-
-        table.insert(tweens, tween)
+        TogglePanel(PAUSE_PANEL, pause_on)
 
         -- if PAUSE_BTN.text == "Pause" then
         --     PAUSE_BTN.text = "Resume"
@@ -88,6 +104,9 @@ function OnClicked(button)
 	
 end
 
+function UpdateMatchUI(matches)
+    MATCHES.text = "Left: " ..tostring(matches)
+end
 
 function Tick(dt)
 	
@@ -99,8 +118,17 @@ function Tick(dt)
 	
 end
 
-SetPauseScreenPos()
+function GameOver()
+    congrats_on = not congrats_on
+    TogglePanel(CONGRAT_PANEL, congrats_on)
+end
+
+SetInitialScreenPos()
 
 RESTART_BTN.clickedEvent:Connect(OnClicked)
 SHUFFLE_BTN.clickedEvent:Connect(OnClicked)
 PAUSE_BTN.clickedEvent:Connect(OnClicked)
+CONGRATS_PLAY_BTN.clickedEvent:Connect(OnClicked)
+
+Events.Connect("match_UI", UpdateMatchUI)
+Events.Connect("game_over", GameOver)

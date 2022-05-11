@@ -17,7 +17,7 @@ local ui_z_offset = 0.01
 local timer = 0
 local timer_pause = false
 
-local matches_remaining = 0
+
 
 function DealPhotos()
 	CARD_SET = THEMES[math.random(#THEMES)].cards
@@ -26,7 +26,7 @@ function DealPhotos()
 		CreatePhotos()
 	end
 	timer = 0
-	matches_remaining = #CARD_SET
+	Events.Broadcast("match_deal", #CARD_SET)
 end
 
 function ThrowPhoto(photo)
@@ -94,6 +94,7 @@ function Restart()
 		photo:Destroy()
 	end
 	z = 0.001
+	tweens = {}
 	DealPhotos()
 	timer = 0
 end
@@ -143,6 +144,6 @@ Events.Connect("destroy_card", function(card)
 	if(card ~= nil and Object.IsValid(card:GetObject())) then
 		card:GetObject():SetWorldPosition(Vector3.New(100, 0, -1000))
 		card:GetObject():Destroy()
-		Events.Broadcast("increase_score", 100)
+		Events.Broadcast("match")
 	end
 end)

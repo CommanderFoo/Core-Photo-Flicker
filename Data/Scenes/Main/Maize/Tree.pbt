@@ -61,6 +61,7 @@ Objects {
   ChildIds: 12637012492273057610
   ChildIds: 7958466908494440361
   ChildIds: 15708841779342355332
+  ChildIds: 16443359550206853135
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -104,6 +105,32 @@ Objects {
           Value: "mc:euianchor:topleft"
         }
       }
+    }
+  }
+}
+Objects {
+  Id: 16443359550206853135
+  Name: "Info Panel - Congrats"
+  Transform {
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 11774971185288353684
+  TemplateInstance {
+    ParameterOverrideMap {
+      key: 1818576290713416063
+      value {
+        Overrides {
+          Name: "Name"
+          String: "Info Panel - Congrats"
+        }
+      }
+    }
+    TemplateAsset {
+      Id: 3859568201331055719
     }
   }
 }
@@ -162,7 +189,7 @@ Objects {
         }
         Overrides {
           Name: "UIY"
-          Float: 0
+          Float: 1500
         }
       }
     }

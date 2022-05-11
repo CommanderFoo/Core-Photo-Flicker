@@ -225,10 +225,11 @@ function Tick(dt)
 	end
 end
 
+Input.DisableVirtualControls()
+
 Input.touchStartedEvent:Connect(on_touch_started)
 Input.touchStoppedEvent:Connect(on_touch_stopped)
 
-Input.DisableVirtualControls()
 
 Events.Connect("Overlap",Overlap)
 Events.Connect("EndOverlap",EndOverlap)

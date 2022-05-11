@@ -227,9 +227,9 @@ Objects {
   ParentId: 15436693484293200163
   UnregisteredParameters {
     Overrides {
-      Name: "cs:UIContainer"
-      ObjectReference {
-        SelfId: 11774971185288353684
+      Name: "cs:Tween"
+      AssetReference {
+        Id: 5010859578220487614
       }
     }
     Overrides {
@@ -251,18 +251,36 @@ Objects {
       }
     }
     Overrides {
-      Name: "cs:Tween"
-      AssetReference {
-        Id: 5010859578220487614
-      }
-    }
-    Overrides {
       Name: "cs:PausePanel"
       ObjectReference {
         SelfId: 8645188952599321583
         SubObjectId: 18265977801772457905
         InstanceId: 15708841779342355332
         TemplateId: 5148378255416365230
+      }
+    }
+    Overrides {
+      Name: "cs:Matches"
+      ObjectReference {
+        SelfId: 7860828991044101585
+      }
+    }
+    Overrides {
+      Name: "cs:CongratPanel"
+      ObjectReference {
+        SelfId: 17377035325617552668
+        SubObjectId: 1818576290713416063
+        InstanceId: 16443359550206853135
+        TemplateId: 3859568201331055719
+      }
+    }
+    Overrides {
+      Name: "cs:Congrats_PlayBtn"
+      ObjectReference {
+        SelfId: 464814696722904432
+        SubObjectId: 17179009979562998035
+        InstanceId: 16443359550206853135
+        TemplateId: 3859568201331055719
       }
     }
   }
