@@ -2,8 +2,7 @@
 -- Custom 
 local TWEEN = require(script:GetCustomProperty("Tween"))
 
-
-
+local UIPANEL_MAIN_BUTTONS = script:GetCustomProperty("UIPanelMainButtons"):WaitForObject()
 local RESTART_BTN = script:GetCustomProperty("RestartBtn"):WaitForObject()
 local SHUFFLE_BTN = script:GetCustomProperty("ShuffleBtn"):WaitForObject()
 local PAUSE_BTN = script:GetCustomProperty("PauseBtn"):WaitForObject()
@@ -95,6 +94,9 @@ function OnClicked(button)
         TogglePanel(CONGRAT_PANEL, congrats_on)
         Events.Broadcast("NewGame")
         Events.BroadcastToServer("NewGame")
+
+        UIPANEL_MAIN_BUTTONS.visibility = Visibility.INHERIT
+
         Task.Wait(1.5)
         button.isInteractable = true
        
@@ -120,6 +122,7 @@ end
 function GameOver()
     congrats_on = not congrats_on
     TogglePanel(CONGRAT_PANEL, congrats_on)
+    UIPANEL_MAIN_BUTTONS.visibility = Visibility.FORCE_OFF
 end
 
 SetInitialScreenPos()

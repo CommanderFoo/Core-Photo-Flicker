@@ -233,6 +233,12 @@ Objects {
       }
     }
     Overrides {
+      Name: "cs:UIPanelMainButtons"
+      ObjectReference {
+        SelfId: 12637012492273057610
+      }
+    }
+    Overrides {
       Name: "cs:RestartBtn"
       ObjectReference {
         SelfId: 5653786578758624549
