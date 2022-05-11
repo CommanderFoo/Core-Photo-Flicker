@@ -21,12 +21,18 @@ local TITLE_SCEEN_BTN_SMALL = script:GetCustomProperty("TitleSceenBtnSmall"):Wai
 local HELP_PANEL = script:GetCustomProperty("HelpPanel"):WaitForObject()
 local HELP_PANEL_CLOSE_BUTTON = script:GetCustomProperty("HelpPanelCloseButton"):WaitForObject()
 
+--Title Screen
+local TITLE_SCREEN_PANEL = script:GetCustomProperty("TitleScreenPanel"):WaitForObject()
+local PLAY_BUTTON = script:GetCustomProperty("PlayButton"):WaitForObject()
+
 
 local tweens = {}
 
 local pause_on = false
 local congrats_on = false
 local tutorial_on = false
+local title_on = true
+
 local screen_size = nil
 local y_pos = nil
 
@@ -34,48 +40,85 @@ local y_pos = nil
 function SetInitialScreenPos()
     screen_size = UI.GetScreenSize()
     y_pos  = CoreMath.Round(screen_size.y / 2) + 750
-    
+
     PAUSE_PANEL.x = 0
     PAUSE_PANEL.y = y_pos
 
     CONGRAT_PANEL.x = 0
     CONGRAT_PANEL.y = y_pos
+
+    HELP_PANEL.x = 0
+    HELP_PANEL.y = y_pos
+
+    TITLE_SCREEN_PANEL.x = 0
+    TITLE_SCREEN_PANEL.y = 0
 end
 
 function TogglePanel(panel, direction)
     --function Tween:new(duration, from, to, easing, change, complete)
     screen_size = UI.GetScreenSize()
-    y_pos = CoreMath.Round(screen_size.y / 2) + 750
-
+    y_pos = 0
     local tween = nil
 
-    if direction then
-        tween = TWEEN:new(1.2, { x = 0, y = y_pos }, { x = 0, y = 0 })
+    if panel == TITLE_SCREEN_PANEL then
+
+        y_pos = (CoreMath.Round(screen_size.y)) * (-4)
+
+        if direction then
+            tween = TWEEN:new(2, { x = 0, y = 0 }, { x = 0, y = y_pos })
+        else
+            tween = TWEEN:new(2, { x = 0, y = y_pos }, { x = 0, y = 0 } )
+        end
+
+
+        tween:on_complete(function()
+            tween = nil
+        end)
+
+        tween:on_change(function(c)
+
+
+            panel.x = c.x
+            panel.y = c.y
+
+        end)
+
+        tween:set_easing(TWEEN.Easings.OutSine)
+
+        table.insert(tweens, tween)
+
     else
-        tween = TWEEN:new(1.2, { x = 0, y = 0 }, { x = 0, y = y_pos } )
+
+        y_pos = CoreMath.Round(screen_size.y / 2) + 750
+
+        if direction then
+            tween = TWEEN:new(0.5, { x = 0, y = y_pos }, { x = 0, y = 0 })
+        else
+            tween = TWEEN:new(0.5, { x = 0, y = 0 }, { x = 0, y = y_pos } )
+        end
+
+
+        tween:on_complete(function()
+            tween = nil
+        end)
+
+        tween:on_change(function(c)
+
+
+            panel.x = c.x
+            panel.y = c.y
+
+        end)
+
+        tween:set_easing(TWEEN.Easings.OutSine)
+
+        table.insert(tweens, tween)
     end
-
-
-    tween:on_complete(function()
-        tween = nil
-    end)
-
-    tween:on_change(function(c)
-
-
-        panel.x = c.x
-        panel.y = c.y
-
-    end)
-
-    tween:set_easing(TWEEN.Easings.OutSine)
-
-    table.insert(tweens, tween)
 end
 
 
 function OnClicked(button)
-    
+
     if button == RESTART_BTN then
         button.isInteractable = false
         Events.Broadcast("Restart")
@@ -108,6 +151,7 @@ function OnClicked(button)
         Task.Wait(1.5)
         button.isInteractable = true
 
+-- Pause Panel Buttons
     elseif button == RESTART_BTN_SMALL then
         button.isInteractable = false
         Events.Broadcast("Pause")
@@ -144,6 +188,14 @@ function OnClicked(button)
         print("Show Title Screen")
         Task.Wait(1.5)
         button.isInteractable = true
+
+-- Title Screen Buttons
+    elseif button == PLAY_BUTTON then
+        TogglePanel(TITLE_SCREEN_PANEL, title_on)
+        Events.Broadcast("NewGame")
+        Events.BroadcastToServer("NewGame")
+        title_on = not title_on
+
     end
 end
 
@@ -179,6 +231,9 @@ CONTINUE_BTN_SMALL.clickedEvent:Connect(OnClicked)
 HELPT_BTN_SMALL.clickedEvent:Connect(OnClicked)
 HELP_PANEL_CLOSE_BUTTON.clickedEvent:Connect(OnClicked)
 TITLE_SCEEN_BTN_SMALL.clickedEvent:Connect(OnClicked)
+--Title Screen Buttons
+PLAY_BUTTON.clickedEvent:Connect(OnClicked)
+
 
 Events.Connect("match_UI", UpdateMatchUI)
 Events.Connect("game_over", GameOver)
