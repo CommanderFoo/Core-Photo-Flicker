@@ -12,6 +12,13 @@ local MATCHES = script:GetCustomProperty("Matches"):WaitForObject()
 local CONGRAT_PANEL = script:GetCustomProperty("CongratPanel"):WaitForObject()
 local CONGRATS_PLAY_BTN = script:GetCustomProperty("Congrats_PlayBtn"):WaitForObject()
 
+--Pause Panel Buttons
+local RESTART_BTN_SMALL = script:GetCustomProperty("RestartBtnSmall"):WaitForObject()
+local CONTINUE_BTN_SMALL = script:GetCustomProperty("ContinueBtnSmall"):WaitForObject()
+local HELPT_BTN_SMALL = script:GetCustomProperty("HelptBtnSmall"):WaitForObject()
+local TITLE_SCEEN_BTN_SMALL = script:GetCustomProperty("TitleSceenBtnSmall"):WaitForObject()
+
+
 
 
 local tweens = {}
@@ -100,9 +107,37 @@ function OnClicked(button)
         Task.Wait(1.5)
         button.isInteractable = true
        
+    elseif button == RESTART_BTN_SMALL then
+        button.isInteractable = false
+        pause_on =  not pause_on
+        TogglePanel(PAUSE_PANEL, pause_on)
+        Events.Broadcast("NewGame")
+        Events.BroadcastToServer("NewGame")
+        Task.Wait(1.5)
+        button.isInteractable = true
 
+    elseif button == CONTINUE_BTN_SMALL then
+        button.isInteractable = false
+        Events.Broadcast("Pause")
+        Events.BroadcastToServer("Pause")
+        pause_on =  not pause_on
+        TogglePanel(PAUSE_PANEL, pause_on)
+        Task.Wait(1.5)
+        button.isInteractable = true
+
+    elseif button == HELPT_BTN_SMALL then
+        print("Show Tutorial Panel")
+        button.isInteractable = false
+        --TogglePanel(HELP_PANEL, pause_on)
+        Task.Wait(1.5)
+        button.isInteractable = true
+
+    elseif button == TITLE_SCEEN_BTN_SMALL then
+        button.isInteractable = false
+        print("Show Title Screen")
+        Task.Wait(1.5)
+        button.isInteractable = true
     end
-	
 end
 
 function UpdateMatchUI(matches)
@@ -131,6 +166,11 @@ RESTART_BTN.clickedEvent:Connect(OnClicked)
 SHUFFLE_BTN.clickedEvent:Connect(OnClicked)
 PAUSE_BTN.clickedEvent:Connect(OnClicked)
 CONGRATS_PLAY_BTN.clickedEvent:Connect(OnClicked)
+--Pause Panel Buttons
+RESTART_BTN_SMALL.clickedEvent:Connect(OnClicked)
+CONTINUE_BTN_SMALL.clickedEvent:Connect(OnClicked)
+HELPT_BTN_SMALL.clickedEvent:Connect(OnClicked)
+TITLE_SCEEN_BTN_SMALL.clickedEvent:Connect(OnClicked)
 
 Events.Connect("match_UI", UpdateMatchUI)
 Events.Connect("game_over", GameOver)

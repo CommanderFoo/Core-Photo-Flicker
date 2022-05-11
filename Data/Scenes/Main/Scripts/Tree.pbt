@@ -289,6 +289,50 @@ Objects {
         TemplateId: 3859568201331055719
       }
     }
+    Overrides {
+      Name: "cs:RestartBtnSmall"
+      ObjectReference {
+        SelfId: 3088195229283567644
+        SubObjectId: 13184351717956119817
+        InstanceId: 15708841779342355332
+        TemplateId: 14023288659414186656
+        NestedInstanceIds: 9949614083154602174
+        OuterTemplateIds: 5148378255416365230
+      }
+    }
+    Overrides {
+      Name: "cs:ContinueBtnSmall"
+      ObjectReference {
+        SelfId: 13080923197347410702
+        SubObjectId: 7597076911483041071
+        InstanceId: 15708841779342355332
+        TemplateId: 14119923603966097905
+        NestedInstanceIds: 5353234590505029856
+        OuterTemplateIds: 5148378255416365230
+      }
+    }
+    Overrides {
+      Name: "cs:HelptBtnSmall"
+      ObjectReference {
+        SelfId: 3496935486245004403
+        SubObjectId: 7146785217445425719
+        InstanceId: 15708841779342355332
+        TemplateId: 3381543344473464802
+        NestedInstanceIds: 17712255028505201794
+        OuterTemplateIds: 5148378255416365230
+      }
+    }
+    Overrides {
+      Name: "cs:TitleSceenBtnSmall"
+      ObjectReference {
+        SelfId: 1792260201898276365
+        SubObjectId: 16185451386549994482
+        InstanceId: 15708841779342355332
+        TemplateId: 10128101213007158315
+        NestedInstanceIds: 10780757283735670500
+        OuterTemplateIds: 5148378255416365230
+      }
+    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"

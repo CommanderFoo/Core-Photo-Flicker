@@ -67,7 +67,7 @@ Objects {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
   Visible_v2 {
-    Value: "mc:evisibilitysetting:forceon"
+    Value: "mc:evisibilitysetting:forceoff"
   }
   CameraCollidable {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -1254,6 +1254,12 @@ Objects {
           Name: "Name"
           String: "Info Panel - Congrats"
         }
+        Overrides {
+          Name: "Visible"
+          Enum {
+            Value: "mc:evisibilitysetting:forceoff"
+          }
+        }
       }
     }
     TemplateAsset {
@@ -1274,6 +1280,82 @@ Objects {
   ParentId: 11774971185288353684
   TemplateInstance {
     ParameterOverrideMap {
+      key: 2139160105041421524
+      value {
+        Overrides {
+          Name: "Name"
+          String: "Small Button - Restart"
+        }
+        Overrides {
+          Name: "Position"
+          Vector {
+          }
+        }
+        Overrides {
+          Name: "Rotation"
+          Rotator {
+          }
+        }
+      }
+    }
+    ParameterOverrideMap {
+      key: 4199342093175963746
+      value {
+        Overrides {
+          Name: "Name"
+          String: "Small Button - Continue"
+        }
+        Overrides {
+          Name: "Position"
+          Vector {
+          }
+        }
+        Overrides {
+          Name: "Rotation"
+          Rotator {
+          }
+        }
+      }
+    }
+    ParameterOverrideMap {
+      key: 7327731647824409147
+      value {
+        Overrides {
+          Name: "Name"
+          String: "Small Button - Tutorial"
+        }
+        Overrides {
+          Name: "Position"
+          Vector {
+          }
+        }
+        Overrides {
+          Name: "Rotation"
+          Rotator {
+          }
+        }
+      }
+    }
+    ParameterOverrideMap {
+      key: 10730513210641364825
+      value {
+        Overrides {
+          Name: "Name"
+          String: "Small Button - Title Screen"
+        }
+        Overrides {
+          Name: "Position"
+          Vector {
+          }
+        }
+        Overrides {
+          Name: "Rotation"
+          Rotator {
+          }
+        }
+      }
+    }
+    ParameterOverrideMap {
       key: 18265977801772457905
       value {
         Overrides {
@@ -1289,30 +1371,6 @@ Objects {
           Name: "Rotation"
           Rotator {
           }
-        }
-        Overrides {
-          Name: "Scale"
-          Vector {
-            X: 1
-            Y: 1
-            Z: 1
-          }
-        }
-        Overrides {
-          Name: "Opacity"
-          Float: 1
-        }
-        Overrides {
-          Name: "UIInheritParentWidth"
-          Bool: false
-        }
-        Overrides {
-          Name: "UIInheritParentHeight"
-          Bool: false
-        }
-        Overrides {
-          Name: "UIX"
-          Float: 0
         }
         Overrides {
           Name: "UIY"
@@ -1487,7 +1545,7 @@ Objects {
     Value: "mc:eindicatorvisibility:visiblewhenselected"
   }
   Control {
-    Width: 280
+    Width: 240
     Height: 80
     RenderTransformPivot {
       Anchor {
