@@ -25,3 +25,12 @@ Assets {
     AssetId: "RobotoBlack_ref"
   }
 }
+Assets {
+  Id: 2412044537693665245
+  Name: "Mouse Memoirs"
+  PlatformAssetType: 28
+  PrimaryAsset {
+    AssetType: "FontAssetRef"
+    AssetId: "MouseMemoirsRegular_ref"
+  }
+}
