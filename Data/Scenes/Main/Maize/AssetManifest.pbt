@@ -53,6 +53,15 @@ Assets {
   }
 }
 Assets {
+  Id: 7428118362056698014
+  Name: "Fantasy Banner 005"
+  PlatformAssetType: 9
+  PrimaryAsset {
+    AssetType: "PlatformBrushAssetRef"
+    AssetId: "UI_Fantasy_Equip_Banner_005"
+  }
+}
+Assets {
   Id: 7335377910279542972
   Name: "Icon Arrow Swap"
   PlatformAssetType: 9
