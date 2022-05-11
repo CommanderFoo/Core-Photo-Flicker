@@ -1257,7 +1257,7 @@ Objects {
         Overrides {
           Name: "Visible"
           Enum {
-            Value: "mc:evisibilitysetting:forceoff"
+            Value: "mc:evisibilitysetting:inheritfromparent"
           }
         }
       }
@@ -1278,83 +1278,13 @@ Objects {
     }
   }
   ParentId: 11774971185288353684
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
   TemplateInstance {
-    ParameterOverrideMap {
-      key: 2139160105041421524
-      value {
-        Overrides {
-          Name: "Name"
-          String: "Small Button - Restart"
-        }
-        Overrides {
-          Name: "Position"
-          Vector {
-          }
-        }
-        Overrides {
-          Name: "Rotation"
-          Rotator {
-          }
-        }
-      }
-    }
-    ParameterOverrideMap {
-      key: 4199342093175963746
-      value {
-        Overrides {
-          Name: "Name"
-          String: "Small Button - Continue"
-        }
-        Overrides {
-          Name: "Position"
-          Vector {
-          }
-        }
-        Overrides {
-          Name: "Rotation"
-          Rotator {
-          }
-        }
-      }
-    }
-    ParameterOverrideMap {
-      key: 7327731647824409147
-      value {
-        Overrides {
-          Name: "Name"
-          String: "Small Button - Tutorial"
-        }
-        Overrides {
-          Name: "Position"
-          Vector {
-          }
-        }
-        Overrides {
-          Name: "Rotation"
-          Rotator {
-          }
-        }
-      }
-    }
-    ParameterOverrideMap {
-      key: 10730513210641364825
-      value {
-        Overrides {
-          Name: "Name"
-          String: "Small Button - Title Screen"
-        }
-        Overrides {
-          Name: "Position"
-          Vector {
-          }
-        }
-        Overrides {
-          Name: "Rotation"
-          Rotator {
-          }
-        }
-      }
-    }
     ParameterOverrideMap {
       key: 18265977801772457905
       value {
@@ -1371,10 +1301,6 @@ Objects {
           Name: "Rotation"
           Rotator {
           }
-        }
-        Overrides {
-          Name: "UIY"
-          Float: 1500
         }
       }
     }
