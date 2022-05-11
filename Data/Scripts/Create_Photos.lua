@@ -108,8 +108,11 @@ function Reshuffle()
 	
 end
 
-function GameOver()
+function GameOver(player)
 	timer_pause = true
+	
+	Events.Broadcast("finish_time", timer)
+	
 	--TODO:
 	--Game over stuff
 end
