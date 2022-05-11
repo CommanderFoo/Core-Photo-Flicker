@@ -68,17 +68,12 @@ end
 
 function OnClicked(button)
     
-    if button == RESTART_BTN or button == CONGRATS_PLAY_BTN then
+    if button == RESTART_BTN then
         button.isInteractable = false
         Events.Broadcast("Restart")
         Events.BroadcastToServer("Restart")
         Task.Wait(1.5)
         button.isInteractable = true
-
-        if button == CONGRATS_PLAY_BTN then
-            congrats_on = not congrats_on
-            TogglePanel(CONGRAT_PANEL, congrats_on)
-        end
 
     elseif button == SHUFFLE_BTN then
        
@@ -94,11 +89,15 @@ function OnClicked(button)
         pause_on =  not pause_on
         TogglePanel(PAUSE_PANEL, pause_on)
 
-        -- if PAUSE_BTN.text == "Pause" then
-        --     PAUSE_BTN.text = "Resume"
-        -- else
-        --     PAUSE_BTN.text = "Pause"
-        -- end
+    elseif button == CONGRATS_PLAY_BTN then
+        button.isInteractable = false
+        congrats_on = not congrats_on
+        TogglePanel(CONGRAT_PANEL, congrats_on)
+        Events.Broadcast("NewGame")
+        Events.BroadcastToServer("NewGame")
+        Task.Wait(1.5)
+        button.isInteractable = true
+       
 
     end
 	

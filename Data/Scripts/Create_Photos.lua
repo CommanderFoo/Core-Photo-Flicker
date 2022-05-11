@@ -108,6 +108,18 @@ function Reshuffle()
 	
 end
 
+function GameOver()
+	timer_pause = true
+	--TODO:
+	--Game over stuff
+end
+
+function NewGame()
+	--Called from Congrats Panel Play Again Button
+	timer_pause = false
+	Restart()
+end
+
 function PauseGame()
 	timer_pause = not(timer_pause )
 	
@@ -137,9 +149,11 @@ end
 
 Game.playerJoinedEvent:Connect(DealPhotos)
 
+Events.Connect("game_over",GameOver)
 Events.Connect("Pause",PauseGame)
 Events.Connect("Reshuffle", Reshuffle)
 Events.Connect("Restart", Restart)
+Events.Connect("NewGame", NewGame)
 Events.Connect("destroy_card", function(card)
 	if(card ~= nil and Object.IsValid(card:GetObject())) then
 		card:GetObject():SetWorldPosition(Vector3.New(100, 0, -1000))
