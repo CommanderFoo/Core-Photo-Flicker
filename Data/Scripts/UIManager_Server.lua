@@ -86,7 +86,7 @@ function TitleScreenAnimation(direction)
     local TITLE_TEXT_PANEL = TITLE_ROOT:GetCustomProperty("TitleTextPanel"):WaitForObject()
     
     screen_size = UI.GetScreenSize()
-    y_pos = CoreMath.Round(screen_size.y) * 2
+    y_pos = CoreMath.Round(screen_size.y) * 5
     
     local tween = nil
     local tween_BG = nil
@@ -114,7 +114,9 @@ function TitleScreenAnimation(direction)
 
     tween_BG:on_change(function(c)
         
-        BG_PANEL.height =CoreMath.Round(c.height)
+        --BG_PANEL.height =CoreMath.Round(c.height)
+        BG_PANEL.y =CoreMath.Round(c.height)
+
 
     end)
 
