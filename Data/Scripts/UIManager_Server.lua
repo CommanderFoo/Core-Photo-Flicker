@@ -21,12 +21,6 @@ local TITLE_SCEEN_BTN_SMALL = script:GetCustomProperty("TitleSceenBtnSmall"):Wai
 local HELP_PANEL = script:GetCustomProperty("HelpPanel"):WaitForObject()
 local HELP_PANEL_CLOSE_BUTTON = script:GetCustomProperty("HelpPanelCloseButton"):WaitForObject()
 
---Title Screen Buttons
-local TITLE_PLAY_BTN = script:GetCustomProperty("Title_PlayBtn"):WaitForObject()
-local TITLE_ROOT = script:GetCustomProperty("Title_Root"):WaitForObject()
-
-
-
 
 local tweens = {}
 
@@ -79,73 +73,6 @@ function TogglePanel(panel, direction)
     table.insert(tweens, tween)
 end
 
-function TitleScreenAnimation(direction)
-    
-    local BTNS_PANEL = TITLE_ROOT:GetCustomProperty("BtnsPanel"):WaitForObject()
-    local BG_PANEL = TITLE_ROOT:GetCustomProperty("BGPanel"):WaitForObject()
-    local TITLE_TEXT_PANEL = TITLE_ROOT:GetCustomProperty("TitleTextPanel"):WaitForObject()
-    
-    screen_size = UI.GetScreenSize()
-    y_pos = CoreMath.Round(screen_size.y) * 2
-    
-    local tween = nil
-    local tween_BG = nil
-    
-    --Fade opacity on btns and title text to 0
-    --BG Height to - screensize
-    
-    
-    --function Tween:new(duration, from, to, easing, change, complete)
-    if direction then
-        tween = TWEEN:new(1,{opacity = 1},{opacity = 0})
-        tween_BG = TWEEN:new(1.5,{height = 0}, {height = -y_pos})
-    else
-        tween = TWEEN:new(1,{opacity = 0},{opacity = 1} )
-        tween_BG = TWEEN:new(1.5,{height = -y_pos}, {height = 0})
-    end
-
-
-    tween_BG:on_complete(function ()
-        if not direction then
-            table.insert(tweens, tween)
-        end
-        tween_BG = nil
-    end)
-
-    tween_BG:on_change(function(c)
-        
-        BG_PANEL.height =CoreMath.Round(c.height)
-
-    end)
-
-    tween:on_complete(function()
-        if direction then
-            table.insert(tweens, tween_BG)
-            BTNS_PANEL.isEnabled = false
-        else
-            BTNS_PANEL.isEnabled = true
-        end
-        tween = nil
-    end)
-
-    tween:on_change(function(c)
-
-        BTNS_PANEL.opacity = c.opacity
-        TITLE_TEXT_PANEL.opacity = c.opacity
-
-    end)
-
-
-    tween:set_easing(TWEEN.Easings.OutSine)
-    tween_BG:set_easing((TWEEN.Easings.OutSine))
-
-    if direction then
-        table.insert(tweens, tween)
-    else
-        table.insert(tweens, tween_BG)
-    end
-
-end
 
 function OnClicked(button)
     
@@ -214,17 +141,10 @@ function OnClicked(button)
 
     elseif button == TITLE_SCEEN_BTN_SMALL then
         button.isInteractable = false
-        TitleScreenAnimation(false)          -- Add functionality here
-        Task.Wait(1.5)
-        button.isInteractable = true
-    elseif button == TITLE_PLAY_BTN then
-        button.isInteractable = false
-        TitleScreenAnimation(true)
+        print("Show Title Screen")
         Task.Wait(1.5)
         button.isInteractable = true
     end
-    
-
 end
 
 function UpdateMatchUI(matches)
@@ -259,7 +179,6 @@ CONTINUE_BTN_SMALL.clickedEvent:Connect(OnClicked)
 HELPT_BTN_SMALL.clickedEvent:Connect(OnClicked)
 HELP_PANEL_CLOSE_BUTTON.clickedEvent:Connect(OnClicked)
 TITLE_SCEEN_BTN_SMALL.clickedEvent:Connect(OnClicked)
-TITLE_PLAY_BTN.clickedEvent:Connect(OnClicked)
 
 Events.Connect("match_UI", UpdateMatchUI)
 Events.Connect("game_over", GameOver)
