@@ -244,6 +244,12 @@ Objects {
             Value: "mc:euianchor:bottomcenter"
           }
         }
+        Overrides {
+          Name: "Visible"
+          Enum {
+            Value: "mc:evisibilitysetting:forceoff"
+          }
+        }
       }
     }
     ParameterOverrideMap {
@@ -329,6 +335,12 @@ Objects {
           Name: "UIY"
           Float: 0
         }
+        Overrides {
+          Name: "Visible"
+          Enum {
+            Value: "mc:evisibilitysetting:forceoff"
+          }
+        }
       }
     }
     ParameterOverrideMap {
@@ -396,7 +408,7 @@ Objects {
         }
         Overrides {
           Name: "UIY"
-          Float: 0
+          Float: 24
         }
       }
     }

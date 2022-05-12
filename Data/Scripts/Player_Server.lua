@@ -70,6 +70,10 @@ local function SetPlayerStats(game_time)
 	end
 
 	--get updated data to display on Congrats Panel
+	GetPlayerStats()
+end
+
+function GetPlayerStats()
 	local data = Storage.GetPlayerData(local_player)
     data.wins = local_player:GetResource("wins")
 	data.best_time = local_player:GetResource("best_time") / 1000
@@ -78,9 +82,9 @@ local function SetPlayerStats(game_time)
 end
 
 
-
 Game.playerJoinedEvent:Connect(on_player_joined)
 Game.playerLeftEvent:Connect(PlayerLeft)
 Events.Connect("match",AdjustMatches)
 Events.Connect("match_deal", SetInitialCards)
 Events.Connect("finish_time", SetPlayerStats)
+Events.Connect("Pause", GetPlayerStats)

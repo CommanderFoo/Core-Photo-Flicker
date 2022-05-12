@@ -413,6 +413,33 @@ Objects {
         TemplateId: 3859568201331055719
       }
     }
+    Overrides {
+      Name: "cs:Title_TutBtn"
+      ObjectReference {
+        SelfId: 4366773479182736341
+        SubObjectId: 6067044185211840393
+        InstanceId: 7020615236707917277
+        TemplateId: 8520288693219612727
+      }
+    }
+    Overrides {
+      Name: "cs:Title_LB_Btn"
+      ObjectReference {
+        SelfId: 3339825613732590424
+        SubObjectId: 6067044185211840393
+        InstanceId: 17180833255887931705
+        TemplateId: 8520288693219612727
+      }
+    }
+    Overrides {
+      Name: "cs:Pause_BestTimeBox"
+      ObjectReference {
+        SelfId: 2031768987582673686
+        SubObjectId: 10859973817405814600
+        InstanceId: 15708841779342355332
+        TemplateId: 5148378255416365230
+      }
+    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"

@@ -28,9 +28,13 @@ local TITLE_PLAY_BTN = script:GetCustomProperty("Title_PlayBtn"):WaitForObject()
 local TITLE_ROOT = script:GetCustomProperty("Title_Root"):WaitForObject()
 
 local PAUSE_PANEL_MATCHES_LEFT = script:GetCustomProperty("PausePanel_MatchesLeft"):WaitForObject()
+local PAUSE_BEST_TIME_BOX = script:GetCustomProperty("Pause_BestTimeBox"):WaitForObject()
 
 local CONGRAT_PANEL_BEST_TIME_BOX = script:GetCustomProperty("CongratPanelBestTimeBox"):WaitForObject()
 local TOAL_WINS_BOX = script:GetCustomProperty("ToalWinsBox"):WaitForObject()
+
+local TITLE_TUT_BTN = script:GetCustomProperty("Title_TutBtn"):WaitForObject()
+local TITLE_LB_BTN = script:GetCustomProperty("Title_LB_Btn"):WaitForObject()
 
 
 
@@ -245,6 +249,12 @@ function OnClicked(button)
         Events.BroadcastToServer("NewGame")
         Task.Wait(1.5)
         button.isInteractable = true
+    elseif button == TITLE_TUT_BTN then
+        button.isInteractable = false
+        tutorial_on = not tutorial_on
+        TogglePanel(HELP_PANEL, pause_on)
+        Task.Wait(1.5)
+        button.isInteractable = true
     end
     
 
@@ -266,14 +276,20 @@ function Tick(dt)
 	
 end
 
-function ShowStats(wins, bestTime)
-    print("Player Stats: ", wins, bestTime)
-
+function ShowPausePanelStats(bestTime)
+    
     local mins = string.format("%02.f", math.floor(bestTime/60))
 	local secs = string.format("%02.f", math.floor(bestTime - mins *60))
+	PAUSE_BEST_TIME_BOX.text.text = mins..":"..secs
+end
+
+function ShowStats(wins, bestTime)
+    local mins = string.format("%02.f", math.floor(bestTime/60))
+	local secs = string.format("%02.f", math.floor(bestTime - mins *60))
+
 	CONGRAT_PANEL_BEST_TIME_BOX.text = mins..":"..secs
     TOAL_WINS_BOX.text = tostring(wins)
-
+    PAUSE_BEST_TIME_BOX.text = mins..":"..secs
 end
 function GameOver()
     congrats_on = not congrats_on
@@ -288,13 +304,14 @@ SHUFFLE_BTN_SQUARE.clickedEvent:Connect(OnClicked)
 PAUSE_BTN.clickedEvent:Connect(OnClicked)
 CONGRATS_PLAY_BTN.clickedEvent:Connect(OnClicked)
 CONGRAT_PANEL_TITLE_BTN.clickedEvent:Connect(OnClicked)
---Pause Panel Buttons
+
 RESTART_BTN_SMALL.clickedEvent:Connect(OnClicked)
 CONTINUE_BTN_SMALL.clickedEvent:Connect(OnClicked)
 HELPT_BTN_SMALL.clickedEvent:Connect(OnClicked)
 HELP_PANEL_CLOSE_BUTTON.clickedEvent:Connect(OnClicked)
 TITLE_SCEEN_BTN_SMALL.clickedEvent:Connect(OnClicked)
 TITLE_PLAY_BTN.clickedEvent:Connect(OnClicked)
+TITLE_TUT_BTN.clickedEvent:Connect(OnClicked)
 
 Events.Connect("match_UI", UpdateMatchUI)
 Events.Connect("game_over", GameOver)
