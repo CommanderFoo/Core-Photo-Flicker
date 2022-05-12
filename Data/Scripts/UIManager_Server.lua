@@ -52,8 +52,8 @@ function SetInitialScreenPos()
     HELP_PANEL.x = 0
     HELP_PANEL.y = y_pos
 
-    TITLE_SCREEN_PANEL.x = 0
-    TITLE_SCREEN_PANEL.y = 0
+    -- TITLE_SCREEN_PANEL.x = 0
+    -- TITLE_SCREEN_PANEL.y = 0
 end
 
 function TogglePanel(panel, direction)
