@@ -339,7 +339,7 @@ Assets {
       BasicBindingData {
         BasicInputs {
           KeyboardPrimary {
-            Value: "mc:ebindingkeyboard:v"
+            Value: "mc:ebindingkeyboard:leftalt"
           }
           KeyboardSecondary {
             Value: "mc:ebindingkeyboard:none"

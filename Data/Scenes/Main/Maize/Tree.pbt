@@ -63,11 +63,31 @@ Objects {
   ChildIds: 6036301749954090572
   ChildIds: 10804723435934021432
   ChildIds: 4085833305605419278
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:BtnsPanel"
+      ObjectReference {
+        SelfId: 4085833305605419278
+      }
+    }
+    Overrides {
+      Name: "cs:BGPanel"
+      ObjectReference {
+        SelfId: 15720916385974855352
+      }
+    }
+    Overrides {
+      Name: "cs:TitleTextPanel"
+      ObjectReference {
+        SelfId: 6036301749954090572
+      }
+    }
+  }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
   Visible_v2 {
-    Value: "mc:evisibilitysetting:forceoff"
+    Value: "mc:evisibilitysetting:forceon"
   }
   CameraCollidable {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -874,13 +894,12 @@ Objects {
     Value: "mc:eindicatorvisibility:visiblewhenselected"
   }
   Control {
-    Width: 100
-    Height: 100
     RenderTransformPivot {
       Anchor {
         Value: "mc:euianchor:middlecenter"
       }
     }
+    AddSizeToParentIfUsingParentSize: true
     UseParentWidth: true
     UseParentHeight: true
     Panel {
