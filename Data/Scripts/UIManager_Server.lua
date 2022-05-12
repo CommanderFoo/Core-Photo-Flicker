@@ -232,6 +232,8 @@ function OnClicked(button)
     elseif button == TITLE_PLAY_BTN then
         button.isInteractable = false
         TitleScreenAnimation(true)
+        Events.Broadcast("NewGame")
+        Events.BroadcastToServer("NewGame")
         Task.Wait(1.5)
         button.isInteractable = true
     end

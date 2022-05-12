@@ -116,11 +116,16 @@ function GameOver(player)
 	
 	--TODO:
 	--Game over stuff
-	local VFX = World.SpawnAsset(VICTORY_VFX, {position = Vector3.New(-116, 0, 960), lifeSpan = 10})
+	local VFX = World.SpawnAsset(VICTORY_VFX, {position = Vector3.New(-116, 0, 960)})
 end
 
 function NewGame()
 	--Called from Congrats Panel Play Again Button
+	local vfxObject = World.FindObjectByName("VictoryVFX")
+	-- Remove victory VFX
+	if vfxObject then
+    	vfxObject:Destroy()
+	end
 	timer_pause = false
 	Restart()
 end
