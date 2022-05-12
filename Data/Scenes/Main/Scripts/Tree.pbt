@@ -269,6 +269,12 @@ Objects {
       }
     }
     Overrides {
+      Name: "cs:Title_Root"
+      ObjectReference {
+        SelfId: 7895828788752880789
+      }
+    }
+    Overrides {
       Name: "cs:Matches"
       ObjectReference {
         SelfId: 7860828991044101585
@@ -284,12 +290,21 @@ Objects {
       }
     }
     Overrides {
-      Name: "cs:Congrats_PlayBtn"
+      Name: "cs:CongratPanelTitleBtn"
       ObjectReference {
-        SelfId: 464814696722904432
-        SubObjectId: 17179009979562998035
-        InstanceId: 16443359550206853135
-        TemplateId: 3859568201331055719
+        SelfId: 16108917046180659431
+        SubObjectId: 16185451386549994482
+        InstanceId: 5007935806679030012
+        TemplateId: 10128101213007158315
+      }
+    }
+    Overrides {
+      Name: "cs:CongratPanelPlayBtn"
+      ObjectReference {
+        SelfId: 11315687987019533577
+        SubObjectId: 7597076911483041071
+        InstanceId: 6282794326374701942
+        TemplateId: 14119923603966097905
       }
     }
     Overrides {
@@ -361,12 +376,6 @@ Objects {
         SubObjectId: 6067044185211840393
         InstanceId: 16389421210091220024
         TemplateId: 8520288693219612727
-      }
-    }
-    Overrides {
-      Name: "cs:Title_Root"
-      ObjectReference {
-        SelfId: 7895828788752880789
       }
     }
   }

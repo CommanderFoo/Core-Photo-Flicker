@@ -3,7 +3,7 @@ Entries {
     StringVar: "wins"
   }
   SimpleValue {
-    IntVar: 7
+    IntVar: 9
   }
 }
 Entries {

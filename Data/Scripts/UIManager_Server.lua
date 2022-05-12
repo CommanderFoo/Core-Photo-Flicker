@@ -10,7 +10,9 @@ local PAUSE_PANEL = script:GetCustomProperty("PausePanel"):WaitForObject()
 local MATCHES = script:GetCustomProperty("Matches"):WaitForObject()
 
 local CONGRAT_PANEL = script:GetCustomProperty("CongratPanel"):WaitForObject()
-local CONGRATS_PLAY_BTN = script:GetCustomProperty("Congrats_PlayBtn"):WaitForObject()
+local CONGRAT_PANEL_TITLE_BTN = script:GetCustomProperty("CongratPanelTitleBtn"):WaitForObject()
+local CONGRAT_PANEL_PLAY_BTN = script:GetCustomProperty("CongratPanelPlayBtn"):WaitForObject()
+
 
 --Pause Panel Buttons
 local RESTART_BTN_SMALL = script:GetCustomProperty("RestartBtnSmall"):WaitForObject()
@@ -171,7 +173,7 @@ function OnClicked(button)
         pause_on =  not pause_on
         TogglePanel(PAUSE_PANEL, pause_on)
 
-    elseif button == CONGRATS_PLAY_BTN then
+    elseif button == CONGRAT_PANEL_PLAY_BTN then
         button.isInteractable = false
         congrats_on = not congrats_on
         TogglePanel(CONGRAT_PANEL, congrats_on)
@@ -180,6 +182,14 @@ function OnClicked(button)
 
         UIPANEL_MAIN_BUTTONS.visibility = Visibility.INHERIT
 
+        Task.Wait(1.5)
+        button.isInteractable = true
+
+    elseif button == CONGRAT_PANEL_TITLE_BTN then
+        button.isInteractable = false
+        congrats_on = not congrats_on
+        TogglePanel(CONGRAT_PANEL, congrats_on)
+        TitleScreenAnimation(false)          -- Add functionality here
         Task.Wait(1.5)
         button.isInteractable = true
 
@@ -254,7 +264,8 @@ SetInitialScreenPos()
 RESTART_BTN.clickedEvent:Connect(OnClicked)
 SHUFFLE_BTN_SQUARE.clickedEvent:Connect(OnClicked)
 PAUSE_BTN.clickedEvent:Connect(OnClicked)
-CONGRATS_PLAY_BTN.clickedEvent:Connect(OnClicked)
+CONGRAT_PANEL_PLAY_BTN.clickedEvent:Connect(OnClicked)
+CONGRAT_PANEL_TITLE_BTN.clickedEvent:Connect(OnClicked)
 --Pause Panel Buttons
 RESTART_BTN_SMALL.clickedEvent:Connect(OnClicked)
 CONTINUE_BTN_SMALL.clickedEvent:Connect(OnClicked)
