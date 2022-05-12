@@ -189,7 +189,7 @@ function OnClicked(button)
         button.isInteractable = false
         congrats_on = not congrats_on
         TogglePanel(CONGRAT_PANEL, congrats_on)
-        TitleScreenAnimation(false)          -- Add functionality here
+        TitleScreenAnimation(false)
         Task.Wait(1.5)
         button.isInteractable = true
 
