@@ -57,7 +57,6 @@ local function SetPlayerStats(game_time)
 	local time_converted = CoreMath.Round(game_time * 1000)
 	local_player:AddResource("wins",1)
 	local t = local_player:GetResource("best_time") or 0
-
 	if t > 0 then
 		if time_converted <= t then
 			--Events.Broadcast("new_record")		--nothing is listening to this yet
@@ -69,6 +68,12 @@ local function SetPlayerStats(game_time)
 	else
 		local_player:SetResource("best_time", math.tointeger(time_converted))
 	end
+	--get updated data to display on Congrats Panel
+	local data = Storage.GetPlayerData(local_player)
+    data.wins = local_player:GetResource("wins")
+	data.best_time = local_player:GetResource("best_time")
+	
+	Events.BroadcastToPlayer(local_player, "show_stats", data.wins, data.best_time)
 end
 
 

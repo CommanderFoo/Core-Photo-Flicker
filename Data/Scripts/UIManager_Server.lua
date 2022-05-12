@@ -27,6 +27,9 @@ local HELP_PANEL_CLOSE_BUTTON = script:GetCustomProperty("HelpPanelCloseButton")
 local TITLE_PLAY_BTN = script:GetCustomProperty("Title_PlayBtn"):WaitForObject()
 local TITLE_ROOT = script:GetCustomProperty("Title_Root"):WaitForObject()
 
+local PAUSE_PANEL_MATCHES_LEFT = script:GetCustomProperty("PausePanel_MatchesLeft"):WaitForObject()
+
+local CONGRAT_PANEL_BEST_TIME_BOX = script:GetCustomProperty("CongratPanelBestTimeBox"):WaitForObject()
 
 
 
@@ -170,6 +173,11 @@ function OnClicked(button)
     elseif button == PAUSE_BTN then
         Events.Broadcast("Pause")
         Events.BroadcastToServer("Pause")
+
+        --PAUSE_PANEL_MATCHES_LEFT.text = matches
+	    --PAUSE_PANEL_TIME.text = timer
+	    --PAUSE_PANEL_BEST_TIME = bestTime
+
         pause_on =  not pause_on
         TogglePanel(PAUSE_PANEL, pause_on)
 
@@ -243,6 +251,8 @@ end
 
 function UpdateMatchUI(matches)
     MATCHES.text = "Left: " ..tostring(matches)
+    local photosFound = string.format("%02.f", (20 - tostring(matches)))
+    PAUSE_PANEL_MATCHES_LEFT.text = photosFound .. " / " .. "20"
 end
 
 function Tick(dt)
@@ -255,6 +265,17 @@ function Tick(dt)
 	
 end
 
+function ShowStats(wins, bestTime)
+    print("Player Stats: ", wins, bestTime)
+    
+	--format time - This should really be an API or something
+	local hours = string.format("%02.f", math.floor(bestTime/3600))
+	local mins = string.format("%02.f", math.floor(bestTime/60 - (hours*60)))
+	local secs = string.format("%02.f", math.floor(bestTime - hours*3600 - mins *60))
+
+	CONGRAT_PANEL_BEST_TIME_BOX.text = mins..":"..secs
+
+end
 function GameOver()
     congrats_on = not congrats_on
     TogglePanel(CONGRAT_PANEL, congrats_on)
@@ -278,3 +299,4 @@ TITLE_PLAY_BTN.clickedEvent:Connect(OnClicked)
 
 Events.Connect("match_UI", UpdateMatchUI)
 Events.Connect("game_over", GameOver)
+Events.Connect("show_stats", ShowStats)

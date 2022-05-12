@@ -6,6 +6,7 @@ local THEMES = require(script:GetCustomProperty("Themes"))
 local TIMER = script:GetCustomProperty("Timer"):WaitForObject()
 
 local VICTORY_VFX = script:GetCustomProperty("VictoryVFX")
+local UINEW_TIME_BOX = script:GetCustomProperty("UINewTimeBox"):WaitForObject()
 
 
 local CARD_SET = nil
@@ -111,11 +112,16 @@ end
 
 function GameOver(player)
 	timer_pause = true
-	
 	Events.Broadcast("finish_time", timer)
 	
 	--TODO:
-	--Game over stuff
+	--Game over stuff'
+	--format timer
+	local hours = string.format("%02.f", math.floor(timer/3600))
+	local mins = string.format("%02.f", math.floor(timer/60 - (hours*60)))
+	local secs = string.format("%02.f", math.floor(timer - hours*3600 - mins *60))
+
+	UINEW_TIME_BOX.text = mins..":"..secs
 	local VFX = World.SpawnAsset(VICTORY_VFX, {position = Vector3.New(-116, 0, 960)})
 end
 
@@ -132,7 +138,7 @@ end
 
 function PauseGame()
 	timer_pause = not(timer_pause )
-	
+
 end
 
 function Tick(dt)
@@ -157,7 +163,7 @@ function Tick(dt)
 	end
 end
 
-Game.playerJoinedEvent:Connect(DealPhotos)
+--Game.playerJoinedEvent:Connect(DealPhotos)
 
 Events.Connect("game_over",GameOver)
 Events.Connect("Pause",PauseGame)

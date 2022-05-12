@@ -1,16 +1,16 @@
 Entries {
   Key {
-    StringVar: "best_time"
+    StringVar: "wins"
   }
   SimpleValue {
-    IntVar: 3899
+    IntVar: 8
   }
 }
 Entries {
   Key {
-    StringVar: "wins"
+    StringVar: "best_time"
   }
   SimpleValue {
-    IntVar: 18
+    IntVar: 5484
   }
 }

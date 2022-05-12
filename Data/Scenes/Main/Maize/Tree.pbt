@@ -1337,6 +1337,28 @@ Objects {
         }
       }
     }
+    ParameterOverrideMap {
+      key: 2827503420586283443
+      value {
+        Overrides {
+          Name: "Label"
+          String: "20 / 20"
+        }
+      }
+    }
+    ParameterOverrideMap {
+      key: 17237940530261932370
+      value {
+        Overrides {
+          Name: "Label"
+          String: " Matched:"
+        }
+        Overrides {
+          Name: "Width"
+          Int: 291
+        }
+      }
+    }
     TemplateAsset {
       Id: 3859568201331055719
     }
@@ -1360,6 +1382,28 @@ Objects {
     Value: "mc:evisibilitysetting:inheritfromparent"
   }
   TemplateInstance {
+    ParameterOverrideMap {
+      key: 15856237788124902301
+      value {
+        Overrides {
+          Name: "Label"
+          String: "Matched:"
+        }
+        Overrides {
+          Name: "Width"
+          Int: 293
+        }
+      }
+    }
+    ParameterOverrideMap {
+      key: 15867733808156970339
+      value {
+        Overrides {
+          Name: "Label"
+          String: "00 / 00"
+        }
+      }
+    }
     ParameterOverrideMap {
       key: 18265977801772457905
       value {

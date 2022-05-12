@@ -112,6 +112,15 @@ Objects {
         Id: 640981643313215282
       }
     }
+    Overrides {
+      Name: "cs:UINewTimeBox"
+      ObjectReference {
+        SelfId: 15537437782754505595
+        SubObjectId: 4592353684857437976
+        InstanceId: 16443359550206853135
+        TemplateId: 3859568201331055719
+      }
+    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
@@ -375,6 +384,24 @@ Objects {
       Name: "cs:Title_Root"
       ObjectReference {
         SelfId: 7895828788752880789
+      }
+    }
+    Overrides {
+      Name: "cs:PausePanel_MatchesLeft"
+      ObjectReference {
+        SelfId: 6246959250755946813
+        SubObjectId: 15867733808156970339
+        InstanceId: 15708841779342355332
+        TemplateId: 5148378255416365230
+      }
+    }
+    Overrides {
+      Name: "cs:CongratPanelBestTimeBox"
+      ObjectReference {
+        SelfId: 6879240258815747357
+        SubObjectId: 13217141998046538110
+        InstanceId: 16443359550206853135
+        TemplateId: 3859568201331055719
       }
     }
   }
