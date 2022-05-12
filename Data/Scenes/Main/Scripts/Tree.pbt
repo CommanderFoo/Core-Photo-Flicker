@@ -269,12 +269,6 @@ Objects {
       }
     }
     Overrides {
-      Name: "cs:Title_Root"
-      ObjectReference {
-        SelfId: 7895828788752880789
-      }
-    }
-    Overrides {
       Name: "cs:Matches"
       ObjectReference {
         SelfId: 7860828991044101585
@@ -299,7 +293,7 @@ Objects {
       }
     }
     Overrides {
-      Name: "cs:CongratPanelPlayBtn"
+      Name: "cs:Congrats_PlayBtn"
       ObjectReference {
         SelfId: 11315687987019533577
         SubObjectId: 7597076911483041071
@@ -376,6 +370,12 @@ Objects {
         SubObjectId: 6067044185211840393
         InstanceId: 16389421210091220024
         TemplateId: 8520288693219612727
+      }
+    }
+    Overrides {
+      Name: "cs:Title_Root"
+      ObjectReference {
+        SelfId: 7895828788752880789
       }
     }
   }
