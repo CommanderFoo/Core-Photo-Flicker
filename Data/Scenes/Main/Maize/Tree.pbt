@@ -1342,7 +1342,11 @@ Objects {
       value {
         Overrides {
           Name: "Label"
-          String: "20 / 20"
+          String: "0"
+        }
+        Overrides {
+          Name: "Name"
+          String: "Toal Wins Box"
         }
       }
     }
@@ -1351,11 +1355,15 @@ Objects {
       value {
         Overrides {
           Name: "Label"
-          String: " Matched:"
+          String: " Total Wins:"
         }
         Overrides {
           Name: "Width"
           Int: 291
+        }
+        Overrides {
+          Name: "Name"
+          String: "Total Wins Label"
         }
       }
     }

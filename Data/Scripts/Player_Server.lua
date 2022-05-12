@@ -68,11 +68,12 @@ local function SetPlayerStats(game_time)
 	else
 		local_player:SetResource("best_time", math.tointeger(time_converted))
 	end
+
 	--get updated data to display on Congrats Panel
 	local data = Storage.GetPlayerData(local_player)
     data.wins = local_player:GetResource("wins")
-	data.best_time = local_player:GetResource("best_time")
-	
+	data.best_time = local_player:GetResource("best_time") / 1000
+
 	Events.BroadcastToPlayer(local_player, "show_stats", data.wins, data.best_time)
 end
 

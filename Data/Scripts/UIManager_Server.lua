@@ -30,6 +30,7 @@ local TITLE_ROOT = script:GetCustomProperty("Title_Root"):WaitForObject()
 local PAUSE_PANEL_MATCHES_LEFT = script:GetCustomProperty("PausePanel_MatchesLeft"):WaitForObject()
 
 local CONGRAT_PANEL_BEST_TIME_BOX = script:GetCustomProperty("CongratPanelBestTimeBox"):WaitForObject()
+local TOAL_WINS_BOX = script:GetCustomProperty("ToalWinsBox"):WaitForObject()
 
 
 
@@ -267,13 +268,11 @@ end
 
 function ShowStats(wins, bestTime)
     print("Player Stats: ", wins, bestTime)
-    
-	--format time - This should really be an API or something
-	local hours = string.format("%02.f", math.floor(bestTime/3600))
-	local mins = string.format("%02.f", math.floor(bestTime/60 - (hours*60)))
-	local secs = string.format("%02.f", math.floor(bestTime - hours*3600 - mins *60))
 
+    local mins = string.format("%02.f", math.floor(bestTime/60))
+	local secs = string.format("%02.f", math.floor(bestTime - mins *60))
 	CONGRAT_PANEL_BEST_TIME_BOX.text = mins..":"..secs
+    TOAL_WINS_BOX.text = tostring(wins)
 
 end
 function GameOver()

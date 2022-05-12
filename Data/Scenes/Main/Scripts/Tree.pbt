@@ -404,6 +404,15 @@ Objects {
         TemplateId: 3859568201331055719
       }
     }
+    Overrides {
+      Name: "cs:ToalWinsBox"
+      ObjectReference {
+        SelfId: 14926634983258709456
+        SubObjectId: 2827503420586283443
+        InstanceId: 16443359550206853135
+        TemplateId: 3859568201331055719
+      }
+    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
