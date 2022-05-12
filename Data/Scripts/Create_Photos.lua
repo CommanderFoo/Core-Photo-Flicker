@@ -5,6 +5,7 @@ local THEMES = require(script:GetCustomProperty("Themes"))
 
 local TIMER = script:GetCustomProperty("Timer"):WaitForObject()
 
+local VICTORY_VFX = script:GetCustomProperty("VictoryVFX")
 
 
 local CARD_SET = nil
@@ -115,6 +116,7 @@ function GameOver(player)
 	
 	--TODO:
 	--Game over stuff
+	local VFX = World.SpawnAsset(VICTORY_VFX, {position = Vector3.New(-116, 0, 960), lifeSpan = 10})
 end
 
 function NewGame()

@@ -104,7 +104,12 @@ Objects {
     Overrides {
       Name: "cs:PauseScreen"
       ObjectReference {
-        SelfId: 841534158063459245
+      }
+    }
+    Overrides {
+      Name: "cs:VictoryVFX"
+      AssetReference {
+        Id: 640981643313215282
       }
     }
   }
@@ -286,19 +291,13 @@ Objects {
     Overrides {
       Name: "cs:CongratPanelTitleBtn"
       ObjectReference {
-        SelfId: 16108917046180659431
-        SubObjectId: 16185451386549994482
-        InstanceId: 5007935806679030012
-        TemplateId: 10128101213007158315
+        SelfId: 6731027836968864159
       }
     }
     Overrides {
       Name: "cs:Congrats_PlayBtn"
       ObjectReference {
-        SelfId: 11315687987019533577
-        SubObjectId: 7597076911483041071
-        InstanceId: 6282794326374701942
-        TemplateId: 14119923603966097905
+        SelfId: 9830906351788122329
       }
     }
     Overrides {

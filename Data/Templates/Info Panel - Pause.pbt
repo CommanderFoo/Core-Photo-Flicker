@@ -36,7 +36,6 @@ Assets {
         Control {
           Width: 704
           Height: 704
-          UIY: 1500
           RenderTransformPivot {
             Anchor {
               Value: "mc:euianchor:middlecenter"
@@ -857,7 +856,7 @@ Assets {
               B: 0.270497799
               A: 1
             }
-            OutlineSize: 2
+            OutlineSize: 3
           }
           AnchorLayout {
             SelfAnchor {
@@ -939,7 +938,7 @@ Assets {
               B: 0.270497799
               A: 1
             }
-            OutlineSize: 2
+            OutlineSize: 3
           }
           AnchorLayout {
             SelfAnchor {
@@ -983,7 +982,7 @@ Assets {
           Value: "mc:eindicatorvisibility:visiblewhenselected"
         }
         Control {
-          Width: 280
+          Width: 285
           Height: 80
           UIX: 64
           UIY: 104
@@ -1021,7 +1020,7 @@ Assets {
               B: 0.270497799
               A: 1
             }
-            OutlineSize: 2
+            OutlineSize: 3
           }
           AnchorLayout {
             SelfAnchor {
@@ -1103,7 +1102,7 @@ Assets {
               B: 0.270497799
               A: 1
             }
-            OutlineSize: 2
+            OutlineSize: 3
           }
           AnchorLayout {
             SelfAnchor {
