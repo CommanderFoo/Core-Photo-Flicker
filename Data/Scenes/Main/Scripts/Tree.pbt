@@ -354,6 +354,21 @@ Objects {
         TemplateId: 3903482482837030487
       }
     }
+    Overrides {
+      Name: "cs:Title_PlayBtn"
+      ObjectReference {
+        SelfId: 2418174281190231112
+        SubObjectId: 6067044185211840393
+        InstanceId: 16389421210091220024
+        TemplateId: 8520288693219612727
+      }
+    }
+    Overrides {
+      Name: "cs:Title_Root"
+      ObjectReference {
+        SelfId: 7895828788752880789
+      }
+    }
   }
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
