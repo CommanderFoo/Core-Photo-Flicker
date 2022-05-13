@@ -9,7 +9,7 @@ Tags: "Puzzle"
 Tags: "Experimental"
 ScreenshotPaths: "D:\\OneDrive\\Pictures\\PhotoFlickerTtileScreen1.png"
 ScreenshotPaths: "D:\\OneDrive\\Pictures\\PhotoFlickerScreen1.png"
-ReleaseNotes: "First publish"
+ReleaseNotes: "removed small testing set of 4 cards"
 OwnerId: "f2e2a54c03be49f29fe4f8b78602201b"
 SerializationVersion: 4
 SceneNameToSceneIdMap {
