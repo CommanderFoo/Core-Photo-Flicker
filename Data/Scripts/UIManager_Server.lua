@@ -94,6 +94,8 @@ function TitleScreenAnimation(direction)
     local BTNS_PANEL = TITLE_ROOT:GetCustomProperty("BtnsPanel"):WaitForObject()
     local BG_PANEL = TITLE_ROOT:GetCustomProperty("BGPanel"):WaitForObject()
     local TITLE_TEXT_PANEL = TITLE_ROOT:GetCustomProperty("TitleTextPanel"):WaitForObject()
+
+    local BG_Indiv_Panels = BG_PANEL:GetChildren()
     
     screen_size = UI.GetScreenSize()
     y_pos = CoreMath.Round(screen_size.y) * 5
@@ -125,7 +127,11 @@ function TitleScreenAnimation(direction)
     tween_BG:on_change(function(c)
         
         --BG_PANEL.height =CoreMath.Round(c.height)
-        BG_PANEL.y =CoreMath.Round(c.height)
+        --BG_PANEL.y =CoreMath.Round(c.height)
+
+        for _, panel in ipairs(BG_Indiv_Panels) do
+            panel.y = CoreMath.Round(c.height)
+        end
 
 
     end)
