@@ -3,7 +3,7 @@ Entries {
     StringVar: "wins"
   }
   SimpleValue {
-    IntVar: 5
+    IntVar: 6
   }
 }
 Entries {
@@ -11,6 +11,6 @@ Entries {
     StringVar: "best_time"
   }
   SimpleValue {
-    IntVar: 20111
+    IntVar: 15229
   }
 }

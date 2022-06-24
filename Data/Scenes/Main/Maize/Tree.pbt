@@ -1,6 +1,1454 @@
 Name: "Maize"
 RootId: 3843404861901986054
 Objects {
+  Id: 7780068891736137061
+  Name: "Interface Leaderboard"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 3843404861901986054
+  ChildIds: 7183948543128728715
+  ChildIds: 9164962882180724303
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:LeaderboardReference"
+      NetReference {
+        Key: "81E43FCCD043970C"
+        Type {
+          Value: "mc:enetreferencetype:leaderboard"
+        }
+      }
+    }
+    Overrides {
+      Name: "cs:LeaderboardType"
+      String: "GLOBAL"
+    }
+    Overrides {
+      Name: "cs:LeaderboardStat"
+      String: "RESOURCE"
+    }
+    Overrides {
+      Name: "cs:LeaderboardPersistence"
+      String: "TOTAL"
+    }
+    Overrides {
+      Name: "cs:ResourceName"
+      String: "best_time"
+    }
+    Overrides {
+      Name: "cs:DisplayAsInteger"
+      Bool: false
+    }
+    Overrides {
+      Name: "cs:UpdateTimer"
+      Float: 30
+    }
+    Overrides {
+      Name: "cs:UpdateOnEvent"
+      String: "UpdateLeaderboards"
+    }
+    Overrides {
+      Name: "cs:UpdateOnResourceChanged"
+      Bool: true
+    }
+    Overrides {
+      Name: "cs:UpdateOnPlayerDied"
+      Bool: false
+    }
+    Overrides {
+      Name: "cs:UpdateOnDamageDealt"
+      Bool: false
+    }
+    Overrides {
+      Name: "cs:UpdateOnRoundEnd"
+      Bool: false
+    }
+    Overrides {
+      Name: "cs:FirstPlaceColor"
+      Color {
+        R: 1
+        G: 0.679542601
+        A: 1
+      }
+    }
+    Overrides {
+      Name: "cs:SecondPlaceColor"
+      Color {
+        R: 0.318000019
+        G: 0.318000019
+        B: 0.318000019
+        A: 1
+      }
+    }
+    Overrides {
+      Name: "cs:ThirdPlaceColor"
+      Color {
+        R: 0.610495746
+        G: 0.212230787
+        B: 0.0318960398
+        A: 1
+      }
+    }
+    Overrides {
+      Name: "cs:NoPodiumPlacementColor"
+      Color {
+        R: 1
+        G: 0.894790173
+        B: 0.78771764
+        A: 1
+      }
+    }
+    Overrides {
+      Name: "cs:UsernameColor"
+      Color {
+        R: 1
+        G: 1
+        B: 1
+        A: 1
+      }
+    }
+    Overrides {
+      Name: "cs:ScoreColor"
+      Color {
+        G: 0.138431564
+        B: 0.270497799
+        A: 1
+      }
+    }
+    Overrides {
+      Name: "cs:ToggleBinding"
+      String: "ability_extra_40"
+    }
+    Overrides {
+      Name: "cs:ToggleEvent"
+      String: ""
+    }
+    Overrides {
+      Name: "cs:ForceOnEvent"
+      String: ""
+    }
+    Overrides {
+      Name: "cs:ForceOffEvent"
+      String: ""
+    }
+    Overrides {
+      Name: "cs:EaseToggle"
+      Bool: true
+    }
+    Overrides {
+      Name: "cs:EaseBeginning"
+      String: "UP"
+    }
+    Overrides {
+      Name: "cs:EasingDuration"
+      Float: 0.5
+    }
+    Overrides {
+      Name: "cs:EasingEquationIn"
+      String: "LINEAR"
+    }
+    Overrides {
+      Name: "cs:EasingDirectionIn"
+      String: "IN"
+    }
+    Overrides {
+      Name: "cs:EasingEquationOut"
+      String: "LINEAR"
+    }
+    Overrides {
+      Name: "cs:EasingDirectionOut"
+      String: "OUT"
+    }
+    Overrides {
+      Name: "cs:LeaderboardType:tooltip"
+      String: "The LeaderboardType for the leaderboard referenced | GLOBAL, MONTLY, WEEKLY, DAILY"
+    }
+    Overrides {
+      Name: "cs:LeaderboardStat:tooltip"
+      String: "What is being tracked by the leaderboard | RESOURCE, KDR, KILLS, DEATHS, DAMAGE_DEALT"
+    }
+    Overrides {
+      Name: "cs:UpdateTimer:tooltip"
+      String: "The seconds for the leaderboard to update naturally; must be greater than 0"
+    }
+    Overrides {
+      Name: "cs:ResourceName:tooltip"
+      String: "The name of the resource that will be monitored; only applies if LeaderboardStat is RESOURCE"
+    }
+    Overrides {
+      Name: "cs:DisplayAsInteger:tooltip"
+      String: "Determines if the score is shown as an interger (1) or a float (1.0)"
+    }
+    Overrides {
+      Name: "cs:UpdateOnEvent:tooltip"
+      String: "The leaderboard will update upon this event being fired"
+    }
+    Overrides {
+      Name: "cs:UpdateOnResourceChanged:tooltip"
+      String: "The leaderboard will update upon a player\'s resource changing that corresponds to this leaderboard\'s ResourceName; does not apply if LeaderboardStat is not RESOURCE"
+    }
+    Overrides {
+      Name: "cs:UpdateOnPlayerDied:tooltip"
+      String: "The leaderboard will update upon a player dying; does not apply if LeaderboardStat is not KDR, KILLS, or DEATHS"
+    }
+    Overrides {
+      Name: "cs:UpdateOnDamageDealt:tooltip"
+      String: "The leaderboard will update upon a player being damaged; does not apply if LeaderboardStat is not DAMAGE_DEALT"
+    }
+    Overrides {
+      Name: "cs:UpdateOnRoundEnd:tooltip"
+      String: "The leaderboard will update upon Game.roundEndEvent"
+    }
+    Overrides {
+      Name: "cs:LeaderboardPersistence:tooltip"
+      String: "TOTAL, ROUND"
+    }
+    Overrides {
+      Name: "cs:EaseBeginning:tooltip"
+      String: "The location that the leaderboard should ease from and to; does not apply if EaseToggle is false | UP, DOWN, LEFT, RIGHT"
+    }
+    Overrides {
+      Name: "cs:LeaderboardReference:tooltip"
+      String: "The NetReference for the Leaderboard (View -> Global Leaderboards)"
+    }
+    Overrides {
+      Name: "cs:FirstPlaceColor:tooltip"
+      String: "The color for the person in the first place on the leaderbard"
+    }
+    Overrides {
+      Name: "cs:SecondPlaceColor:tooltip"
+      String: "The color for the person in the second place on the leaderbard"
+    }
+    Overrides {
+      Name: "cs:ThirdPlaceColor:tooltip"
+      String: "The color for the person in the third place on the leaderbard"
+    }
+    Overrides {
+      Name: "cs:NoPodiumPlacementColor:tooltip"
+      String: "The color for the everyone not on the podium (not top 3)"
+    }
+    Overrides {
+      Name: "cs:UsernameColor:tooltip"
+      String: "The color for each player\'s username"
+    }
+    Overrides {
+      Name: "cs:ScoreColor:tooltip"
+      String: "The color for each player\'s score"
+    }
+    Overrides {
+      Name: "cs:ToggleBinding:tooltip"
+      String: "The binding that someone presses to show/hide the leaderboard"
+    }
+    Overrides {
+      Name: "cs:ToggleEvent:tooltip"
+      String: "The event that will toggle the visibility of leaderboard"
+    }
+    Overrides {
+      Name: "cs:EaseToggle:tooltip"
+      String: "Determines if the leaderboard should just pop in/out of place, or ease/tween/interpolate"
+    }
+    Overrides {
+      Name: "cs:EasingDuration:tooltip"
+      String: "The amount of time for easing; does not apply if EaseToggle is false"
+    }
+    Overrides {
+      Name: "cs:EasingEquationIn:tooltip"
+      String: "The easing equation that will be used to ease in; does not apply if EaseToggle is false | LINEAR, QUADRATIC, CUBIC, QUARTIC, QUINTIC, SINE, EXPONENTIAL, CIRCULAR, ELASTIC, BACK, BOUNCE"
+    }
+    Overrides {
+      Name: "cs:EasingDirectionIn:tooltip"
+      String: "The easing direction that will be used to ease in; does not apply if EaseToggle is false | IN, OUT, INOUT"
+    }
+    Overrides {
+      Name: "cs:EasingEquationOut:tooltip"
+      String: "The easing equation that will be used to ease out; does not apply if EaseToggle is false | LINEAR, QUADRATIC, CUBIC, QUARTIC, QUINTIC, SINE, EXPONENTIAL, CIRCULAR, ELASTIC, BACK, BOUNCE"
+    }
+    Overrides {
+      Name: "cs:EasingDirectionOut:tooltip"
+      String: "The easing direction that will be used to ease out; does not apply if EaseToggle is false | IN, OUT, INOUT"
+    }
+    Overrides {
+      Name: "cs:ForceOnEvent:tooltip"
+      String: "The event that will force the leaderboard to become visible"
+    }
+    Overrides {
+      Name: "cs:ForceOffEvent:tooltip"
+      String: "The event that will force the leaderboard to become invisible"
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Folder {
+    IsGroup: true
+  }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
+}
+Objects {
+  Id: 9164962882180724303
+  Name: "ClientContext"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 7780068891736137061
+  ChildIds: 8353332574736957229
+  ChildIds: 11580823468390265612
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:forceoff"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:forceoff"
+  }
+  NetworkContext {
+    MinDetailLevel {
+      Value: "mc:edetaillevel:low"
+    }
+    MaxDetailLevel {
+      Value: "mc:edetaillevel:ultra"
+    }
+  }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
+}
+Objects {
+  Id: 11580823468390265612
+  Name: "Container"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 9164962882180724303
+  ChildIds: 14601385093844270737
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Control {
+    RenderTransformPivot {
+      Anchor {
+        Value: "mc:euianchor:middlecenter"
+      }
+    }
+    Canvas {
+      Opacity: 1
+      IsHUD: true
+      CanvasWorldSize {
+        X: 1024
+        Y: 1024
+      }
+      TwoSided: true
+      TickWhenOffScreen: true
+      RedrawTime: 30
+      UseSafeZoneAdjustment: true
+    }
+    AnchorLayout {
+      SelfAnchor {
+        Anchor {
+          Value: "mc:euianchor:topleft"
+        }
+      }
+      TargetAnchor {
+        Anchor {
+          Value: "mc:euianchor:topleft"
+        }
+      }
+    }
+  }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
+}
+Objects {
+  Id: 14601385093844270737
+  Name: "Info Panel - LB Best Times"
+  Transform {
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 11580823468390265612
+  ChildIds: 14222734122354242116
+  ChildIds: 17827925343952316993
+  ChildIds: 14264508659476324533
+  ChildIds: 3897961557962607827
+  ChildIds: 15274178841109868548
+  ChildIds: 1938946672763722497
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:forceon"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  Control {
+    Width: 704
+    Height: 704
+    RenderTransformPivot {
+      Anchor {
+        Value: "mc:euianchor:middlecenter"
+      }
+    }
+    Panel {
+      IsClipping: true
+      Opacity: 1
+    }
+    AnchorLayout {
+      SelfAnchor {
+        Anchor {
+          Value: "mc:euianchor:middlecenter"
+        }
+      }
+      TargetAnchor {
+        Anchor {
+          Value: "mc:euianchor:middlecenter"
+        }
+      }
+    }
+  }
+}
+Objects {
+  Id: 1938946672763722497
+  Name: "UI Panel Text"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 14601385093844270737
+  ChildIds: 2748792085481215223
+  ChildIds: 8040714643068808242
+  ChildIds: 14852959938417706359
+  ChildIds: 6315719277639969354
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  Control {
+    Width: 600
+    Height: 560
+    UIY: -20
+    RenderTransformPivot {
+      Anchor {
+        Value: "mc:euianchor:middlecenter"
+      }
+    }
+    Panel {
+      IsClipping: true
+      Opacity: 1
+    }
+    AnchorLayout {
+      SelfAnchor {
+        Anchor {
+          Value: "mc:euianchor:middlecenter"
+        }
+      }
+      TargetAnchor {
+        Anchor {
+          Value: "mc:euianchor:middlecenter"
+        }
+      }
+    }
+  }
+}
+Objects {
+  Id: 6315719277639969354
+  Name: "Entries"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 1938946672763722497
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Control {
+    Width: -10
+    UIY: 80
+    RenderTransformPivot {
+      Anchor {
+        Value: "mc:euianchor:middlecenter"
+      }
+    }
+    AddSizeToParentIfUsingParentSize: true
+    UseParentWidth: true
+    UseParentHeight: true
+    ScrollPanel {
+      Orientation {
+        Value: "mc:eorientation:orient_vertical"
+      }
+      IsInteractable: true
+    }
+    AnchorLayout {
+      SelfAnchor {
+        Anchor {
+          Value: "mc:euianchor:bottomcenter"
+        }
+      }
+      TargetAnchor {
+        Anchor {
+          Value: "mc:euianchor:bottomcenter"
+        }
+      }
+    }
+  }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
+}
+Objects {
+  Id: 14852959938417706359
+  Name: "UpdateTimer"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 1938946672763722497
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Control {
+    Width: -60
+    Height: 40
+    UIY: -478.313
+    RenderTransformPivot {
+      Anchor {
+        Value: "mc:euianchor:middlecenter"
+      }
+    }
+    AddSizeToParentIfUsingParentSize: true
+    UseParentWidth: true
+    Text {
+      Label: "UPDATES IN 30 SECONDS"
+      Color {
+        G: 0.138431564
+        B: 0.270497799
+        A: 1
+      }
+      Size: 20
+      Justification {
+        Value: "mc:etextjustify:center"
+      }
+      ClipTextToSize: true
+      Font {
+        Id: 7895514115667993783
+      }
+    }
+    AnchorLayout {
+      SelfAnchor {
+        Anchor {
+          Value: "mc:euianchor:bottomcenter"
+        }
+      }
+      TargetAnchor {
+        Anchor {
+          Value: "mc:euianchor:bottomcenter"
+        }
+      }
+    }
+  }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
+}
+Objects {
+  Id: 8040714643068808242
+  Name: "UI Text Box"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 1938946672763722497
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  Control {
+    Width: 200
+    Height: 60
+    RenderTransformPivot {
+      Anchor {
+        Value: "mc:euianchor:middlecenter"
+      }
+    }
+    UseParentWidth: true
+    Text {
+      Label: "Best Times:"
+      Color {
+        G: 0.138431564
+        B: 0.270497799
+        A: 1
+      }
+      Size: 32
+      Justification {
+        Value: "mc:etextjustify:center"
+      }
+      AutoWrapText: true
+      Font {
+        Id: 7895514115667993783
+      }
+      VerticalJustification {
+        Value: "mc:everticaljustification:top"
+      }
+      ShadowColor {
+        A: 1
+      }
+      ShadowOffset {
+      }
+      OutlineColor {
+        A: 1
+      }
+    }
+    AnchorLayout {
+      SelfAnchor {
+        Anchor {
+          Value: "mc:euianchor:topleft"
+        }
+      }
+      TargetAnchor {
+        Anchor {
+          Value: "mc:euianchor:topleft"
+        }
+      }
+    }
+  }
+}
+Objects {
+  Id: 2748792085481215223
+  Name: "UI Text Box"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 1938946672763722497
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:forceoff"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  Control {
+    Width: 200
+    Height: 60
+    RenderTransformPivot {
+      Anchor {
+        Value: "mc:euianchor:middlecenter"
+      }
+    }
+    UseParentWidth: true
+    Text {
+      Label: "Best Times:"
+      Color {
+        G: 0.138431564
+        B: 0.270497799
+        A: 1
+      }
+      Size: 32
+      Justification {
+        Value: "mc:etextjustify:center"
+      }
+      AutoWrapText: true
+      Font {
+        Id: 7895514115667993783
+      }
+      VerticalJustification {
+        Value: "mc:everticaljustification:top"
+      }
+      ShadowColor {
+        A: 1
+      }
+      ShadowOffset {
+      }
+      OutlineColor {
+        A: 1
+      }
+    }
+    AnchorLayout {
+      SelfAnchor {
+        Anchor {
+          Value: "mc:euianchor:topleft"
+        }
+      }
+      TargetAnchor {
+        Anchor {
+          Value: "mc:euianchor:topleft"
+        }
+      }
+    }
+  }
+}
+Objects {
+  Id: 15274178841109868548
+  Name: "Outer Border"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 14601385093844270737
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  Control {
+    Width: 652
+    Height: 610
+    UIY: -20
+    RenderTransformPivot {
+      Anchor {
+        Value: "mc:euianchor:middlecenter"
+      }
+    }
+    Image {
+      Brush {
+        Id: 9547437666052135238
+      }
+      Color {
+        G: 0.138431564
+        B: 0.270497799
+        A: 1
+      }
+      TeamSettings {
+      }
+      ShadowColor {
+        A: 1
+      }
+      ShadowOffset {
+      }
+      ScreenshotIndex: 1
+    }
+    AnchorLayout {
+      SelfAnchor {
+        Anchor {
+          Value: "mc:euianchor:middlecenter"
+        }
+      }
+      TargetAnchor {
+        Anchor {
+          Value: "mc:euianchor:middlecenter"
+        }
+      }
+    }
+  }
+}
+Objects {
+  Id: 3897961557962607827
+  Name: "Inner UI Panel"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 14601385093844270737
+  ChildIds: 12981025908709384164
+  ChildIds: 13415471038135393928
+  ChildIds: 509629312295621149
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  Control {
+    Width: 600
+    Height: 560
+    UIY: -20
+    RenderTransformPivot {
+      Anchor {
+        Value: "mc:euianchor:middlecenter"
+      }
+    }
+    Panel {
+      IsClipping: true
+      Opacity: 1
+    }
+    AnchorLayout {
+      SelfAnchor {
+        Anchor {
+          Value: "mc:euianchor:middlecenter"
+        }
+      }
+      TargetAnchor {
+        Anchor {
+          Value: "mc:euianchor:middlecenter"
+        }
+      }
+    }
+  }
+}
+Objects {
+  Id: 509629312295621149
+  Name: "Top Curve"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 3897961557962607827
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:forceon"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  Control {
+    Width: 1583
+    Height: 703
+    UIX: 305.358398
+    UIY: -364.497375
+    RenderTransformPivot {
+      Anchor {
+        Value: "mc:euianchor:middlecenter"
+      }
+    }
+    Image {
+      Brush {
+        Id: 5843242743582657704
+      }
+      Color {
+        R: 0.341914415
+        G: 0.814846396
+        B: 1
+        A: 1
+      }
+      TeamSettings {
+      }
+      ShadowColor {
+        A: 1
+      }
+      ShadowOffset {
+      }
+      ScreenshotIndex: 1
+    }
+    AnchorLayout {
+      SelfAnchor {
+        Anchor {
+          Value: "mc:euianchor:middlecenter"
+        }
+      }
+      TargetAnchor {
+        Anchor {
+          Value: "mc:euianchor:middlecenter"
+        }
+      }
+    }
+  }
+}
+Objects {
+  Id: 13415471038135393928
+  Name: "Middle Curve"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 3897961557962607827
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:forceon"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  Control {
+    Width: 1930
+    Height: 879
+    UIX: 400.189941
+    UIY: -228.398529
+    RenderTransformPivot {
+      Anchor {
+        Value: "mc:euianchor:middlecenter"
+      }
+    }
+    Image {
+      Brush {
+        Id: 5843242743582657704
+      }
+      Color {
+        R: 0.102241755
+        G: 0.577579916
+        B: 1
+        A: 1
+      }
+      TeamSettings {
+      }
+      ShadowColor {
+        A: 1
+      }
+      ShadowOffset {
+      }
+      ScreenshotIndex: 1
+    }
+    AnchorLayout {
+      SelfAnchor {
+        Anchor {
+          Value: "mc:euianchor:middlecenter"
+        }
+      }
+      TargetAnchor {
+        Anchor {
+          Value: "mc:euianchor:middlecenter"
+        }
+      }
+    }
+  }
+}
+Objects {
+  Id: 12981025908709384164
+  Name: "Bottom Curve"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 3897961557962607827
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:forceon"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  Control {
+    Width: 1930
+    Height: 879
+    UIX: 400.189941
+    UIY: 39.866127
+    RenderTransformPivot {
+      Anchor {
+        Value: "mc:euianchor:middlecenter"
+      }
+    }
+    Image {
+      Brush {
+        Id: 5843242743582657704
+      }
+      Color {
+        R: 0.0318960436
+        G: 0.434153557
+        B: 0.947306514
+        A: 1
+      }
+      TeamSettings {
+      }
+      ShadowColor {
+        A: 1
+      }
+      ShadowOffset {
+      }
+      ScreenshotIndex: 1
+    }
+    AnchorLayout {
+      SelfAnchor {
+        Anchor {
+          Value: "mc:euianchor:middlecenter"
+        }
+      }
+      TargetAnchor {
+        Anchor {
+          Value: "mc:euianchor:middlecenter"
+        }
+      }
+    }
+  }
+}
+Objects {
+  Id: 14264508659476324533
+  Name: "Inner Border"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 14601385093844270737
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  Control {
+    Width: 644
+    Height: 600
+    UIY: -20
+    RenderTransformPivot {
+      Anchor {
+        Value: "mc:euianchor:middlecenter"
+      }
+    }
+    Image {
+      Brush {
+        Id: 14813488981274987120
+      }
+      Color {
+        G: 0.138431564
+        B: 0.270497799
+        A: 1
+      }
+      TeamSettings {
+      }
+      ShadowColor {
+        A: 1
+      }
+      ShadowOffset {
+      }
+      ScreenshotIndex: 1
+    }
+    AnchorLayout {
+      SelfAnchor {
+        Anchor {
+          Value: "mc:euianchor:middlecenter"
+        }
+      }
+      TargetAnchor {
+        Anchor {
+          Value: "mc:euianchor:middlecenter"
+        }
+      }
+    }
+  }
+}
+Objects {
+  Id: 17827925343952316993
+  Name: "Tile Edge"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 14601385093844270737
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  Control {
+    Width: 704
+    Height: 680
+    UIY: -10
+    RenderTransformPivot {
+      Anchor {
+        Value: "mc:euianchor:middlecenter"
+      }
+    }
+    Image {
+      Brush {
+        Id: 14813488981274987120
+      }
+      Color {
+        R: 0.00699545396
+        G: 0.25415194
+        B: 0.693871737
+        A: 1
+      }
+      TeamSettings {
+      }
+      ShadowColor {
+        A: 1
+      }
+      ShadowOffset {
+      }
+      ScreenshotIndex: 1
+    }
+    AnchorLayout {
+      SelfAnchor {
+        Anchor {
+          Value: "mc:euianchor:middlecenter"
+        }
+      }
+      TargetAnchor {
+        Anchor {
+          Value: "mc:euianchor:middlecenter"
+        }
+      }
+    }
+  }
+}
+Objects {
+  Id: 14222734122354242116
+  Name: "Background"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 14601385093844270737
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  Control {
+    Width: 704
+    Height: 704
+    RenderTransformPivot {
+      Anchor {
+        Value: "mc:euianchor:middlecenter"
+      }
+    }
+    Image {
+      Brush {
+        Id: 14813488981274987120
+      }
+      Color {
+        G: 0.138431564
+        B: 0.270497799
+        A: 1
+      }
+      TeamSettings {
+      }
+      ShadowColor {
+        A: 1
+      }
+      ShadowOffset {
+      }
+      ScreenshotIndex: 1
+    }
+    AnchorLayout {
+      SelfAnchor {
+        Anchor {
+          Value: "mc:euianchor:bottomcenter"
+        }
+      }
+      TargetAnchor {
+        Anchor {
+          Value: "mc:euianchor:bottomcenter"
+        }
+      }
+    }
+  }
+}
+Objects {
+  Id: 8353332574736957229
+  Name: "Leaderboard_Interface"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 9164962882180724303
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:EntryTemplate"
+      AssetReference {
+        Id: 11304610660571557117
+      }
+    }
+    Overrides {
+      Name: "cs:EaseUI"
+      AssetReference {
+        Id: 14330113247476084753
+      }
+    }
+    Overrides {
+      Name: "cs:Leaderboard"
+      ObjectReference {
+        SelfId: 7780068891736137061
+      }
+    }
+    Overrides {
+      Name: "cs:LeaderboardPanel"
+      ObjectReference {
+        SelfId: 14601385093844270737
+      }
+    }
+    Overrides {
+      Name: "cs:Entries"
+      ObjectReference {
+        SelfId: 6315719277639969354
+      }
+    }
+    Overrides {
+      Name: "cs:Title"
+      ObjectReference {
+        SelfId: 2748792085481215223
+      }
+    }
+    Overrides {
+      Name: "cs:UpdateTimer"
+      ObjectReference {
+        SelfId: 14852959938417706359
+      }
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Script {
+    ScriptAsset {
+      Id: 17529528901566979388
+    }
+  }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
+}
+Objects {
+  Id: 7183948543128728715
+  Name: "Leaderboard"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 7780068891736137061
+  UnregisteredParameters {
+    Overrides {
+      Name: "cs:Leaderboard"
+      ObjectReference {
+        SelfId: 7780068891736137061
+      }
+    }
+  }
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Script {
+    ScriptAsset {
+      Id: 13362638781340740546
+    }
+  }
+  NetworkRelevanceDistance {
+    Value: "mc:eproxyrelevance:critical"
+  }
+}
+Objects {
   Id: 15083460371663379266
   Name: "UI_ClientContext"
   Transform {
