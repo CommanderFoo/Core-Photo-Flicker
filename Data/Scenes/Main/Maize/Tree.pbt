@@ -17,6 +17,7 @@ Objects {
   ParentId: 3843404861901986054
   ChildIds: 11774971185288353684
   ChildIds: 7895828788752880789
+  ChildIds: 11997106476283474767
   Collidable_v2 {
     Value: "mc:ecollisionsetting:forceoff"
   }
@@ -42,6 +43,146 @@ Objects {
   }
   NetworkRelevanceDistance {
     Value: "mc:eproxyrelevance:critical"
+  }
+}
+Objects {
+  Id: 11997106476283474767
+  Name: "Panel Container"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 15083460371663379266
+  ChildIds: 12878029569979075007
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  Control {
+    UIX: 100
+    RenderTransformPivot {
+      Anchor {
+        Value: "mc:euianchor:middlecenter"
+      }
+    }
+    Canvas {
+      ContentType {
+        Value: "mc:ecanvascontenttype:dynamic"
+      }
+      Opacity: 1
+      IsHUD: true
+      CanvasWorldSize {
+        X: 1024
+        Y: 1024
+      }
+      RedrawTime: 30
+      UseSafeZoneAdjustment: true
+    }
+    AnchorLayout {
+      SelfAnchor {
+        Anchor {
+          Value: "mc:euianchor:topleft"
+        }
+      }
+      TargetAnchor {
+        Anchor {
+          Value: "mc:euianchor:topleft"
+        }
+      }
+    }
+  }
+}
+Objects {
+  Id: 12878029569979075007
+  Name: "Info Panel - Tutorial"
+  Transform {
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 11997106476283474767
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  TemplateInstance {
+    ParameterOverrideMap {
+      key: 343415894732562037
+      value {
+        Overrides {
+          Name: "UIY"
+          Float: -8
+        }
+      }
+    }
+    ParameterOverrideMap {
+      key: 1065769718497404668
+      value {
+        Overrides {
+          Name: "Name"
+          String: "Info Panel - Tutorial"
+        }
+        Overrides {
+          Name: "Position"
+          Vector {
+          }
+        }
+        Overrides {
+          Name: "Rotation"
+          Rotator {
+          }
+        }
+        Overrides {
+          Name: "Scale"
+          Vector {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        Overrides {
+          Name: "Visible"
+          Enum {
+            Value: "mc:evisibilitysetting:inheritfromparent"
+          }
+        }
+        Overrides {
+          Name: "UIY"
+          Float: -1500
+        }
+      }
+    }
+    ParameterOverrideMap {
+      key: 1565875284924237421
+      value {
+        Overrides {
+          Name: "Label"
+          String: "Find all pairs of matching cards.\r\nPlace one card on top of another with the same picture to make a match.\r\nPairs of cards must stack with no other cards between them.\r\nCards can be moved quickly with a flick gesture."
+        }
+      }
+    }
+    TemplateAsset {
+      Id: 3903482482837030487
+    }
   }
 }
 Objects {
@@ -338,7 +479,7 @@ Objects {
         Overrides {
           Name: "Visible"
           Enum {
-            Value: "mc:evisibilitysetting:forceoff"
+            Value: "mc:evisibilitysetting:inheritfromparent"
           }
         }
       }
@@ -1219,7 +1360,6 @@ Objects {
   ChildIds: 7958466908494440361
   ChildIds: 15708841779342355332
   ChildIds: 16443359550206853135
-  ChildIds: 12878029569979075007
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -1263,52 +1403,6 @@ Objects {
           Value: "mc:euianchor:topleft"
         }
       }
-    }
-  }
-}
-Objects {
-  Id: 12878029569979075007
-  Name: "Info Panel - Tutorial"
-  Transform {
-    Scale {
-      X: 1
-      Y: 1
-      Z: 1
-    }
-  }
-  ParentId: 11774971185288353684
-  Collidable_v2 {
-    Value: "mc:ecollisionsetting:inheritfromparent"
-  }
-  Visible_v2 {
-    Value: "mc:evisibilitysetting:inheritfromparent"
-  }
-  TemplateInstance {
-    ParameterOverrideMap {
-      key: 1065769718497404668
-      value {
-        Overrides {
-          Name: "Name"
-          String: "Info Panel - Tutorial"
-        }
-        Overrides {
-          Name: "Position"
-          Vector {
-          }
-        }
-        Overrides {
-          Name: "Rotation"
-          Rotator {
-          }
-        }
-        Overrides {
-          Name: "UIY"
-          Float: 1500
-        }
-      }
-    }
-    TemplateAsset {
-      Id: 3903482482837030487
     }
   }
 }

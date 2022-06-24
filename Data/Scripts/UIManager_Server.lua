@@ -258,11 +258,10 @@ function OnClicked(button)
     elseif button == TITLE_TUT_BTN then
         button.isInteractable = false
         tutorial_on = not tutorial_on
-        TogglePanel(HELP_PANEL, pause_on)
+        TogglePanel(HELP_PANEL, tutorial_on)
         Task.Wait(1.5)
         button.isInteractable = true
     end
-    
 
 end
 

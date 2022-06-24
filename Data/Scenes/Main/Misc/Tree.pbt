@@ -88,6 +88,7 @@ Objects {
     }
     MinPitch: -89
     MaxPitch: 89
+    IsCameraCollisionEnabled: true
   }
   NetworkRelevanceDistance {
     Value: "mc:eproxyrelevance:critical"
