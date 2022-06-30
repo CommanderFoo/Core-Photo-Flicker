@@ -36,13 +36,12 @@ local TOAL_WINS_BOX = script:GetCustomProperty("ToalWinsBox"):WaitForObject()
 local TITLE_TUT_BTN = script:GetCustomProperty("Title_TutBtn"):WaitForObject()
 local TITLE_LB_BTN = script:GetCustomProperty("Title_LB_Btn"):WaitForObject()
 
-
-
 local tweens = {}
 
 local pause_on = false
 local congrats_on = false
 local tutorial_on = false
+local leaderboard_on = false
 local screen_size = nil
 local y_pos = nil
 
@@ -248,6 +247,7 @@ function OnClicked(button)
         TitleScreenAnimation(false)          -- Add functionality here
         Task.Wait(1.5)
         button.isInteractable = true
+
     elseif button == TITLE_PLAY_BTN then
         button.isInteractable = false
         TitleScreenAnimation(true)
@@ -255,10 +255,19 @@ function OnClicked(button)
         Events.BroadcastToServer("NewGame")
         Task.Wait(1.5)
         button.isInteractable = true
+
     elseif button == TITLE_TUT_BTN then
         button.isInteractable = false
         tutorial_on = not tutorial_on
         TogglePanel(HELP_PANEL, tutorial_on)
+        Task.Wait(1.5)
+        button.isInteractable = true
+
+    elseif button == TITLE_LB_BTN then
+        print("Broadcast to Leaderboard ToggleLeaderBoard")
+        button.isInteractable = false
+        --leaderboard_on = not leaderboard_on
+        Events.Broadcast("ToggleLeaderBoard")
         Task.Wait(1.5)
         button.isInteractable = true
     end
@@ -317,6 +326,7 @@ HELP_PANEL_CLOSE_BUTTON.clickedEvent:Connect(OnClicked)
 TITLE_SCEEN_BTN_SMALL.clickedEvent:Connect(OnClicked)
 TITLE_PLAY_BTN.clickedEvent:Connect(OnClicked)
 TITLE_TUT_BTN.clickedEvent:Connect(OnClicked)
+TITLE_LB_BTN.clickedEvent:Connect(OnClicked)
 
 Events.Connect("match_UI", UpdateMatchUI)
 Events.Connect("game_over", GameOver)

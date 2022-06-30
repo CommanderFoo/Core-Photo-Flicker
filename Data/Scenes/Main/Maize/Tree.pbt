@@ -129,7 +129,7 @@ Objects {
     }
     Overrides {
       Name: "cs:ToggleEvent"
-      String: ""
+      String: "ToggleLeaderBoard"
     }
     Overrides {
       Name: "cs:ForceOnEvent"
@@ -145,11 +145,11 @@ Objects {
     }
     Overrides {
       Name: "cs:EaseBeginning"
-      String: "UP"
+      String: "DOWN"
     }
     Overrides {
       Name: "cs:EasingDuration"
-      Float: 0.5
+      Float: 1.2
     }
     Overrides {
       Name: "cs:EasingEquationIn"
@@ -379,7 +379,6 @@ Objects {
       TwoSided: true
       TickWhenOffScreen: true
       RedrawTime: 30
-      UseSafeZoneAdjustment: true
     }
     AnchorLayout {
       SelfAnchor {
@@ -429,7 +428,7 @@ Objects {
   }
   Control {
     Width: 704
-    Height: 704
+    Height: 900
     RenderTransformPivot {
       Anchor {
         Value: "mc:euianchor:middlecenter"
@@ -472,6 +471,7 @@ Objects {
   ChildIds: 8040714643068808242
   ChildIds: 14852959938417706359
   ChildIds: 6315719277639969354
+  ChildIds: 4228771767581333036
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -486,7 +486,7 @@ Objects {
   }
   Control {
     Width: 600
-    Height: 560
+    Height: 748
     UIY: -20
     RenderTransformPivot {
       Anchor {
@@ -496,6 +496,113 @@ Objects {
     Panel {
       IsClipping: true
       Opacity: 1
+    }
+    AnchorLayout {
+      SelfAnchor {
+        Anchor {
+          Value: "mc:euianchor:middlecenter"
+        }
+      }
+      TargetAnchor {
+        Anchor {
+          Value: "mc:euianchor:middlecenter"
+        }
+      }
+    }
+  }
+}
+Objects {
+  Id: 4228771767581333036
+  Name: "CloseBtn"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 1938946672763722497
+  Collidable_v2 {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  Visible_v2 {
+    Value: "mc:evisibilitysetting:inheritfromparent"
+  }
+  CameraCollidable {
+    Value: "mc:ecollisionsetting:inheritfromparent"
+  }
+  EditorIndicatorVisibility {
+    Value: "mc:eindicatorvisibility:visiblewhenselected"
+  }
+  Control {
+    Width: 250
+    Height: 93
+    UIY: 314.511475
+    RenderTransformPivot {
+      Anchor {
+        Value: "mc:euianchor:middlecenter"
+      }
+    }
+    IsHittable: true
+    Button {
+      Label: "Close"
+      FontColor {
+        R: 1
+        G: 1
+        B: 1
+        A: 1
+      }
+      FontSize: 32
+      ButtonColor {
+        G: 0.138431564
+        B: 0.270497799
+        A: 1
+      }
+      HoveredColor {
+        R: 0.102241755
+        G: 0.577579916
+        B: 1
+        A: 1
+      }
+      PressedColor {
+        R: 0.00699545396
+        G: 0.25415194
+        B: 0.693871737
+        A: 1
+      }
+      DisabledColor {
+        R: 1
+        G: 1
+        B: 1
+        A: 1
+      }
+      Brush {
+        Id: 14813488981274987120
+      }
+      IsButtonEnabled: true
+      ClickMode {
+        Value: "mc:ebuttonclickmode:default"
+      }
+      Font {
+        Id: 7895514115667993783
+      }
+      Justification {
+        Value: "mc:etextjustify:center"
+      }
+      VerticalJustification {
+        Value: "mc:everticaljustification:center"
+      }
+      ShadowColor {
+        G: 0.138431564
+        B: 0.270497799
+        A: 1
+      }
+      ShadowOffset {
+      }
     }
     AnchorLayout {
       SelfAnchor {
@@ -537,6 +644,7 @@ Objects {
   }
   Control {
     Width: -10
+    Height: -205
     UIY: 80
     RenderTransformPivot {
       Anchor {
@@ -555,12 +663,12 @@ Objects {
     AnchorLayout {
       SelfAnchor {
         Anchor {
-          Value: "mc:euianchor:bottomcenter"
+          Value: "mc:euianchor:topcenter"
         }
       }
       TargetAnchor {
         Anchor {
-          Value: "mc:euianchor:bottomcenter"
+          Value: "mc:euianchor:topcenter"
         }
       }
     }
@@ -596,7 +704,7 @@ Objects {
   Control {
     Width: -60
     Height: 40
-    UIY: -478.313
+    UIY: 42.1990356
     RenderTransformPivot {
       Anchor {
         Value: "mc:euianchor:middlecenter"
@@ -623,12 +731,12 @@ Objects {
     AnchorLayout {
       SelfAnchor {
         Anchor {
-          Value: "mc:euianchor:bottomcenter"
+          Value: "mc:euianchor:topcenter"
         }
       }
       TargetAnchor {
         Anchor {
-          Value: "mc:euianchor:bottomcenter"
+          Value: "mc:euianchor:topcenter"
         }
       }
     }
@@ -820,7 +928,7 @@ Objects {
   }
   Control {
     Width: 652
-    Height: 610
+    Height: 804
     UIY: -20
     RenderTransformPivot {
       Anchor {
@@ -891,7 +999,7 @@ Objects {
   }
   Control {
     Width: 600
-    Height: 560
+    Height: 747
     UIY: -20
     RenderTransformPivot {
       Anchor {
@@ -1085,7 +1193,7 @@ Objects {
   }
   Control {
     Width: 1930
-    Height: 879
+    Height: 1015
     UIX: 400.189941
     UIY: 39.866127
     RenderTransformPivot {
@@ -1155,7 +1263,7 @@ Objects {
   }
   Control {
     Width: 644
-    Height: 600
+    Height: 794
     UIY: -20
     RenderTransformPivot {
       Anchor {
@@ -1223,7 +1331,7 @@ Objects {
   }
   Control {
     Width: 704
-    Height: 680
+    Height: 880
     UIY: -10
     RenderTransformPivot {
       Anchor {
@@ -1292,7 +1400,7 @@ Objects {
   }
   Control {
     Width: 704
-    Height: 704
+    Height: 900
     RenderTransformPivot {
       Anchor {
         Value: "mc:euianchor:middlecenter"
@@ -1386,6 +1494,12 @@ Objects {
       Name: "cs:UpdateTimer"
       ObjectReference {
         SelfId: 14852959938417706359
+      }
+    }
+    Overrides {
+      Name: "cs:CloseBtn"
+      ObjectReference {
+        SelfId: 4228771767581333036
       }
     }
   }
@@ -1539,7 +1653,6 @@ Objects {
         Y: 1024
       }
       RedrawTime: 30
-      UseSafeZoneAdjustment: true
     }
     AnchorLayout {
       SelfAnchor {
@@ -1625,6 +1738,15 @@ Objects {
         Overrides {
           Name: "Label"
           String: "Find all pairs of matching cards.\r\nPlace one card on top of another with the same picture to make a match.\r\nPairs of cards must stack with no other cards between them.\r\nCards can be moved quickly with a flick gesture."
+        }
+      }
+    }
+    ParameterOverrideMap {
+      key: 17986995274466356880
+      value {
+        Overrides {
+          Name: "UIY"
+          Float: 38.0302544
         }
       }
     }
@@ -1734,6 +1856,7 @@ Objects {
   ChildIds: 16389421210091220024
   ChildIds: 7020615236707917277
   ChildIds: 17180833255887931705
+  ChildIds: 6851865783099017570
   Collidable_v2 {
     Value: "mc:ecollisionsetting:inheritfromparent"
   }
@@ -1769,6 +1892,92 @@ Objects {
           Value: "mc:euianchor:middlecenter"
         }
       }
+    }
+  }
+}
+Objects {
+  Id: 6851865783099017570
+  Name: "Text Button - Capsule"
+  Transform {
+    Location {
+    }
+    Rotation {
+    }
+    Scale {
+      X: 1
+      Y: 1
+      Z: 1
+    }
+  }
+  ParentId: 4085833305605419278
+  TemplateInstance {
+    ParameterOverrideMap {
+      key: 4429027583269805043
+      value {
+        Overrides {
+          Name: "Name"
+          String: "Option Button - Capsule"
+        }
+        Overrides {
+          Name: "Position"
+          Vector {
+          }
+        }
+        Overrides {
+          Name: "Rotation"
+          Rotator {
+          }
+        }
+        Overrides {
+          Name: "Scale"
+          Vector {
+            X: 1
+            Y: 1
+            Z: 1
+          }
+        }
+        Overrides {
+          Name: "UIY"
+          Float: 280
+        }
+        Overrides {
+          Name: "UIX"
+          Float: 0
+        }
+      }
+    }
+    ParameterOverrideMap {
+      key: 6067044185211840393
+      value {
+        Overrides {
+          Name: "Label"
+          String: "Collections"
+        }
+        Overrides {
+          Name: "DisabledColor"
+          Color {
+            R: 0.0318960436
+            G: 0.434153557
+            B: 0.947306514
+            A: 1
+          }
+        }
+        Overrides {
+          Name: "ScaleToFit"
+          Bool: false
+        }
+        Overrides {
+          Name: "FontSize"
+          Int: 32
+        }
+        Overrides {
+          Name: "UIY"
+          Float: 0
+        }
+      }
+    }
+    TemplateAsset {
+      Id: 8520288693219612727
     }
   }
 }
@@ -1836,7 +2045,7 @@ Objects {
         Overrides {
           Name: "Visible"
           Enum {
-            Value: "mc:evisibilitysetting:forceoff"
+            Value: "mc:evisibilitysetting:inheritfromparent"
           }
         }
       }
@@ -1859,6 +2068,15 @@ Objects {
         Overrides {
           Name: "UIY"
           Float: -1
+        }
+        Overrides {
+          Name: "DisabledColor"
+          Color {
+            R: 0.0318960436
+            G: 0.434153557
+            B: 0.947306514
+            A: 1
+          }
         }
       }
     }
@@ -1951,6 +2169,15 @@ Objects {
           Name: "UIY"
           Float: -1
         }
+        Overrides {
+          Name: "DisabledColor"
+          Color {
+            R: 0.0318960436
+            G: 0.434153557
+            B: 0.947306514
+            A: 1
+          }
+        }
       }
     }
     TemplateAsset {
@@ -1998,6 +2225,20 @@ Objects {
         Overrides {
           Name: "UIY"
           Float: 24
+        }
+      }
+    }
+    ParameterOverrideMap {
+      key: 6067044185211840393
+      value {
+        Overrides {
+          Name: "DisabledColor"
+          Color {
+            R: 0.0318960436
+            G: 0.434153557
+            B: 0.947306514
+            A: 1
+          }
         }
       }
     }

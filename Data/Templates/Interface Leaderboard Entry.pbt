@@ -132,6 +132,7 @@ Assets {
               Value: "mc:etextjustify:center"
             }
             Font {
+              Id: 7895514115667993783
             }
           }
           AnchorLayout {
@@ -262,6 +263,7 @@ Assets {
             }
             ClipTextToSize: true
             Font {
+              Id: 7895514115667993783
             }
           }
           AnchorLayout {
@@ -390,6 +392,7 @@ Assets {
             }
             ClipTextToSize: true
             Font {
+              Id: 7895514115667993783
             }
           }
           AnchorLayout {
@@ -408,6 +411,15 @@ Assets {
         NetworkRelevanceDistance {
           Value: "mc:eproxyrelevance:critical"
         }
+      }
+    }
+    Assets {
+      Id: 7895514115667993783
+      Name: "Baloo 2 Extra Bold"
+      PlatformAssetType: 28
+      PrimaryAsset {
+        AssetType: "FontAssetRef"
+        AssetId: "Baloo2ExtraBold_ref"
       }
     }
     PrimaryAssetId {

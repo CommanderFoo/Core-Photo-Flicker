@@ -507,21 +507,21 @@ Objects {
       }
     }
     Overrides {
-      Name: "cs:Title_LB_Btn"
-      ObjectReference {
-        SelfId: 3339825613732590424
-        SubObjectId: 6067044185211840393
-        InstanceId: 17180833255887931705
-        TemplateId: 8520288693219612727
-      }
-    }
-    Overrides {
       Name: "cs:Pause_BestTimeBox"
       ObjectReference {
         SelfId: 2031768987582673686
         SubObjectId: 10859973817405814600
         InstanceId: 15708841779342355332
         TemplateId: 5148378255416365230
+      }
+    }
+    Overrides {
+      Name: "cs:Title_LB_Btn"
+      ObjectReference {
+        SelfId: 3339825613732590424
+        SubObjectId: 6067044185211840393
+        InstanceId: 17180833255887931705
+        TemplateId: 8520288693219612727
       }
     }
   }

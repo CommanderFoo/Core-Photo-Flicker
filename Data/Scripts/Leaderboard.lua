@@ -118,6 +118,7 @@ LEADERBOARD_PERSISTENCE = GetProperty(LEADERBOARD_PERSISTENCE, LEADERBOARD_PERSI
 
 if((LEADERBOARD_STAT == "RESOURCE") and (#RESOURCE_NAME > 0)) then
 	_G.ResourcesToTrack[RESOURCE_NAME] = true
+
 end
 
 Events.Connect("LDT_Update", OnUpdate)

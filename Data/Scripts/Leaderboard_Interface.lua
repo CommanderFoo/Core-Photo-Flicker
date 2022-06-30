@@ -26,6 +26,7 @@ local LeaderboardPanel = script:GetCustomProperty("LeaderboardPanel"):WaitForObj
 local Entries = script:GetCustomProperty("Entries"):WaitForObject()
 local Title = script:GetCustomProperty("Title"):WaitForObject()
 local UpdateTimer = script:GetCustomProperty("UpdateTimer"):WaitForObject()
+local CLOSE_BTN = script:GetCustomProperty("CloseBtn"):WaitForObject()
 
 ------------------------------------------------------------------------------------------------------------------------
 --	CONTANTS
@@ -147,6 +148,11 @@ local function OnBindingReleased(player, binding)
 	if(binding ~= TOGGLE_BINDING) then return end
 
 	ForceToggle()
+end
+local function CloseButton(button)
+	if button == CLOSE_BTN then
+		Events.Broadcast("ToggleLeaderBoard")
+	end
 end
 
 ------------------------------------------------------------------------------------------------------------------------
@@ -272,7 +278,13 @@ function Update(id)
 		if(DISPLAY_AS_INTEGER) then
 			playerScore.text = tostring(math.ceil(entry.score))
 		else
-			playerScore.text = ToSuffixString(entry.score)
+			if RESOURCE_NAME == "best_time" then
+				local mins = string.format("%02.f", math.floor(entry.score/60))
+				local secs = string.format("%02.f", math.floor(entry.score - mins *60))
+				playerScore.text = mins..":"..secs
+			else
+				playerScore.text = ToSuffixString(entry.score)
+			end
 		end
 		playerScore:SetColor(SCORE_COLOR)
 
@@ -301,6 +313,8 @@ end
 
 Events.Connect("LDT_Update", Update)
 Events.Connect("TDT_Toggle", Toggle)
+
+CLOSE_BTN.clickedEvent:Connect(CloseButton)
 
 if(UPDATE_ON_ROUND_END) then
 	Game.roundEndEvent:Connect(Update)
