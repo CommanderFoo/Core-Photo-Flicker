@@ -279,8 +279,9 @@ function Update(id)
 			playerScore.text = tostring(math.ceil(entry.score))
 		else
 			if RESOURCE_NAME == "best_time" then
-				local mins = string.format("%02.f", math.floor(entry.score/60))
-				local secs = string.format("%02.f", math.floor(entry.score - mins *60))
+				local format_time = entry.score / 1000
+				local mins = string.format("%02.f", math.floor(format_time/60))
+				local secs = string.format("%02.f", math.floor(format_time - mins *60))
 				playerScore.text = mins..":"..secs
 			else
 				playerScore.text = ToSuffixString(entry.score)

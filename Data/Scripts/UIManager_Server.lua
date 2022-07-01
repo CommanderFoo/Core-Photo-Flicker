@@ -198,7 +198,7 @@ function OnClicked(button)
         Events.Broadcast("NewGame")
         Events.BroadcastToServer("NewGame")
 
-        UIPANEL_MAIN_BUTTONS.visibility = Visibility.INHERIT
+        UIPANEL_MAIN_BUTTONS.visibility = Visibility.FORCE_ON
 
         Task.Wait(1.5)
         button.isInteractable = true
@@ -244,6 +244,10 @@ function OnClicked(button)
 
     elseif button == TITLE_SCEEN_BTN_SMALL then
         button.isInteractable = false
+        Events.Broadcast("Pause")
+        Events.BroadcastToServer("Pause")
+        pause_on =  not pause_on
+        TogglePanel(PAUSE_PANEL, pause_on)
         TitleScreenAnimation(false)          -- Add functionality here
         Task.Wait(1.5)
         button.isInteractable = true
@@ -253,6 +257,7 @@ function OnClicked(button)
         TitleScreenAnimation(true)
         Events.Broadcast("NewGame")
         Events.BroadcastToServer("NewGame")
+        UIPANEL_MAIN_BUTTONS.visibility = Visibility.FORCE_ON
         Task.Wait(1.5)
         button.isInteractable = true
 

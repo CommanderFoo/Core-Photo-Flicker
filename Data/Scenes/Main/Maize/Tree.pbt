@@ -379,6 +379,7 @@ Objects {
       TwoSided: true
       TickWhenOffScreen: true
       RedrawTime: 30
+      UseSafeZoneAdjustment: true
     }
     AnchorLayout {
       SelfAnchor {
@@ -1653,6 +1654,7 @@ Objects {
         Y: 1024
       }
       RedrawTime: 30
+      UseSafeZoneAdjustment: true
     }
     AnchorLayout {
       SelfAnchor {
@@ -1823,6 +1825,7 @@ Objects {
         Y: 1024
       }
       RedrawTime: 30
+      UseSafeZoneAdjustment: true
     }
     AnchorLayout {
       SelfAnchor {
